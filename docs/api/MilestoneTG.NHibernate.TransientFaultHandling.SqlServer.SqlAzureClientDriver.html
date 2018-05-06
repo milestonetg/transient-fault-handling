@@ -1,0 +1,346 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class SqlAzureClientDriver
+   | Transient Fault Handling </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class SqlAzureClientDriver
+   | Transient Fault Handling ">
+    <meta name="generator" content="docfx 2.32.2.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.SqlAzureClientDriver">
+  
+  
+  <h1 id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_SqlAzureClientDriver" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.SqlAzureClientDriver" class="text-break">Class SqlAzureClientDriver
+  </h1>
+  <div class="markdown level0 summary"><p>NHibernate client driver for SQL Azure that includes the Enterprise Library transient fault-handling.
+Note: It doesn&apos;t handle timeout errors, which can sometimes be transient. If you have timeout errors
+that aren&apos;t caused by unoptimized queries then use </p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">NHibernate.Driver.DriverBase</span></div>
+    <div class="level2"><span class="xref">NHibernate.Driver.ReflectionBasedDriver</span></div>
+    <div class="level3"><span class="xref">NHibernate.Driver.SqlClientDriver</span></div>
+    <div class="level4"><span class="xref">NHibernate.Driver.Sql2008ClientDriver</span></div>
+    <div class="level5"><a class="xref" href="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSql2008ClientDriver.html">ReliableSql2008ClientDriver</a></div>
+    <div class="level6"><a class="xref" href="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.DefaultReliableSql2008ClientDriver-1.html">DefaultReliableSql2008ClientDriver</a>&lt;<a class="xref" href="MilestoneTG.TransientFaultHandling.SqlDatabaseTransientErrorDetectionStrategy.html">SqlDatabaseTransientErrorDetectionStrategy</a>&gt;</div>
+    <div class="level7"><span class="xref">SqlAzureClientDriver</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">NHibernate.Driver.IDriver</span></div>
+    <div><span class="xref">NHibernate.Driver.ISqlParameterFormatter</span></div>
+    <div><span class="xref">NHibernate.AdoNet.IEmbeddedBatcherFactoryProvider</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.DefaultReliableSql2008ClientDriver-1.html#MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_DefaultReliableSql2008ClientDriver_1_CreateReliableConnection">DefaultReliableSql2008ClientDriver&lt;SqlDatabaseTransientErrorDetectionStrategy&gt;.CreateReliableConnection()</a>
+    </div>
+    <div>
+      <a class="xref" href="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.DefaultReliableSql2008ClientDriver-1.html#MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_DefaultReliableSql2008ClientDriver_1_ConnectionRetryEventHandler">DefaultReliableSql2008ClientDriver&lt;SqlDatabaseTransientErrorDetectionStrategy&gt;.ConnectionRetryEventHandler()</a>
+    </div>
+    <div>
+      <a class="xref" href="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.DefaultReliableSql2008ClientDriver-1.html#MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_DefaultReliableSql2008ClientDriver_1_CommandRetryEventHandler">DefaultReliableSql2008ClientDriver&lt;SqlDatabaseTransientErrorDetectionStrategy&gt;.CommandRetryEventHandler()</a>
+    </div>
+    <div>
+      <a class="xref" href="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.DefaultReliableSql2008ClientDriver-1.html#MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_DefaultReliableSql2008ClientDriver_1_RetryEventHandler">DefaultReliableSql2008ClientDriver&lt;SqlDatabaseTransientErrorDetectionStrategy&gt;.RetryEventHandler()</a>
+    </div>
+    <div>
+      <a class="xref" href="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSql2008ClientDriver.html#MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSql2008ClientDriver_CreateConnection">ReliableSql2008ClientDriver.CreateConnection()</a>
+    </div>
+    <div>
+      <a class="xref" href="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSql2008ClientDriver.html#MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSql2008ClientDriver_CreateCommand">ReliableSql2008ClientDriver.CreateCommand()</a>
+    </div>
+    <div>
+      <span class="xref">NHibernate.Driver.Sql2008ClientDriver.InitializeParameter(System.Data.Common.DbParameter, System.String, NHibernate.SqlTypes.SqlType)</span>
+    </div>
+    <div>
+      <span class="xref">NHibernate.Driver.Sql2008ClientDriver.RequiresTimeSpanForTime</span>
+    </div>
+    <div>
+      <span class="xref">NHibernate.Driver.Sql2008ClientDriver.MinDate</span>
+    </div>
+    <div>
+      <span class="xref">NHibernate.Driver.SqlClientDriver.MaxSizeForAnsiClob</span>
+    </div>
+    <div>
+      <span class="xref">NHibernate.Driver.SqlClientDriver.MaxSizeForClob</span>
+    </div>
+    <div>
+      <span class="xref">NHibernate.Driver.SqlClientDriver.MaxSizeForBlob</span>
+    </div>
+    <div>
+      <span class="xref">NHibernate.Driver.SqlClientDriver.MaxSizeForXml</span>
+    </div>
+    <div>
+      <span class="xref">NHibernate.Driver.SqlClientDriver.MaxSizeForLengthLimitedAnsiString</span>
+    </div>
+    <div>
+      <span class="xref">NHibernate.Driver.SqlClientDriver.MaxSizeForLengthLimitedString</span>
+    </div>
+    <div>
+      <span class="xref">NHibernate.Driver.SqlClientDriver.MaxSizeForLengthLimitedBinary</span>
+    </div>
+    <div>
+      <span class="xref">NHibernate.Driver.SqlClientDriver.MaxPrecision</span>
+    </div>
+    <div>
+      <span class="xref">NHibernate.Driver.SqlClientDriver.MaxScale</span>
+    </div>
+    <div>
+      <span class="xref">NHibernate.Driver.SqlClientDriver.MaxDateTime2</span>
+    </div>
+    <div>
+      <span class="xref">NHibernate.Driver.SqlClientDriver.MaxDateTimeOffset</span>
+    </div>
+    <div>
+      <span class="xref">NHibernate.Driver.SqlClientDriver.Configure(System.Collections.Generic.IDictionary&lt;System.String, System.String&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">NHibernate.Driver.SqlClientDriver.SetVariableLengthParameterSize(System.Data.Common.DbParameter, NHibernate.SqlTypes.SqlType)</span>
+    </div>
+    <div>
+      <span class="xref">NHibernate.Driver.SqlClientDriver.SetDefaultParameterSize(System.Data.Common.DbParameter, NHibernate.SqlTypes.SqlType)</span>
+    </div>
+    <div>
+      <span class="xref">NHibernate.Driver.SqlClientDriver.IsAnsiText(System.Data.Common.DbParameter, NHibernate.SqlTypes.SqlType)</span>
+    </div>
+    <div>
+      <span class="xref">NHibernate.Driver.SqlClientDriver.IsText(System.Data.Common.DbParameter, NHibernate.SqlTypes.SqlType)</span>
+    </div>
+    <div>
+      <span class="xref">NHibernate.Driver.SqlClientDriver.IsBlob(System.Data.Common.DbParameter, NHibernate.SqlTypes.SqlType)</span>
+    </div>
+    <div>
+      <span class="xref">NHibernate.Driver.SqlClientDriver.GetResultSetsCommand(NHibernate.Engine.ISessionImplementor)</span>
+    </div>
+    <div>
+      <span class="xref">NHibernate.Driver.SqlClientDriver.NHibernate.AdoNet.IEmbeddedBatcherFactoryProvider.BatcherFactoryClass</span>
+    </div>
+    <div>
+      <span class="xref">NHibernate.Driver.SqlClientDriver.UseNamedPrefixInSql</span>
+    </div>
+    <div>
+      <span class="xref">NHibernate.Driver.SqlClientDriver.UseNamedPrefixInParameter</span>
+    </div>
+    <div>
+      <span class="xref">NHibernate.Driver.SqlClientDriver.NamedPrefix</span>
+    </div>
+    <div>
+      <span class="xref">NHibernate.Driver.SqlClientDriver.SupportsMultipleOpenReaders</span>
+    </div>
+    <div>
+      <span class="xref">NHibernate.Driver.SqlClientDriver.SupportsMultipleQueries</span>
+    </div>
+    <div>
+      <span class="xref">NHibernate.Driver.SqlClientDriver.HasDelayedDistributedTransactionCompletion</span>
+    </div>
+    <div>
+      <span class="xref">NHibernate.Driver.ReflectionBasedDriver.ReflectionTypedProviderExceptionMessageTemplate</span>
+    </div>
+    <div>
+      <span class="xref">NHibernate.Driver.ReflectionBasedDriver.DriverVersion</span>
+    </div>
+    <div>
+      <span class="xref">NHibernate.Driver.DriverBase.FormatNameForSql(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">NHibernate.Driver.DriverBase.FormatNameForParameter(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">NHibernate.Driver.DriverBase.GenerateCommand(System.Data.CommandType, NHibernate.SqlCommand.SqlString, NHibernate.SqlTypes.SqlType[])</span>
+    </div>
+    <div>
+      <span class="xref">NHibernate.Driver.DriverBase.SetCommandTimeout(System.Data.Common.DbCommand)</span>
+    </div>
+    <div>
+      <span class="xref">NHibernate.Driver.DriverBase.NHibernate.Driver.ISqlParameterFormatter.GetParameterName(System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">NHibernate.Driver.DriverBase.GetSqlStringFormatter()</span>
+    </div>
+    <div>
+      <span class="xref">NHibernate.Driver.DriverBase.GenerateParameter(System.Data.Common.DbCommand, System.String, NHibernate.SqlTypes.SqlType)</span>
+    </div>
+    <div>
+      <span class="xref">NHibernate.Driver.DriverBase.RemoveUnusedCommandParameters(System.Data.Common.DbCommand, NHibernate.SqlCommand.SqlString)</span>
+    </div>
+    <div>
+      <span class="xref">NHibernate.Driver.DriverBase.ExpandQueryParameters(System.Data.Common.DbCommand, NHibernate.SqlCommand.SqlString, NHibernate.SqlTypes.SqlType[])</span>
+    </div>
+    <div>
+      <span class="xref">NHibernate.Driver.DriverBase.CloneParameter(System.Data.Common.DbCommand, System.Data.Common.DbParameter, NHibernate.SqlTypes.SqlType)</span>
+    </div>
+    <div>
+      <span class="xref">NHibernate.Driver.DriverBase.PrepareCommand(System.Data.Common.DbCommand)</span>
+    </div>
+    <div>
+      <span class="xref">NHibernate.Driver.DriverBase.OnBeforePrepare(System.Data.Common.DbCommand)</span>
+    </div>
+    <div>
+      <span class="xref">NHibernate.Driver.DriverBase.AdjustCommand(System.Data.Common.DbCommand)</span>
+    </div>
+    <div>
+      <span class="xref">NHibernate.Driver.DriverBase.GenerateOutputParameter(System.Data.Common.DbCommand)</span>
+    </div>
+    <div>
+      <span class="xref">NHibernate.Driver.DriverBase.IsPrepareSqlEnabled</span>
+    </div>
+    <div>
+      <span class="xref">NHibernate.Driver.DriverBase.SupportsPreparingCommands</span>
+    </div>
+    <div>
+      <span class="xref">NHibernate.Driver.DriverBase.SupportsSystemTransactions</span>
+    </div>
+    <div>
+      <span class="xref">NHibernate.Driver.DriverBase.SupportsNullEnlistment</span>
+    </div>
+    <div>
+      <span class="xref">NHibernate.Driver.DriverBase.SupportsEnlistmentWhenAutoEnlistmentIsDisabled</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.html">MilestoneTG.NHibernate.TransientFaultHandling.SqlServer</a></h6>
+  <h6><strong>Assembly</strong>: MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.dll</h6>
+  <h5 id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_SqlAzureClientDriver_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class SqlAzureClientDriver : DefaultReliableSql2008ClientDriver&lt;SqlDatabaseTransientErrorDetectionStrategy&gt;, IDriver, ISqlParameterFormatter, IEmbeddedBatcherFactoryProvider</code></pre>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">NHibernate.Driver.IDriver</span>
+  </div>
+  <div>
+      <span class="xref">NHibernate.Driver.ISqlParameterFormatter</span>
+  </div>
+  <div>
+      <span class="xref">NHibernate.AdoNet.IEmbeddedBatcherFactoryProvider</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Licensed under MIT
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,636 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ThrottlingCondition
+   | Transient Fault Handling </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ThrottlingCondition
+   | Transient Fault Handling ">
+    <meta name="generator" content="docfx 2.32.2.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MilestoneTG.TransientFaultHandling.Data.ThrottlingCondition">
+  
+  
+  <h1 id="MilestoneTG_TransientFaultHandling_Data_ThrottlingCondition" data-uid="MilestoneTG.TransientFaultHandling.Data.ThrottlingCondition" class="text-break">Class ThrottlingCondition
+  </h1>
+  <div class="markdown level0 summary"><p>Implements an object that holds the decoded reason code returned from SQL Database when throttling conditions are encountered.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">ThrottlingCondition</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MilestoneTG.TransientFaultHandling.Data.html">MilestoneTG.TransientFaultHandling.Data</a></h6>
+  <h6><strong>Assembly</strong>: MilestoneTG.TransientFaultHandling.Data.SqlServer.dll</h6>
+  <h5 id="MilestoneTG_TransientFaultHandling_Data_ThrottlingCondition_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Serializable]
+public class ThrottlingCondition</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_ThrottlingCondition_ThrottlingErrorNumber" data-uid="MilestoneTG.TransientFaultHandling.Data.ThrottlingCondition.ThrottlingErrorNumber">ThrottlingErrorNumber</h4>
+  <div class="markdown level1 summary"><p>Gets the error number that corresponds to the throttling conditions reported by SQL Database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int ThrottlingErrorNumber = 40501</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_Data_ThrottlingCondition_IsThrottledOnCpu_" data-uid="MilestoneTG.TransientFaultHandling.Data.ThrottlingCondition.IsThrottledOnCpu*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_ThrottlingCondition_IsThrottledOnCpu" data-uid="MilestoneTG.TransientFaultHandling.Data.ThrottlingCondition.IsThrottledOnCpu">IsThrottledOnCpu</h4>
+  <div class="markdown level1 summary"><p>Gets a value that indicates whether CPU throttling was reported by SQL Database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsThrottledOnCpu { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_Data_ThrottlingCondition_IsThrottledOnDatabaseSize_" data-uid="MilestoneTG.TransientFaultHandling.Data.ThrottlingCondition.IsThrottledOnDatabaseSize*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_ThrottlingCondition_IsThrottledOnDatabaseSize" data-uid="MilestoneTG.TransientFaultHandling.Data.ThrottlingCondition.IsThrottledOnDatabaseSize">IsThrottledOnDatabaseSize</h4>
+  <div class="markdown level1 summary"><p>Gets a value that indicates whether database size throttling was reported by SQL Database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsThrottledOnDatabaseSize { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_Data_ThrottlingCondition_IsThrottledOnDataRead_" data-uid="MilestoneTG.TransientFaultHandling.Data.ThrottlingCondition.IsThrottledOnDataRead*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_ThrottlingCondition_IsThrottledOnDataRead" data-uid="MilestoneTG.TransientFaultHandling.Data.ThrottlingCondition.IsThrottledOnDataRead">IsThrottledOnDataRead</h4>
+  <div class="markdown level1 summary"><p>Gets a value that indicates whether data read activity throttling was reported by SQL Database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsThrottledOnDataRead { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_Data_ThrottlingCondition_IsThrottledOnDataSpace_" data-uid="MilestoneTG.TransientFaultHandling.Data.ThrottlingCondition.IsThrottledOnDataSpace*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_ThrottlingCondition_IsThrottledOnDataSpace" data-uid="MilestoneTG.TransientFaultHandling.Data.ThrottlingCondition.IsThrottledOnDataSpace">IsThrottledOnDataSpace</h4>
+  <div class="markdown level1 summary"><p>Gets a value that indicates whether physical data file space throttling was reported by SQL Database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsThrottledOnDataSpace { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_Data_ThrottlingCondition_IsThrottledOnLogSpace_" data-uid="MilestoneTG.TransientFaultHandling.Data.ThrottlingCondition.IsThrottledOnLogSpace*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_ThrottlingCondition_IsThrottledOnLogSpace" data-uid="MilestoneTG.TransientFaultHandling.Data.ThrottlingCondition.IsThrottledOnLogSpace">IsThrottledOnLogSpace</h4>
+  <div class="markdown level1 summary"><p>Gets a value that indicates whether physical log space throttling was reported by SQL Database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsThrottledOnLogSpace { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_Data_ThrottlingCondition_IsThrottledOnLogWrite_" data-uid="MilestoneTG.TransientFaultHandling.Data.ThrottlingCondition.IsThrottledOnLogWrite*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_ThrottlingCondition_IsThrottledOnLogWrite" data-uid="MilestoneTG.TransientFaultHandling.Data.ThrottlingCondition.IsThrottledOnLogWrite">IsThrottledOnLogWrite</h4>
+  <div class="markdown level1 summary"><p>Gets a value that indicates whether transaction activity throttling was reported by SQL Database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsThrottledOnLogWrite { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_Data_ThrottlingCondition_IsThrottledOnWorkerThreads_" data-uid="MilestoneTG.TransientFaultHandling.Data.ThrottlingCondition.IsThrottledOnWorkerThreads*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_ThrottlingCondition_IsThrottledOnWorkerThreads" data-uid="MilestoneTG.TransientFaultHandling.Data.ThrottlingCondition.IsThrottledOnWorkerThreads">IsThrottledOnWorkerThreads</h4>
+  <div class="markdown level1 summary"><p>Gets a value that indicates whether concurrent requests throttling was reported by SQL Database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsThrottledOnWorkerThreads { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_Data_ThrottlingCondition_IsUnknown_" data-uid="MilestoneTG.TransientFaultHandling.Data.ThrottlingCondition.IsUnknown*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_ThrottlingCondition_IsUnknown" data-uid="MilestoneTG.TransientFaultHandling.Data.ThrottlingCondition.IsUnknown">IsUnknown</h4>
+  <div class="markdown level1 summary"><p>Gets a value that indicates whether throttling conditions were not determined with certainty.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsUnknown { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_Data_ThrottlingCondition_ThrottledResources_" data-uid="MilestoneTG.TransientFaultHandling.Data.ThrottlingCondition.ThrottledResources*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_ThrottlingCondition_ThrottledResources" data-uid="MilestoneTG.TransientFaultHandling.Data.ThrottlingCondition.ThrottledResources">ThrottledResources</h4>
+  <div class="markdown level1 summary"><p>Gets a list of the resources in the SQL Database that were subject to throttling conditions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;Tuple&lt;ThrottledResourceType, ThrottlingType&gt;&gt; ThrottledResources { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Tuple</span>&lt;<a class="xref" href="MilestoneTG.TransientFaultHandling.Data.ThrottledResourceType.html">ThrottledResourceType</a>, <a class="xref" href="MilestoneTG.TransientFaultHandling.Data.ThrottlingType.html">ThrottlingType</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_Data_ThrottlingCondition_ThrottlingMode_" data-uid="MilestoneTG.TransientFaultHandling.Data.ThrottlingCondition.ThrottlingMode*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_ThrottlingCondition_ThrottlingMode" data-uid="MilestoneTG.TransientFaultHandling.Data.ThrottlingCondition.ThrottlingMode">ThrottlingMode</h4>
+  <div class="markdown level1 summary"><p>Gets the value that reflects the throttling mode in SQL Database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ThrottlingMode ThrottlingMode { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MilestoneTG.TransientFaultHandling.Data.ThrottlingMode.html">ThrottlingMode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_Data_ThrottlingCondition_Unknown_" data-uid="MilestoneTG.TransientFaultHandling.Data.ThrottlingCondition.Unknown*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_ThrottlingCondition_Unknown" data-uid="MilestoneTG.TransientFaultHandling.Data.ThrottlingCondition.Unknown">Unknown</h4>
+  <div class="markdown level1 summary"><p>Gets an unknown throttling condition in the event that the actual throttling condition cannot be determined.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ThrottlingCondition Unknown { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MilestoneTG.TransientFaultHandling.Data.ThrottlingCondition.html">ThrottlingCondition</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_Data_ThrottlingCondition_FromError_" data-uid="MilestoneTG.TransientFaultHandling.Data.ThrottlingCondition.FromError*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_ThrottlingCondition_FromError_System_Data_SqlClient_SqlError_" data-uid="MilestoneTG.TransientFaultHandling.Data.ThrottlingCondition.FromError(System.Data.SqlClient.SqlError)">FromError(SqlError)</h4>
+  <div class="markdown level1 summary"><p>Determines the throttling conditions from the specified SQL error.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ThrottlingCondition FromError(SqlError error)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.SqlClient.SqlError</span></td>
+        <td><span class="parametername">error</span></td>
+        <td><p>The <span class="xref">System.Data.SqlClient.SqlError</span> object that contains information relevant to a warning or error returned by SQL Server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MilestoneTG.TransientFaultHandling.Data.ThrottlingCondition.html">ThrottlingCondition</a></td>
+        <td><p>An instance of the object that holds the decoded reason codes returned from SQL Database when throttling conditions were encountered.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_Data_ThrottlingCondition_FromException_" data-uid="MilestoneTG.TransientFaultHandling.Data.ThrottlingCondition.FromException*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_ThrottlingCondition_FromException_System_Data_SqlClient_SqlException_" data-uid="MilestoneTG.TransientFaultHandling.Data.ThrottlingCondition.FromException(System.Data.SqlClient.SqlException)">FromException(SqlException)</h4>
+  <div class="markdown level1 summary"><p>Determines throttling conditions from the specified SQL exception.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ThrottlingCondition FromException(SqlException ex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.SqlClient.SqlException</span></td>
+        <td><span class="parametername">ex</span></td>
+        <td><p>The <span class="xref">System.Data.SqlClient.SqlException</span> object that contains information relevant to an error returned by SQL Server when throttling conditions were encountered.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MilestoneTG.TransientFaultHandling.Data.ThrottlingCondition.html">ThrottlingCondition</a></td>
+        <td><p>An instance of the object that holds the decoded reason codes returned from SQL Database when throttling conditions were encountered.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_Data_ThrottlingCondition_FromReasonCode_" data-uid="MilestoneTG.TransientFaultHandling.Data.ThrottlingCondition.FromReasonCode*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_ThrottlingCondition_FromReasonCode_System_Int32_" data-uid="MilestoneTG.TransientFaultHandling.Data.ThrottlingCondition.FromReasonCode(System.Int32)">FromReasonCode(Int32)</h4>
+  <div class="markdown level1 summary"><p>Determines the throttling conditions from the specified reason code.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ThrottlingCondition FromReasonCode(int reasonCode)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">reasonCode</span></td>
+        <td><p>The reason code returned by SQL Database that contains the throttling mode and the exceeded resource types.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MilestoneTG.TransientFaultHandling.Data.ThrottlingCondition.html">ThrottlingCondition</a></td>
+        <td><p>An instance of the object holding the decoded reason codes returned from SQL Database when encountering throttling conditions.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_Data_ThrottlingCondition_ToString_" data-uid="MilestoneTG.TransientFaultHandling.Data.ThrottlingCondition.ToString*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_ThrottlingCondition_ToString" data-uid="MilestoneTG.TransientFaultHandling.Data.ThrottlingCondition.ToString">ToString()</h4>
+  <div class="markdown level1 summary"><p>Returns a textual representation of the current ThrottlingCondition object, including the information held with respect to throttled resources.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>A string that represents the current ThrottlingCondition object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.ToString()</span></div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Licensed under MIT
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

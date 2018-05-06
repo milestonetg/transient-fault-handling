@@ -1,0 +1,957 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class SqlCommandExtensions
+   | Transient Fault Handling </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class SqlCommandExtensions
+   | Transient Fault Handling ">
+    <meta name="generator" content="docfx 2.32.2.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MilestoneTG.TransientFaultHandling.SqlCommandExtensions">
+  
+  
+  <h1 id="MilestoneTG_TransientFaultHandling_SqlCommandExtensions" data-uid="MilestoneTG.TransientFaultHandling.SqlCommandExtensions" class="text-break">Class SqlCommandExtensions
+  </h1>
+  <div class="markdown level0 summary"><p>Provides a set of extension methods that add retry capabilities to the standard System.Data.SqlClient.SqlCommand implementation.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">SqlCommandExtensions</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MilestoneTG.TransientFaultHandling.html">MilestoneTG.TransientFaultHandling</a></h6>
+  <h6><strong>Assembly</strong>: MilestoneTG.TransientFaultHandling.Data.SqlServer.dll</h6>
+  <h5 id="MilestoneTG_TransientFaultHandling_SqlCommandExtensions_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class SqlCommandExtensions</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_SqlCommandExtensions_ExecuteNonQueryWithRetry_" data-uid="MilestoneTG.TransientFaultHandling.SqlCommandExtensions.ExecuteNonQueryWithRetry*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_SqlCommandExtensions_ExecuteNonQueryWithRetry_System_Data_SqlClient_SqlCommand_" data-uid="MilestoneTG.TransientFaultHandling.SqlCommandExtensions.ExecuteNonQueryWithRetry(System.Data.SqlClient.SqlCommand)">ExecuteNonQueryWithRetry(SqlCommand)</h4>
+  <div class="markdown level1 summary"><p>Executes a Transact-SQL statement against the connection and returns the number of rows affected. Uses the default retry policy when executing the command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ExecuteNonQueryWithRetry(this SqlCommand command)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.SqlClient.SqlCommand</span></td>
+        <td><span class="parametername">command</span></td>
+        <td><p>The command object that is required for the extension method declaration.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The number of rows affected.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_SqlCommandExtensions_ExecuteNonQueryWithRetry_" data-uid="MilestoneTG.TransientFaultHandling.SqlCommandExtensions.ExecuteNonQueryWithRetry*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_SqlCommandExtensions_ExecuteNonQueryWithRetry_System_Data_SqlClient_SqlCommand_MilestoneTG_TransientFaultHandling_RetryPolicy_" data-uid="MilestoneTG.TransientFaultHandling.SqlCommandExtensions.ExecuteNonQueryWithRetry(System.Data.SqlClient.SqlCommand,MilestoneTG.TransientFaultHandling.RetryPolicy)">ExecuteNonQueryWithRetry(SqlCommand, RetryPolicy)</h4>
+  <div class="markdown level1 summary"><p>Executes a Transact-SQL statement against the connection and returns the number of rows affected. Uses the specified retry policy when executing the command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ExecuteNonQueryWithRetry(this SqlCommand command, RetryPolicy retryPolicy)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.SqlClient.SqlCommand</span></td>
+        <td><span class="parametername">command</span></td>
+        <td><p>The command object that is required for the extension method declaration.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MilestoneTG.TransientFaultHandling.RetryPolicy.html">RetryPolicy</a></td>
+        <td><span class="parametername">retryPolicy</span></td>
+        <td><p>The retry policy that determines whether to retry a command if a connection fails while executing the command.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The number of rows affected.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_SqlCommandExtensions_ExecuteNonQueryWithRetry_" data-uid="MilestoneTG.TransientFaultHandling.SqlCommandExtensions.ExecuteNonQueryWithRetry*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_SqlCommandExtensions_ExecuteNonQueryWithRetry_System_Data_SqlClient_SqlCommand_MilestoneTG_TransientFaultHandling_RetryPolicy_MilestoneTG_TransientFaultHandling_RetryPolicy_" data-uid="MilestoneTG.TransientFaultHandling.SqlCommandExtensions.ExecuteNonQueryWithRetry(System.Data.SqlClient.SqlCommand,MilestoneTG.TransientFaultHandling.RetryPolicy,MilestoneTG.TransientFaultHandling.RetryPolicy)">ExecuteNonQueryWithRetry(SqlCommand, RetryPolicy, RetryPolicy)</h4>
+  <div class="markdown level1 summary"><p>Executes a Transact-SQL statement against the connection and returns the number of rows affected. Uses the specified retry policies when executing the command
+and establishing a connection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ExecuteNonQueryWithRetry(this SqlCommand command, RetryPolicy cmdRetryPolicy, RetryPolicy conRetryPolicy)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.SqlClient.SqlCommand</span></td>
+        <td><span class="parametername">command</span></td>
+        <td><p>The command object that is required for the extension method declaration.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MilestoneTG.TransientFaultHandling.RetryPolicy.html">RetryPolicy</a></td>
+        <td><span class="parametername">cmdRetryPolicy</span></td>
+        <td><p>The command retry policy that determines whether to retry a command if it fails while executing.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MilestoneTG.TransientFaultHandling.RetryPolicy.html">RetryPolicy</a></td>
+        <td><span class="parametername">conRetryPolicy</span></td>
+        <td><p>The connection retry policy that determines whether to re-establish a connection if it drops while executing the command.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The number of rows affected.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_SqlCommandExtensions_ExecuteReaderWithRetry_" data-uid="MilestoneTG.TransientFaultHandling.SqlCommandExtensions.ExecuteReaderWithRetry*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_SqlCommandExtensions_ExecuteReaderWithRetry_System_Data_SqlClient_SqlCommand_" data-uid="MilestoneTG.TransientFaultHandling.SqlCommandExtensions.ExecuteReaderWithRetry(System.Data.SqlClient.SqlCommand)">ExecuteReaderWithRetry(SqlCommand)</h4>
+  <div class="markdown level1 summary"><p>Sends the specified command to the connection and builds a SqlDataReader object that contains the results.
+Uses the default retry policy when executing the command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SqlDataReader ExecuteReaderWithRetry(this SqlCommand command)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.SqlClient.SqlCommand</span></td>
+        <td><span class="parametername">command</span></td>
+        <td><p>The command object that is required for the extension method declaration.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.SqlClient.SqlDataReader</span></td>
+        <td><p>A System.Data.SqlClient.SqlDataReader object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_SqlCommandExtensions_ExecuteReaderWithRetry_" data-uid="MilestoneTG.TransientFaultHandling.SqlCommandExtensions.ExecuteReaderWithRetry*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_SqlCommandExtensions_ExecuteReaderWithRetry_System_Data_SqlClient_SqlCommand_MilestoneTG_TransientFaultHandling_RetryPolicy_" data-uid="MilestoneTG.TransientFaultHandling.SqlCommandExtensions.ExecuteReaderWithRetry(System.Data.SqlClient.SqlCommand,MilestoneTG.TransientFaultHandling.RetryPolicy)">ExecuteReaderWithRetry(SqlCommand, RetryPolicy)</h4>
+  <div class="markdown level1 summary"><p>Sends the specified command to the connection and builds a SqlDataReader object that contains the results.
+Uses the specified retry policy when executing the command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SqlDataReader ExecuteReaderWithRetry(this SqlCommand command, RetryPolicy retryPolicy)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.SqlClient.SqlCommand</span></td>
+        <td><span class="parametername">command</span></td>
+        <td><p>The command object that is required for the extension method declaration.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MilestoneTG.TransientFaultHandling.RetryPolicy.html">RetryPolicy</a></td>
+        <td><span class="parametername">retryPolicy</span></td>
+        <td><p>The retry policy that determines whether to retry a command if a connection fails while executing the command.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.SqlClient.SqlDataReader</span></td>
+        <td><p>A System.Data.SqlClient.SqlDataReader object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_SqlCommandExtensions_ExecuteReaderWithRetry_" data-uid="MilestoneTG.TransientFaultHandling.SqlCommandExtensions.ExecuteReaderWithRetry*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_SqlCommandExtensions_ExecuteReaderWithRetry_System_Data_SqlClient_SqlCommand_MilestoneTG_TransientFaultHandling_RetryPolicy_MilestoneTG_TransientFaultHandling_RetryPolicy_" data-uid="MilestoneTG.TransientFaultHandling.SqlCommandExtensions.ExecuteReaderWithRetry(System.Data.SqlClient.SqlCommand,MilestoneTG.TransientFaultHandling.RetryPolicy,MilestoneTG.TransientFaultHandling.RetryPolicy)">ExecuteReaderWithRetry(SqlCommand, RetryPolicy, RetryPolicy)</h4>
+  <div class="markdown level1 summary"><p>Sends the specified command to the connection and builds a SqlDataReader object that contains the results.
+Uses the specified retry policies when executing the command and
+establishing a connection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SqlDataReader ExecuteReaderWithRetry(this SqlCommand command, RetryPolicy cmdRetryPolicy, RetryPolicy conRetryPolicy)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.SqlClient.SqlCommand</span></td>
+        <td><span class="parametername">command</span></td>
+        <td><p>The command object that is required for the extension method declaration.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MilestoneTG.TransientFaultHandling.RetryPolicy.html">RetryPolicy</a></td>
+        <td><span class="parametername">cmdRetryPolicy</span></td>
+        <td><p>The command retry policy that determines whether to retry a command if it fails while executing.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MilestoneTG.TransientFaultHandling.RetryPolicy.html">RetryPolicy</a></td>
+        <td><span class="parametername">conRetryPolicy</span></td>
+        <td><p>The connection retry policy that determines whether to re-establish a connection if it drops while executing the command.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.SqlClient.SqlDataReader</span></td>
+        <td><p>A System.Data.SqlClient.SqlDataReader object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_SqlCommandExtensions_ExecuteReaderWithRetry_" data-uid="MilestoneTG.TransientFaultHandling.SqlCommandExtensions.ExecuteReaderWithRetry*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_SqlCommandExtensions_ExecuteReaderWithRetry_System_Data_SqlClient_SqlCommand_System_Data_CommandBehavior_" data-uid="MilestoneTG.TransientFaultHandling.SqlCommandExtensions.ExecuteReaderWithRetry(System.Data.SqlClient.SqlCommand,System.Data.CommandBehavior)">ExecuteReaderWithRetry(SqlCommand, CommandBehavior)</h4>
+  <div class="markdown level1 summary"><p>Sends the specified command to the connection and builds a SqlDataReader object by using the specified 
+command behavior. Uses the default retry policy when executing the command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SqlDataReader ExecuteReaderWithRetry(this SqlCommand command, CommandBehavior behavior)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.SqlClient.SqlCommand</span></td>
+        <td><span class="parametername">command</span></td>
+        <td><p>The command object that is required for the extension method declaration.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Data.CommandBehavior</span></td>
+        <td><span class="parametername">behavior</span></td>
+        <td><p>One of the enumeration values that specifies the command behavior.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.SqlClient.SqlDataReader</span></td>
+        <td><p>A System.Data.SqlClient.SqlDataReader object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_SqlCommandExtensions_ExecuteReaderWithRetry_" data-uid="MilestoneTG.TransientFaultHandling.SqlCommandExtensions.ExecuteReaderWithRetry*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_SqlCommandExtensions_ExecuteReaderWithRetry_System_Data_SqlClient_SqlCommand_System_Data_CommandBehavior_MilestoneTG_TransientFaultHandling_RetryPolicy_" data-uid="MilestoneTG.TransientFaultHandling.SqlCommandExtensions.ExecuteReaderWithRetry(System.Data.SqlClient.SqlCommand,System.Data.CommandBehavior,MilestoneTG.TransientFaultHandling.RetryPolicy)">ExecuteReaderWithRetry(SqlCommand, CommandBehavior, RetryPolicy)</h4>
+  <div class="markdown level1 summary"><p>Sends the specified command to the connection and builds a SqlDataReader object by using the specified
+command behavior. Uses the specified retry policy when executing the command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SqlDataReader ExecuteReaderWithRetry(this SqlCommand command, CommandBehavior behavior, RetryPolicy retryPolicy)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.SqlClient.SqlCommand</span></td>
+        <td><span class="parametername">command</span></td>
+        <td><p>The command object that is required for the extension method declaration.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Data.CommandBehavior</span></td>
+        <td><span class="parametername">behavior</span></td>
+        <td><p>One of the enumeration values that specifies the command behavior.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MilestoneTG.TransientFaultHandling.RetryPolicy.html">RetryPolicy</a></td>
+        <td><span class="parametername">retryPolicy</span></td>
+        <td><p>The retry policy that determines whether to retry a command if a connection fails while executing the command.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.SqlClient.SqlDataReader</span></td>
+        <td><p>A System.Data.SqlClient.SqlDataReader object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_SqlCommandExtensions_ExecuteReaderWithRetry_" data-uid="MilestoneTG.TransientFaultHandling.SqlCommandExtensions.ExecuteReaderWithRetry*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_SqlCommandExtensions_ExecuteReaderWithRetry_System_Data_SqlClient_SqlCommand_System_Data_CommandBehavior_MilestoneTG_TransientFaultHandling_RetryPolicy_MilestoneTG_TransientFaultHandling_RetryPolicy_" data-uid="MilestoneTG.TransientFaultHandling.SqlCommandExtensions.ExecuteReaderWithRetry(System.Data.SqlClient.SqlCommand,System.Data.CommandBehavior,MilestoneTG.TransientFaultHandling.RetryPolicy,MilestoneTG.TransientFaultHandling.RetryPolicy)">ExecuteReaderWithRetry(SqlCommand, CommandBehavior, RetryPolicy, RetryPolicy)</h4>
+  <div class="markdown level1 summary"><p>Sends the specified command to the connection and builds a SqlDataReader object by using the specified
+command behavior. Uses the specified retry policies when executing the command
+and establishing a connection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SqlDataReader ExecuteReaderWithRetry(this SqlCommand command, CommandBehavior behavior, RetryPolicy cmdRetryPolicy, RetryPolicy conRetryPolicy)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.SqlClient.SqlCommand</span></td>
+        <td><span class="parametername">command</span></td>
+        <td><p>The command object that is required for the extension method declaration.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Data.CommandBehavior</span></td>
+        <td><span class="parametername">behavior</span></td>
+        <td><p>One of the enumeration values that specifies the command behavior.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MilestoneTG.TransientFaultHandling.RetryPolicy.html">RetryPolicy</a></td>
+        <td><span class="parametername">cmdRetryPolicy</span></td>
+        <td><p>The command retry policy that determines whether to retry a command if it fails while executing.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MilestoneTG.TransientFaultHandling.RetryPolicy.html">RetryPolicy</a></td>
+        <td><span class="parametername">conRetryPolicy</span></td>
+        <td><p>The connection retry policy that determines whether to re-establish a connection if it drops while executing the command.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.SqlClient.SqlDataReader</span></td>
+        <td><p>A System.Data.SqlClient.SqlDataReader object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_SqlCommandExtensions_ExecuteScalarWithRetry_" data-uid="MilestoneTG.TransientFaultHandling.SqlCommandExtensions.ExecuteScalarWithRetry*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_SqlCommandExtensions_ExecuteScalarWithRetry_System_Data_SqlClient_SqlCommand_" data-uid="MilestoneTG.TransientFaultHandling.SqlCommandExtensions.ExecuteScalarWithRetry(System.Data.SqlClient.SqlCommand)">ExecuteScalarWithRetry(SqlCommand)</h4>
+  <div class="markdown level1 summary"><p>Executes the query, and returns the first column of the first row in the result set returned by the query. Additional columns or rows are ignored.
+Uses the default retry policy when executing the command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static object ExecuteScalarWithRetry(this SqlCommand command)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.SqlClient.SqlCommand</span></td>
+        <td><span class="parametername">command</span></td>
+        <td><p>The command object that is required for the extension method declaration.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><p>The first column of the first row in the result set, or a null reference if the result set is empty. Returns a maximum of 2033 characters.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_SqlCommandExtensions_ExecuteScalarWithRetry_" data-uid="MilestoneTG.TransientFaultHandling.SqlCommandExtensions.ExecuteScalarWithRetry*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_SqlCommandExtensions_ExecuteScalarWithRetry_System_Data_SqlClient_SqlCommand_MilestoneTG_TransientFaultHandling_RetryPolicy_" data-uid="MilestoneTG.TransientFaultHandling.SqlCommandExtensions.ExecuteScalarWithRetry(System.Data.SqlClient.SqlCommand,MilestoneTG.TransientFaultHandling.RetryPolicy)">ExecuteScalarWithRetry(SqlCommand, RetryPolicy)</h4>
+  <div class="markdown level1 summary"><p>Executes the query, and returns the first column of the first row in the result set returned by the query. Additional columns or rows are ignored.
+Uses the specified retry policy when executing the command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static object ExecuteScalarWithRetry(this SqlCommand command, RetryPolicy retryPolicy)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.SqlClient.SqlCommand</span></td>
+        <td><span class="parametername">command</span></td>
+        <td><p>The command object that is required for the extension method declaration.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MilestoneTG.TransientFaultHandling.RetryPolicy.html">RetryPolicy</a></td>
+        <td><span class="parametername">retryPolicy</span></td>
+        <td><p>The retry policy that determines whether to retry a command if a connection fails while executing the command.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><p>The first column of the first row in the result set, or a null reference if the result set is empty. Returns a maximum of 2033 characters.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_SqlCommandExtensions_ExecuteScalarWithRetry_" data-uid="MilestoneTG.TransientFaultHandling.SqlCommandExtensions.ExecuteScalarWithRetry*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_SqlCommandExtensions_ExecuteScalarWithRetry_System_Data_SqlClient_SqlCommand_MilestoneTG_TransientFaultHandling_RetryPolicy_MilestoneTG_TransientFaultHandling_RetryPolicy_" data-uid="MilestoneTG.TransientFaultHandling.SqlCommandExtensions.ExecuteScalarWithRetry(System.Data.SqlClient.SqlCommand,MilestoneTG.TransientFaultHandling.RetryPolicy,MilestoneTG.TransientFaultHandling.RetryPolicy)">ExecuteScalarWithRetry(SqlCommand, RetryPolicy, RetryPolicy)</h4>
+  <div class="markdown level1 summary"><p>Executes the query, and returns the first column of the first row in the result set returned by the query. Additional columns or rows are ignored.
+Uses the specified retry policies when executing the command and establishing a connection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static object ExecuteScalarWithRetry(this SqlCommand command, RetryPolicy cmdRetryPolicy, RetryPolicy conRetryPolicy)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.SqlClient.SqlCommand</span></td>
+        <td><span class="parametername">command</span></td>
+        <td><p>The command object that is required for the extension method declaration.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MilestoneTG.TransientFaultHandling.RetryPolicy.html">RetryPolicy</a></td>
+        <td><span class="parametername">cmdRetryPolicy</span></td>
+        <td><p>The command retry policy that determines whether to retry a command if it fails while executing.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MilestoneTG.TransientFaultHandling.RetryPolicy.html">RetryPolicy</a></td>
+        <td><span class="parametername">conRetryPolicy</span></td>
+        <td><p>The connection retry policy that determines whether to re-establish a connection if it drops while executing the command.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><p>The first column of the first row in the result set, or a null reference if the result set is empty. Returns a maximum of 2033 characters.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_SqlCommandExtensions_ExecuteXmlReaderWithRetry_" data-uid="MilestoneTG.TransientFaultHandling.SqlCommandExtensions.ExecuteXmlReaderWithRetry*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_SqlCommandExtensions_ExecuteXmlReaderWithRetry_System_Data_SqlClient_SqlCommand_" data-uid="MilestoneTG.TransientFaultHandling.SqlCommandExtensions.ExecuteXmlReaderWithRetry(System.Data.SqlClient.SqlCommand)">ExecuteXmlReaderWithRetry(SqlCommand)</h4>
+  <div class="markdown level1 summary"><p>Sends the specified command to the connection and builds an XmlReader object that contains the results.
+Uses the default retry policy when executing the command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static XmlReader ExecuteXmlReaderWithRetry(this SqlCommand command)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.SqlClient.SqlCommand</span></td>
+        <td><span class="parametername">command</span></td>
+        <td><p>The command object that is required for the extension method declaration.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Xml.XmlReader</span></td>
+        <td><p>An System.Xml.XmlReader object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_SqlCommandExtensions_ExecuteXmlReaderWithRetry_" data-uid="MilestoneTG.TransientFaultHandling.SqlCommandExtensions.ExecuteXmlReaderWithRetry*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_SqlCommandExtensions_ExecuteXmlReaderWithRetry_System_Data_SqlClient_SqlCommand_MilestoneTG_TransientFaultHandling_RetryPolicy_" data-uid="MilestoneTG.TransientFaultHandling.SqlCommandExtensions.ExecuteXmlReaderWithRetry(System.Data.SqlClient.SqlCommand,MilestoneTG.TransientFaultHandling.RetryPolicy)">ExecuteXmlReaderWithRetry(SqlCommand, RetryPolicy)</h4>
+  <div class="markdown level1 summary"><p>Sends the specified command to the connection and builds an XmlReader object that contains the results.
+Uses the specified retry policy when executing the command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static XmlReader ExecuteXmlReaderWithRetry(this SqlCommand command, RetryPolicy retryPolicy)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.SqlClient.SqlCommand</span></td>
+        <td><span class="parametername">command</span></td>
+        <td><p>The command object that is required for the extension method declaration.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MilestoneTG.TransientFaultHandling.RetryPolicy.html">RetryPolicy</a></td>
+        <td><span class="parametername">retryPolicy</span></td>
+        <td><p>The retry policy that determines whether to retry a command if a connection fails while executing the command.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Xml.XmlReader</span></td>
+        <td><p>An System.Xml.XmlReader object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_SqlCommandExtensions_ExecuteXmlReaderWithRetry_" data-uid="MilestoneTG.TransientFaultHandling.SqlCommandExtensions.ExecuteXmlReaderWithRetry*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_SqlCommandExtensions_ExecuteXmlReaderWithRetry_System_Data_SqlClient_SqlCommand_MilestoneTG_TransientFaultHandling_RetryPolicy_MilestoneTG_TransientFaultHandling_RetryPolicy_" data-uid="MilestoneTG.TransientFaultHandling.SqlCommandExtensions.ExecuteXmlReaderWithRetry(System.Data.SqlClient.SqlCommand,MilestoneTG.TransientFaultHandling.RetryPolicy,MilestoneTG.TransientFaultHandling.RetryPolicy)">ExecuteXmlReaderWithRetry(SqlCommand, RetryPolicy, RetryPolicy)</h4>
+  <div class="markdown level1 summary"><p>Sends the specified command to the connection and builds an XmlReader object that contains the results.
+Uses the specified retry policies when executing the command and establishing a connection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static XmlReader ExecuteXmlReaderWithRetry(this SqlCommand command, RetryPolicy cmdRetryPolicy, RetryPolicy conRetryPolicy)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.SqlClient.SqlCommand</span></td>
+        <td><span class="parametername">command</span></td>
+        <td><p>The command object that is required for the extension method declaration.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MilestoneTG.TransientFaultHandling.RetryPolicy.html">RetryPolicy</a></td>
+        <td><span class="parametername">cmdRetryPolicy</span></td>
+        <td><p>The command retry policy that determines whether to retry a command if it fails while executing.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MilestoneTG.TransientFaultHandling.RetryPolicy.html">RetryPolicy</a></td>
+        <td><span class="parametername">conRetryPolicy</span></td>
+        <td><p>The connection retry policy that determines whether to re-establish a connection if it drops while executing the command.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Xml.XmlReader</span></td>
+        <td><p>An System.Xml.XmlReader object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Licensed under MIT
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

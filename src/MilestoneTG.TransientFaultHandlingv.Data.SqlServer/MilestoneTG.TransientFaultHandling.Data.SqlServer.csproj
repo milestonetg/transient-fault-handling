@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net451</TargetFrameworks>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <Description>
+      Transient fault handling for Microsft SQL Server Client based on Microsoft's implementation in their
+      Enterperise Library Transient Fault Handling Block.
+    </Description>
+    <Authors>milestonetg</Authors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Data.SqlClient" Version="4.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MilestoneTG.TransientFaultHandling.Data\MilestoneTG.TransientFaultHandling.Data.csproj" />
+  </ItemGroup>
+
+</Project>

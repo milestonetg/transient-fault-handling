@@ -1,0 +1,789 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ReliableSqlDbConnection
+   | Transient Fault Handling </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ReliableSqlDbConnection
+   | Transient Fault Handling ">
+    <meta name="generator" content="docfx 2.32.2.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection">
+  
+  
+  <h1 id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection" class="text-break">Class ReliableSqlDbConnection
+  </h1>
+  <div class="markdown level0 summary"><p>Wrap <a class="xref" href="MilestoneTG.TransientFaultHandling.Data.SqlServer.ReliableSqlConnection.html">ReliableSqlConnection</a> in a class that extends <span class="xref">System.Data.Common.DbConnection</span>
+so internal type casts within NHibernate don&apos;t fail.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">System.MarshalByRefObject</span></div>
+    <div class="level2"><span class="xref">System.ComponentModel.Component</span></div>
+    <div class="level3"><span class="xref">System.Data.Common.DbConnection</span></div>
+    <div class="level4"><span class="xref">ReliableSqlDbConnection</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.ComponentModel.IComponent</span></div>
+    <div><span class="xref">System.Data.IDbConnection</span></div>
+    <div><span class="xref">System.IDisposable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Data.Common.DbConnection.BeginTransaction()</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbConnection.BeginTransaction(System.Data.IsolationLevel)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbConnection.CreateCommand()</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbConnection.EnlistTransaction(System.Transactions.Transaction)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbConnection.OnStateChange(System.Data.StateChangeEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbConnection.OpenAsync()</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbConnection.OpenAsync(System.Threading.CancellationToken)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbConnection.System.Data.IDbConnection.BeginTransaction()</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbConnection.System.Data.IDbConnection.BeginTransaction(System.Data.IsolationLevel)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbConnection.System.Data.IDbConnection.CreateCommand()</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbConnection.DbProviderFactory</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbConnection.StateChange</span>
+    </div>
+    <div>
+      <span class="xref">System.ComponentModel.Component.Dispose()</span>
+    </div>
+    <div>
+      <span class="xref">System.ComponentModel.Component.GetService(System.Type)</span>
+    </div>
+    <div>
+      <span class="xref">System.ComponentModel.Component.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.ComponentModel.Component.CanRaiseEvents</span>
+    </div>
+    <div>
+      <span class="xref">System.ComponentModel.Component.Container</span>
+    </div>
+    <div>
+      <span class="xref">System.ComponentModel.Component.DesignMode</span>
+    </div>
+    <div>
+      <span class="xref">System.ComponentModel.Component.Events</span>
+    </div>
+    <div>
+      <span class="xref">System.ComponentModel.Component.Site</span>
+    </div>
+    <div>
+      <span class="xref">System.ComponentModel.Component.Disposed</span>
+    </div>
+    <div>
+      <span class="xref">System.MarshalByRefObject.GetLifetimeService()</span>
+    </div>
+    <div>
+      <span class="xref">System.MarshalByRefObject.InitializeLifetimeService()</span>
+    </div>
+    <div>
+      <span class="xref">System.MarshalByRefObject.MemberwiseClone(System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.html">MilestoneTG.NHibernate.TransientFaultHandling.SqlServer</a></h6>
+  <h6><strong>Assembly</strong>: MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.dll</h6>
+  <h5 id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ReliableSqlDbConnection : DbConnection, IComponent, IDbConnection, IDisposable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection__ctor_" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.#ctor*"></a>
+  <h4 id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection__ctor_MilestoneTG_TransientFaultHandling_Data_SqlServer_ReliableSqlConnection_" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.#ctor(MilestoneTG.TransientFaultHandling.Data.SqlServer.ReliableSqlConnection)">ReliableSqlDbConnection(ReliableSqlConnection)</h4>
+  <div class="markdown level1 summary"><p>Constructs a <a class="xref" href="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.html">ReliableSqlDbConnection</a> to wrap around the given <a class="xref" href="MilestoneTG.TransientFaultHandling.Data.SqlServer.ReliableSqlConnection.html">ReliableSqlConnection</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReliableSqlDbConnection(ReliableSqlConnection connection)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MilestoneTG.TransientFaultHandling.Data.SqlServer.ReliableSqlConnection.html">ReliableSqlConnection</a></td>
+        <td><span class="parametername">connection</span></td>
+        <td><p>The <a class="xref" href="MilestoneTG.TransientFaultHandling.Data.SqlServer.ReliableSqlConnection.html">ReliableSqlConnection</a> to wrap</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_ConnectionString_" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.ConnectionString*"></a>
+  <h4 id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_ConnectionString" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.ConnectionString">ConnectionString</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ConnectionString { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbConnection.ConnectionString</span></div>
+  
+  
+  <a id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_ConnectionTimeout_" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.ConnectionTimeout*"></a>
+  <h4 id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_ConnectionTimeout" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.ConnectionTimeout">ConnectionTimeout</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int ConnectionTimeout { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbConnection.ConnectionTimeout</span></div>
+  
+  
+  <a id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_Database_" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.Database*"></a>
+  <h4 id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_Database" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.Database">Database</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string Database { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbConnection.Database</span></div>
+  
+  
+  <a id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_DataSource_" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.DataSource*"></a>
+  <h4 id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_DataSource" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.DataSource">DataSource</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string DataSource { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbConnection.DataSource</span></div>
+  
+  
+  <a id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_ReliableConnection_" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.ReliableConnection*"></a>
+  <h4 id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_ReliableConnection" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.ReliableConnection">ReliableConnection</h4>
+  <div class="markdown level1 summary"><p>The underlying <a class="xref" href="MilestoneTG.TransientFaultHandling.Data.SqlServer.ReliableSqlConnection.html">ReliableSqlConnection</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReliableSqlConnection ReliableConnection { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MilestoneTG.TransientFaultHandling.Data.SqlServer.ReliableSqlConnection.html">ReliableSqlConnection</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_ServerVersion_" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.ServerVersion*"></a>
+  <h4 id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_ServerVersion" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.ServerVersion">ServerVersion</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ServerVersion { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbConnection.ServerVersion</span></div>
+  
+  
+  <a id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_State_" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.State*"></a>
+  <h4 id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_State" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.State">State</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override ConnectionState State { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.ConnectionState</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbConnection.State</span></div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_BeginDbTransaction_" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.BeginDbTransaction*"></a>
+  <h4 id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_BeginDbTransaction_System_Data_IsolationLevel_" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.BeginDbTransaction(System.Data.IsolationLevel)">BeginDbTransaction(IsolationLevel)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override DbTransaction BeginDbTransaction(IsolationLevel isolationLevel)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.IsolationLevel</span></td>
+        <td><span class="parametername">isolationLevel</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.Common.DbTransaction</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbConnection.BeginDbTransaction(System.Data.IsolationLevel)</span></div>
+  
+  
+  <a id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_ChangeDatabase_" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.ChangeDatabase*"></a>
+  <h4 id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_ChangeDatabase_System_String_" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.ChangeDatabase(System.String)">ChangeDatabase(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void ChangeDatabase(string databaseName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">databaseName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbConnection.ChangeDatabase(System.String)</span></div>
+  
+  
+  <a id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_Close_" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.Close*"></a>
+  <h4 id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_Close" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.Close">Close()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Close()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbConnection.Close()</span></div>
+  
+  
+  <a id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_CreateDbCommand_" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.CreateDbCommand*"></a>
+  <h4 id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_CreateDbCommand" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.CreateDbCommand">CreateDbCommand()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override DbCommand CreateDbCommand()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.Common.DbCommand</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbConnection.CreateDbCommand()</span></div>
+  
+  
+  <a id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_Dispose_" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.Dispose*"></a>
+  <h4 id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_Dispose_System_Boolean_" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.Dispose(System.Boolean)">Dispose(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void Dispose(bool disposing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">disposing</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.ComponentModel.Component.Dispose(System.Boolean)</span></div>
+  
+  
+  <a id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_GetSchema_" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.GetSchema*"></a>
+  <h4 id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_GetSchema" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.GetSchema">GetSchema()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override DataTable GetSchema()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.DataTable</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbConnection.GetSchema()</span></div>
+  
+  
+  <a id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_GetSchema_" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.GetSchema*"></a>
+  <h4 id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_GetSchema_System_String_" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.GetSchema(System.String)">GetSchema(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override DataTable GetSchema(string collectionName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">collectionName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.DataTable</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbConnection.GetSchema(System.String)</span></div>
+  
+  
+  <a id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_GetSchema_" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.GetSchema*"></a>
+  <h4 id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_GetSchema_System_String_System_String___" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.GetSchema(System.String,System.String[])">GetSchema(String, String[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override DataTable GetSchema(string collectionName, string[] restrictionValues)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">collectionName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span>[]</td>
+        <td><span class="parametername">restrictionValues</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.DataTable</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbConnection.GetSchema(System.String, System.String[])</span></div>
+  
+  
+  <a id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_Open_" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.Open*"></a>
+  <h4 id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_Open" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.Open">Open()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Open()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbConnection.Open()</span></div>
+  <h3 id="operators">Operators
+  </h3>
+  
+  
+  <a id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_op_Explicit_" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.op_Explicit*"></a>
+  <h4 id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_op_Explicit_MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection__System_Data_SqlClient_SqlConnection" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.op_Explicit(MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection)~System.Data.SqlClient.SqlConnection">Explicit(ReliableSqlDbConnection to SqlConnection)</h4>
+  <div class="markdown level1 summary"><p>Explicit type-casting between <a class="xref" href="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.html">ReliableSqlDbConnection</a> and <a class="xref" href="MilestoneTG.TransientFaultHandling.Data.SqlServer.ReliableSqlConnection.html">ReliableSqlConnection</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static explicit operator SqlConnection(ReliableSqlDbConnection connection)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.html">ReliableSqlDbConnection</a></td>
+        <td><span class="parametername">connection</span></td>
+        <td><p>The <a class="xref" href="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.html">ReliableSqlDbConnection</a> being casted</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.SqlClient.SqlConnection</span></td>
+        <td><p>The underlying <a class="xref" href="MilestoneTG.TransientFaultHandling.Data.SqlServer.ReliableSqlConnection.html">ReliableSqlConnection</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.ComponentModel.IComponent</span>
+  </div>
+  <div>
+      <span class="xref">System.Data.IDbConnection</span>
+  </div>
+  <div>
+      <span class="xref">System.IDisposable</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Licensed under MIT
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

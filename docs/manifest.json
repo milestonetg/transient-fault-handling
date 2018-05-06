@@ -1,0 +1,689 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/dev/MilestoneTG.TransientFaultHandling/docfx_project",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      },
+      "is_incremental": false
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.DefaultReliableSql2008ClientDriver-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.DefaultReliableSql2008ClientDriver-1.html",
+          "hash": "WlciOplqFenjm56jBHN6Dg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableAdoNetTransactionFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableAdoNetTransactionFactory.html",
+          "hash": "aW9OAbAMNknO+pl0FuqvRA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableAdoTransaction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableAdoTransaction.html",
+          "hash": "d1PYmsoBG5AsGaC71Grqrw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSql2008ClientDriver.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSql2008ClientDriver.html",
+          "hash": "cRqo282XjB9v7ju60leiEQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlCommand.html",
+          "hash": "oXI6tJ4p+LXN/NhztpzvEg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.html",
+          "hash": "MGG5FaCh1zD6hBrvZTiQtA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.SqlAzureClientDriver.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.SqlAzureClientDriver.html",
+          "hash": "eMHZm0eQbJUpX9Zsis/OgQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.SqlAzureClientDriverWithTimeoutRetries.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.SqlAzureClientDriverWithTimeoutRetries.html",
+          "hash": "VU5CjuX1gpK9NhGhlLjg9g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.SqlAzureTransientErrorDetectionStrategy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.SqlAzureTransientErrorDetectionStrategy.html",
+          "hash": "0iopljsSEpUUS6PKgxKMKw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.SqlAzureTransientErrorDetectionStrategyWithTimeouts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.SqlAzureTransientErrorDetectionStrategyWithTimeouts.html",
+          "hash": "Z1My+uAu2kRqQ4rpZi52/g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.html",
+          "hash": "IILnZ9kC+1IZXSWv9iA61g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MilestoneTG.TransientFaultHandling.Data.Resources.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MilestoneTG.TransientFaultHandling.Data.Resources.html",
+          "hash": "eCEo76GGma3F81hzyrXHvA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MilestoneTG.TransientFaultHandling.Data.SqlServer.ReliableSqlConnection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MilestoneTG.TransientFaultHandling.Data.SqlServer.ReliableSqlConnection.html",
+          "hash": "mgvq60XclpqaK3z/vGQAAg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MilestoneTG.TransientFaultHandling.Data.SqlServer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MilestoneTG.TransientFaultHandling.Data.SqlServer.html",
+          "hash": "srprtaYDgPLvB538/3ONag=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MilestoneTG.TransientFaultHandling.Data.ThrottledResourceType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MilestoneTG.TransientFaultHandling.Data.ThrottledResourceType.html",
+          "hash": "U+nPNTkbljQnxBxoFJ8QMw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MilestoneTG.TransientFaultHandling.Data.ThrottlingCondition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MilestoneTG.TransientFaultHandling.Data.ThrottlingCondition.html",
+          "hash": "ahGNQjYiYDlX9sxOu9ATEg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MilestoneTG.TransientFaultHandling.Data.ThrottlingMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MilestoneTG.TransientFaultHandling.Data.ThrottlingMode.html",
+          "hash": "5vq4KWW1UXHWQMvgXMN+ZQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MilestoneTG.TransientFaultHandling.Data.ThrottlingType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MilestoneTG.TransientFaultHandling.Data.ThrottlingType.html",
+          "hash": "nqsAlqBOhXYkinLzV4Ri8A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MilestoneTG.TransientFaultHandling.Data.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MilestoneTG.TransientFaultHandling.Data.html",
+          "hash": "TfzUHejN7Gqa6IkFmP+63g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MilestoneTG.TransientFaultHandling.ExponentialBackoffRetryStrategy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MilestoneTG.TransientFaultHandling.ExponentialBackoffRetryStrategy.html",
+          "hash": "80O6et/KVQw9jNIRgTlZWQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MilestoneTG.TransientFaultHandling.FixedIntervalRetryStrategy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MilestoneTG.TransientFaultHandling.FixedIntervalRetryStrategy.html",
+          "hash": "A9y8ewPvfjZgKUF9G0gwKw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MilestoneTG.TransientFaultHandling.Http.HttpRequestWithStatusException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MilestoneTG.TransientFaultHandling.Http.HttpRequestWithStatusException.html",
+          "hash": "8NYkyaU1LqGGG2mK2BmtNA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MilestoneTG.TransientFaultHandling.Http.RetryDelegatingHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MilestoneTG.TransientFaultHandling.Http.RetryDelegatingHandler.html",
+          "hash": "b+aEu/GcOT76+/ToHLdlKw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MilestoneTG.TransientFaultHandling.Http.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MilestoneTG.TransientFaultHandling.Http.html",
+          "hash": "yMpSyVB48uiroG0v2izdaw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MilestoneTG.TransientFaultHandling.HttpStatusCodeErrorDetectionStrategy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MilestoneTG.TransientFaultHandling.HttpStatusCodeErrorDetectionStrategy.html",
+          "hash": "OFx5gEE7eBAvRhHhE9zk7Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MilestoneTG.TransientFaultHandling.ITransientErrorDetectionStrategy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MilestoneTG.TransientFaultHandling.ITransientErrorDetectionStrategy.html",
+          "hash": "nc902b1bzOIPD4YqrGi7cQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MilestoneTG.TransientFaultHandling.IncrementalRetryStrategy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MilestoneTG.TransientFaultHandling.IncrementalRetryStrategy.html",
+          "hash": "pGdSpxwd4bpkaMV+YXQOBQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MilestoneTG.TransientFaultHandling.NetworkConnectivityErrorDetectionStrategy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MilestoneTG.TransientFaultHandling.NetworkConnectivityErrorDetectionStrategy.html",
+          "hash": "Dg0qG1gxFexHQ9uXllGRMA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MilestoneTG.TransientFaultHandling.ReliableDbConnection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MilestoneTG.TransientFaultHandling.ReliableDbConnection.html",
+          "hash": "7FEESIb7ctBxb4xW846tXg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MilestoneTG.TransientFaultHandling.RetryCondition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MilestoneTG.TransientFaultHandling.RetryCondition.html",
+          "hash": "XmtgY1x/SyQzhVydDIzXMw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MilestoneTG.TransientFaultHandling.RetryLimitExceededException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MilestoneTG.TransientFaultHandling.RetryLimitExceededException.html",
+          "hash": "Mhri0FyVCPLexNFu78Hysg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MilestoneTG.TransientFaultHandling.RetryManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MilestoneTG.TransientFaultHandling.RetryManager.html",
+          "hash": "gaDx486Q9ToPDqjH6uwpvw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MilestoneTG.TransientFaultHandling.RetryManagerSqlExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MilestoneTG.TransientFaultHandling.RetryManagerSqlExtensions.html",
+          "hash": "4xRTX1lvDtOPn8REQdLiEA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MilestoneTG.TransientFaultHandling.RetryPolicy-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MilestoneTG.TransientFaultHandling.RetryPolicy-1.html",
+          "hash": "StKiBEgq4AnY85drdfCJgg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MilestoneTG.TransientFaultHandling.RetryPolicy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MilestoneTG.TransientFaultHandling.RetryPolicy.html",
+          "hash": "znWuyNBOkMiA+k1iQW8l9A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MilestoneTG.TransientFaultHandling.RetryStrategy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MilestoneTG.TransientFaultHandling.RetryStrategy.html",
+          "hash": "5gEpWHhTMaNOYRfPSwKTtw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MilestoneTG.TransientFaultHandling.RetryingEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MilestoneTG.TransientFaultHandling.RetryingEventArgs.html",
+          "hash": "Koh9lsIrr+ZRQ/pVhOPSSQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MilestoneTG.TransientFaultHandling.ShouldRetryHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MilestoneTG.TransientFaultHandling.ShouldRetryHandler.html",
+          "hash": "BLxiTfNex1FGvlaBZ3baAg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MilestoneTG.TransientFaultHandling.SqlCommandExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MilestoneTG.TransientFaultHandling.SqlCommandExtensions.html",
+          "hash": "s8df+3EfpfuLY1KGChmBjQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MilestoneTG.TransientFaultHandling.SqlCommandFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MilestoneTG.TransientFaultHandling.SqlCommandFactory.html",
+          "hash": "jAQuYt5VNAJuhg5ax13vSg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MilestoneTG.TransientFaultHandling.SqlConnectionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MilestoneTG.TransientFaultHandling.SqlConnectionExtensions.html",
+          "hash": "aq9qRY5AU4h52Xoc10KL7A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MilestoneTG.TransientFaultHandling.SqlDatabaseTransientErrorDetectionStrategy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MilestoneTG.TransientFaultHandling.SqlDatabaseTransientErrorDetectionStrategy.html",
+          "hash": "gl9NJTDJre83hzaRItUdPw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MilestoneTG.TransientFaultHandling.SqlServerNetworkConnectivityErrorDetectionStrategy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MilestoneTG.TransientFaultHandling.SqlServerNetworkConnectivityErrorDetectionStrategy.html",
+          "hash": "Ffr3+ULplGgzpWX673lGIQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MilestoneTG.TransientFaultHandling.SqlXmlReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MilestoneTG.TransientFaultHandling.SqlXmlReader.html",
+          "hash": "Om+CGmBkutPuIBnbQ4cWaw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MilestoneTG.TransientFaultHandling.TransactionRetryScope.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MilestoneTG.TransientFaultHandling.TransactionRetryScope.html",
+          "hash": "9SmGsZjxRSlYGTQMNZIudg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MilestoneTG.TransientFaultHandling.TransientErrorIgnoreStrategy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MilestoneTG.TransientFaultHandling.TransientErrorIgnoreStrategy.html",
+          "hash": "7/HXa3rLbHZejmWUBV9S+A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MilestoneTG.TransientFaultHandling.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MilestoneTG.TransientFaultHandling.html",
+          "hash": "MAYCsuMlK3Qfm6Dwqzsd1A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "wsMpgYwWZORhMzAyXlcFTw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "vswNRB+SofPvawbSnwtxJQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "Rh3xeVtOXU2+IUFTiXMR1g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "xVlQaX7Tk85omoiWv3O+Ag=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "Vb36mBTPdmInNbvue8Cc5A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "ob7LqWp4kTNLz+9W4omdTw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build"
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build"
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: should not trace intermediate info.",
+        "incrementalPhase": "postProcessing"
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

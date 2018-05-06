@@ -1,0 +1,42 @@
+
+MilestoneTG.TransientFaultHandling (MIT) -> Fork of EnterpriseLibrary.TransientFaultHandling + ClientRuntime
+MilestoneTG.TransientFaultHandling.Data (MS-PL) -> Fork of EnterpriseLibrary.TransientFaultHandling.Data, but only abstractions
+MilestoneTG.TransientFaultHandling.Data.SqlServer (MIT) -> SQL Server implementation from EnterpriseLibrary.TransientFaultHandling.Data
+MilestoneTG.NHibernate.TransientFaultHandling.SqlServer (MIT)
+MilestoneTG.NHibernate.Logging (MIT) -> INHibernateLogger* implementation for Microsoft.Extensions.Logging
+
+MilestoneTG.TransientFaultHandling.Data.MySql
+MilestoneTG.TransientFaultHandling.Data.PostgreSql
+MilestoneTG.TransientFaultHandling.Data.Oracle
+
+MilestoneTG.NHibernate.TransientFaultHandling.MySql (MIT)
+MilestoneTG.NHibernate.TransientFaultHandling.PostgreSql (MIT)
+MilestoneTG.NHibernate.TransientFaultHandling.Oracle (MIT)
+
+
+https://github.com/Azure/azure-sdk-for-net/tree/psSdkJson6/src/SdkCommon/ClientRuntime/ClientRuntime
+MilestoneTG.Microservices.Http (MIT)
+	- RetryDelegatingHandler -> Copy from Microsoft.ClientRuntime, but using MilestoneTG.TransientFaultHandling instead and some fixes
+	- CompressionDelegatingHandler
+	- FitDelegatingHandler -> inject failures explicitly
+	- ChaosDelegatingHandler -> Randomized chaotic failures at runtime
+
+MilestoneTG.Microservices.Logging (MIT) -> /logging endpoint for dynamic logging
+MilestoneTG.Microservices.Logging.ApplicationInsights (MIT)
+
+MilestoneTG.Microservices.Tracing (MIT) -> /tracing endpoint for dynamic request payload tracing
+	
+	
+MilestoneTG.ApplicationInsights (MIT)
+	- VersionTelemetryInitializer -> Set the ApplicationVersion property
+	- RestTelemetryInitializer -> not mark 404 as failed
+	- RestTelemetryProcessor -> Filter out 401 challenges
+
+MilestoneTG.ApplicationInsights.Logging (MIT) -> Implements Microsoft.Extensions.Logging
+	
+MilestoneTG.Splunk (MIT)
+	- SplunkHttpCollectorClient
+	- SplunkMetaData
+	
+MilestoneTG.Splunk.Logging (MIT) -> Implements Microsoft.Extensions.Logging
+

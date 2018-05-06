@@ -1,0 +1,387 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class RetryStrategy
+   | Transient Fault Handling </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class RetryStrategy
+   | Transient Fault Handling ">
+    <meta name="generator" content="docfx 2.32.2.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MilestoneTG.TransientFaultHandling.RetryStrategy">
+  
+  
+  <h1 id="MilestoneTG_TransientFaultHandling_RetryStrategy" data-uid="MilestoneTG.TransientFaultHandling.RetryStrategy" class="text-break">Class RetryStrategy
+  </h1>
+  <div class="markdown level0 summary"><p>Represents a retry strategy that determines the number of retry attempts and the interval 
+between retries.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">RetryStrategy</span></div>
+      <div class="level2"><a class="xref" href="MilestoneTG.TransientFaultHandling.ExponentialBackoffRetryStrategy.html">ExponentialBackoffRetryStrategy</a></div>
+      <div class="level2"><a class="xref" href="MilestoneTG.TransientFaultHandling.FixedIntervalRetryStrategy.html">FixedIntervalRetryStrategy</a></div>
+      <div class="level2"><a class="xref" href="MilestoneTG.TransientFaultHandling.IncrementalRetryStrategy.html">IncrementalRetryStrategy</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MilestoneTG.TransientFaultHandling.html">MilestoneTG.TransientFaultHandling</a></h6>
+  <h6><strong>Assembly</strong>: MilestoneTG.TransientFaultHandling.dll</h6>
+  <h5 id="MilestoneTG_TransientFaultHandling_RetryStrategy_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class RetryStrategy</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_RetryStrategy__ctor_" data-uid="MilestoneTG.TransientFaultHandling.RetryStrategy.#ctor*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_RetryStrategy__ctor_System_String_System_Boolean_" data-uid="MilestoneTG.TransientFaultHandling.RetryStrategy.#ctor(System.String,System.Boolean)">RetryStrategy(String, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MilestoneTG.TransientFaultHandling.RetryStrategy.html">RetryStrategy</a> class. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected RetryStrategy(string name, bool firstFastRetry)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The name of the retry strategy.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">firstFastRetry</span></td>
+        <td><p>true to immediately retry in the first attempt; otherwise, false. 
+The subsequent retries will remain subject to the configured retry interval.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="MilestoneTG_TransientFaultHandling_RetryStrategy_DefaultClientRetryCount" data-uid="MilestoneTG.TransientFaultHandling.RetryStrategy.DefaultClientRetryCount">DefaultClientRetryCount</h4>
+  <div class="markdown level1 summary"><p>Represents the default number of retry attempts.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly int DefaultClientRetryCount</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="MilestoneTG_TransientFaultHandling_RetryStrategy_DefaultFirstFastRetry" data-uid="MilestoneTG.TransientFaultHandling.RetryStrategy.DefaultFirstFastRetry">DefaultFirstFastRetry</h4>
+  <div class="markdown level1 summary"><p>Represents the default flag indicating whether the first retry attempt will be made immediately,
+whereas subsequent retries will remain subject to the retry interval.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly bool DefaultFirstFastRetry</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="MilestoneTG_TransientFaultHandling_RetryStrategy_DefaultRetryInterval" data-uid="MilestoneTG.TransientFaultHandling.RetryStrategy.DefaultRetryInterval">DefaultRetryInterval</h4>
+  <div class="markdown level1 summary"><p>Represents the default interval between retries.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly TimeSpan DefaultRetryInterval</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_RetryStrategy_FastFirstRetry_" data-uid="MilestoneTG.TransientFaultHandling.RetryStrategy.FastFirstRetry*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_RetryStrategy_FastFirstRetry" data-uid="MilestoneTG.TransientFaultHandling.RetryStrategy.FastFirstRetry">FastFirstRetry</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether the first retry attempt will be made immediately,
+whereas subsequent retries will remain subject to the retry interval.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool FastFirstRetry { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_RetryStrategy_Name_" data-uid="MilestoneTG.TransientFaultHandling.RetryStrategy.Name*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_RetryStrategy_Name" data-uid="MilestoneTG.TransientFaultHandling.RetryStrategy.Name">Name</h4>
+  <div class="markdown level1 summary"><p>Gets the name of the retry strategy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_RetryStrategy_NoRetry_" data-uid="MilestoneTG.TransientFaultHandling.RetryStrategy.NoRetry*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_RetryStrategy_NoRetry" data-uid="MilestoneTG.TransientFaultHandling.RetryStrategy.NoRetry">NoRetry</h4>
+  <div class="markdown level1 summary"><p>Returns a default policy that performs no retries, but invokes the action only once.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static RetryStrategy NoRetry { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MilestoneTG.TransientFaultHandling.RetryStrategy.html">RetryStrategy</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_RetryStrategy_GetShouldRetryHandler_" data-uid="MilestoneTG.TransientFaultHandling.RetryStrategy.GetShouldRetryHandler*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_RetryStrategy_GetShouldRetryHandler" data-uid="MilestoneTG.TransientFaultHandling.RetryStrategy.GetShouldRetryHandler">GetShouldRetryHandler()</h4>
+  <div class="markdown level1 summary"><p>Returns the corresponding ShouldRetry delegate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract ShouldRetryHandler GetShouldRetryHandler()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MilestoneTG.TransientFaultHandling.ShouldRetryHandler.html">ShouldRetryHandler</a></td>
+        <td><p>The ShouldRetry delegate.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Licensed under MIT
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

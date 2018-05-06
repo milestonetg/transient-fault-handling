@@ -1,0 +1,81 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2015
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MilestoneTG.TransientFaultHandling", "MilestoneTG.TransientFaultHandling\MilestoneTG.TransientFaultHandling.csproj", "{95490C1D-B79B-49F5-BA45-6D8887636533}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilestoneTG.TransientFaultHandling.Data", "MilestoneTG.TransientFaultHandling.Data\MilestoneTG.TransientFaultHandling.Data.csproj", "{3265CFB1-9A13-42FD-8402-4802C12A335B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilestoneTG.TransientFaultHandling.Data.SqlServer", "MilestoneTG.TransientFaultHandlingv.Data.SqlServer\MilestoneTG.TransientFaultHandling.Data.SqlServer.csproj", "{92CE6A20-0F0E-4A4B-8DD8-7464C5FAE7A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilestoneTG.TransientFaultHandling.Http", "MilestoneTG.TransientFaultHandling.Http\MilestoneTG.TransientFaultHandling.Http.csproj", "{5A0157D0-D79F-4605-BBD4-994E4D37EC34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilestoneTG.NHibernate.TransientFaultHandling.SqlServer", "MilestoneTG.NHibernate.TransientFaultHandling.SqlServer\MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.csproj", "{A2D0723C-1A29-40E1-921A-9A61399E52E3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{06CAFF95-CE72-4704-A0AA-F4CCF4723884}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TransientFaultHandling.TestSupport", "..\test\TransientFaultHandling.TestSupport\TransientFaultHandling.TestSupport.csproj", "{07CCECDC-8BDA-4A54-9057-324C9C6FF948}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MilestoneTG.TransientFaultHandling.Tests", "..\test\MilestoneTG.TransientFaultHandling.Tests\MilestoneTG.TransientFaultHandling.Tests.csproj", "{60A3964F-62C0-4D86-A78B-E385CCAB5443}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MilestoneTG.TransientFaultHandling.Data.Tests", "..\test\MilestoneTG.TransientFaultHandling.Data.Tests\MilestoneTG.TransientFaultHandling.Data.Tests.csproj", "{465751FF-0FD8-40FB-ADD2-99190CB05344}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.Tests", "..\test\MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.Tests\MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.Tests.csproj", "{A3CAF57D-D865-4C93-9A3D-9C944AEAE13A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{95490C1D-B79B-49F5-BA45-6D8887636533}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95490C1D-B79B-49F5-BA45-6D8887636533}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95490C1D-B79B-49F5-BA45-6D8887636533}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95490C1D-B79B-49F5-BA45-6D8887636533}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3265CFB1-9A13-42FD-8402-4802C12A335B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3265CFB1-9A13-42FD-8402-4802C12A335B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3265CFB1-9A13-42FD-8402-4802C12A335B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3265CFB1-9A13-42FD-8402-4802C12A335B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92CE6A20-0F0E-4A4B-8DD8-7464C5FAE7A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92CE6A20-0F0E-4A4B-8DD8-7464C5FAE7A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92CE6A20-0F0E-4A4B-8DD8-7464C5FAE7A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92CE6A20-0F0E-4A4B-8DD8-7464C5FAE7A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A0157D0-D79F-4605-BBD4-994E4D37EC34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A0157D0-D79F-4605-BBD4-994E4D37EC34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A0157D0-D79F-4605-BBD4-994E4D37EC34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A0157D0-D79F-4605-BBD4-994E4D37EC34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2D0723C-1A29-40E1-921A-9A61399E52E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2D0723C-1A29-40E1-921A-9A61399E52E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2D0723C-1A29-40E1-921A-9A61399E52E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2D0723C-1A29-40E1-921A-9A61399E52E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07CCECDC-8BDA-4A54-9057-324C9C6FF948}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07CCECDC-8BDA-4A54-9057-324C9C6FF948}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07CCECDC-8BDA-4A54-9057-324C9C6FF948}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07CCECDC-8BDA-4A54-9057-324C9C6FF948}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60A3964F-62C0-4D86-A78B-E385CCAB5443}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60A3964F-62C0-4D86-A78B-E385CCAB5443}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60A3964F-62C0-4D86-A78B-E385CCAB5443}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60A3964F-62C0-4D86-A78B-E385CCAB5443}.Release|Any CPU.Build.0 = Release|Any CPU
+		{465751FF-0FD8-40FB-ADD2-99190CB05344}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{465751FF-0FD8-40FB-ADD2-99190CB05344}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{465751FF-0FD8-40FB-ADD2-99190CB05344}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{465751FF-0FD8-40FB-ADD2-99190CB05344}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3CAF57D-D865-4C93-9A3D-9C944AEAE13A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3CAF57D-D865-4C93-9A3D-9C944AEAE13A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3CAF57D-D865-4C93-9A3D-9C944AEAE13A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3CAF57D-D865-4C93-9A3D-9C944AEAE13A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{07CCECDC-8BDA-4A54-9057-324C9C6FF948} = {06CAFF95-CE72-4704-A0AA-F4CCF4723884}
+		{60A3964F-62C0-4D86-A78B-E385CCAB5443} = {06CAFF95-CE72-4704-A0AA-F4CCF4723884}
+		{465751FF-0FD8-40FB-ADD2-99190CB05344} = {06CAFF95-CE72-4704-A0AA-F4CCF4723884}
+		{A3CAF57D-D865-4C93-9A3D-9C944AEAE13A} = {06CAFF95-CE72-4704-A0AA-F4CCF4723884}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {47D5807D-AF10-4E36-8590-2A5125EBF787}
+	EndGlobalSection
+EndGlobal

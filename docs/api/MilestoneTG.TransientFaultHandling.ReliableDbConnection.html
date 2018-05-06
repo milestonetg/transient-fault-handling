@@ -1,0 +1,1254 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ReliableDbConnection
+   | Transient Fault Handling </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ReliableDbConnection
+   | Transient Fault Handling ">
+    <meta name="generator" content="docfx 2.32.2.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection">
+  
+  
+  <h1 id="MilestoneTG_TransientFaultHandling_ReliableDbConnection" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection" class="text-break">Class ReliableDbConnection
+  </h1>
+  <div class="markdown level0 summary"><p>Provides a reliable way of opening connections to, and executing commands against, the SQL Database 
+databases taking potential network unreliability and connection retry requirements into account.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">ReliableDbConnection</span></div>
+      <div class="level2"><a class="xref" href="MilestoneTG.TransientFaultHandling.Data.SqlServer.ReliableSqlConnection.html">ReliableSqlConnection</a></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.Data.IDbConnection</span></div>
+    <div><span class="xref">System.IDisposable</span></div>
+    <div><span class="xref">System.ICloneable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MilestoneTG.TransientFaultHandling.html">MilestoneTG.TransientFaultHandling</a></h6>
+  <h6><strong>Assembly</strong>: MilestoneTG.TransientFaultHandling.Data.dll</h6>
+  <h5 id="MilestoneTG_TransientFaultHandling_ReliableDbConnection_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class ReliableDbConnection : IDbConnection, IDisposable, ICloneable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_ReliableDbConnection__ctor_" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection.#ctor*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_ReliableDbConnection__ctor_System_String_MilestoneTG_TransientFaultHandling_RetryPolicy_MilestoneTG_TransientFaultHandling_RetryPolicy_" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection.#ctor(System.String,MilestoneTG.TransientFaultHandling.RetryPolicy,MilestoneTG.TransientFaultHandling.RetryPolicy)">ReliableDbConnection(String, RetryPolicy, RetryPolicy)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MilestoneTG.TransientFaultHandling.ReliableDbConnection.html">ReliableDbConnection</a> class with the specified connection string
+and a policy that defines whether to retry a request if a connection or command
+fails.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReliableDbConnection(string connectionString, RetryPolicy connectionRetryPolicy, RetryPolicy commandRetryPolicy)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">connectionString</span></td>
+        <td><p>The connection string used to open the SQL Database.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MilestoneTG.TransientFaultHandling.RetryPolicy.html">RetryPolicy</a></td>
+        <td><span class="parametername">connectionRetryPolicy</span></td>
+        <td><p>The retry policy that defines whether to retry a request if a connection fails to be established.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MilestoneTG.TransientFaultHandling.RetryPolicy.html">RetryPolicy</a></td>
+        <td><span class="parametername">commandRetryPolicy</span></td>
+        <td><p>The retry policy that defines whether to retry a request if a command fails to be executed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_ReliableDbConnection_CommandRetryPolicy_" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection.CommandRetryPolicy*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_ReliableDbConnection_CommandRetryPolicy" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection.CommandRetryPolicy">CommandRetryPolicy</h4>
+  <div class="markdown level1 summary"><p>Gets the policy that determines whether to retry a command, based on how many 
+times the request has been made and the reason for the last failure. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RetryPolicy CommandRetryPolicy { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MilestoneTG.TransientFaultHandling.RetryPolicy.html">RetryPolicy</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_ReliableDbConnection_ConnectionRetryPolicy_" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection.ConnectionRetryPolicy*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_ReliableDbConnection_ConnectionRetryPolicy" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection.ConnectionRetryPolicy">ConnectionRetryPolicy</h4>
+  <div class="markdown level1 summary"><p>Gets the policy that determines whether to retry a connection request, based on how many 
+times the request has been made and the reason for the last failure. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RetryPolicy ConnectionRetryPolicy { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MilestoneTG.TransientFaultHandling.RetryPolicy.html">RetryPolicy</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_ReliableDbConnection_ConnectionString_" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection.ConnectionString*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_ReliableDbConnection_ConnectionString" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection.ConnectionString">ConnectionString</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the connection string for opening a connection to the SQL Database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ConnectionString { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_ReliableDbConnection_ConnectionTimeout_" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection.ConnectionTimeout*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_ReliableDbConnection_ConnectionTimeout" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection.ConnectionTimeout">ConnectionTimeout</h4>
+  <div class="markdown level1 summary"><p>Gets a value that specifies the time to wait while trying to establish a connection before terminating
+the attempt and generating an error.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int ConnectionTimeout { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_ReliableDbConnection_Current_" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection.Current*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_ReliableDbConnection_Current" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection.Current">Current</h4>
+  <div class="markdown level1 summary"><p>Gets an instance of the SqlConnection object that represents the connection to a SQL Database instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DbConnection Current { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.Common.DbConnection</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_ReliableDbConnection_Database_" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection.Database*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_ReliableDbConnection_Database" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection.Database">Database</h4>
+  <div class="markdown level1 summary"><p>Gets the name of the current database or the database to be used after a
+connection is opened.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Database { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_ReliableDbConnection_SessionTracingId_" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection.SessionTracingId*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_ReliableDbConnection_SessionTracingId" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection.SessionTracingId">SessionTracingId</h4>
+  <div class="markdown level1 summary"><p>Gets the CONTEXT_INFO value that was set for the current session. This value can be used to trace query execution problems. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Guid SessionTracingId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Guid</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_ReliableDbConnection_State_" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection.State*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_ReliableDbConnection_State" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection.State">State</h4>
+  <div class="markdown level1 summary"><p>Gets the current state of the connection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ConnectionState State { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.ConnectionState</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_ReliableDbConnection_BeginTransaction_" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection.BeginTransaction*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_ReliableDbConnection_BeginTransaction" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection.BeginTransaction">BeginTransaction()</h4>
+  <div class="markdown level1 summary"><p>Begins a database transaction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IDbTransaction BeginTransaction()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.IDbTransaction</span></td>
+        <td><p>An object that represents the new transaction.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_ReliableDbConnection_BeginTransaction_" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection.BeginTransaction*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_ReliableDbConnection_BeginTransaction_System_Data_IsolationLevel_" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection.BeginTransaction(System.Data.IsolationLevel)">BeginTransaction(IsolationLevel)</h4>
+  <div class="markdown level1 summary"><p>Begins a database transaction with the specified System.Data.IsolationLevel value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IDbTransaction BeginTransaction(IsolationLevel il)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.IsolationLevel</span></td>
+        <td><span class="parametername">il</span></td>
+        <td><p>One of the enumeration values that specifies the isolation level for the transaction.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.IDbTransaction</span></td>
+        <td><p>An object that represents the new transaction.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_ReliableDbConnection_ChangeDatabase_" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection.ChangeDatabase*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_ReliableDbConnection_ChangeDatabase_System_String_" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection.ChangeDatabase(System.String)">ChangeDatabase(String)</h4>
+  <div class="markdown level1 summary"><p>Changes the current database for an open Connection object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ChangeDatabase(string databaseName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">databaseName</span></td>
+        <td><p>The name of the database to use in place of the current database.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_ReliableDbConnection_Clone_" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection.Clone*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_ReliableDbConnection_Clone" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection.Clone">Clone()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract ReliableDbConnection Clone()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MilestoneTG.TransientFaultHandling.ReliableDbConnection.html">ReliableDbConnection</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_ReliableDbConnection_Close_" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection.Close*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_ReliableDbConnection_Close" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection.Close">Close()</h4>
+  <div class="markdown level1 summary"><p>Closes the connection to the database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Close()</code></pre>
+  </div>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_ReliableDbConnection_CreateCommand_" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection.CreateCommand*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_ReliableDbConnection_CreateCommand" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection.CreateCommand">CreateCommand()</h4>
+  <div class="markdown level1 summary"><p>Creates and returns a SqlCommand object that is associated with the underlying SqlConnection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DbCommand CreateCommand()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.Common.DbCommand</span></td>
+        <td><p>A System.Data.SqlClient.SqlCommand object that is associated with the underlying connection.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_ReliableDbConnection_CreateConnection_" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection.CreateConnection*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_ReliableDbConnection_CreateConnection_System_String_" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection.CreateConnection(System.String)">CreateConnection(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract DbConnection CreateConnection(string connectionString)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">connectionString</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.Common.DbConnection</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_ReliableDbConnection_CreateConnectionStringFailoverPolicy_" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection.CreateConnectionStringFailoverPolicy*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_ReliableDbConnection_CreateConnectionStringFailoverPolicy" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection.CreateConnectionStringFailoverPolicy">CreateConnectionStringFailoverPolicy()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract RetryPolicy CreateConnectionStringFailoverPolicy()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MilestoneTG.TransientFaultHandling.RetryPolicy.html">RetryPolicy</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_ReliableDbConnection_Dispose_" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection.Dispose*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_ReliableDbConnection_Dispose" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"><p>Performs application-defined tasks that are associated with freeing, releasing, or
+resetting managed and unmanaged resources.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_ReliableDbConnection_ExecuteCommand_" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection.ExecuteCommand*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_ReliableDbConnection_ExecuteCommand_System_Data_IDbCommand_" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection.ExecuteCommand(System.Data.IDbCommand)">ExecuteCommand(IDbCommand)</h4>
+  <div class="markdown level1 summary"><p>Executes a SQL command and returns the number of rows affected.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int ExecuteCommand(IDbCommand command)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.IDbCommand</span></td>
+        <td><span class="parametername">command</span></td>
+        <td><p>The SQL command to be executed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The number of rows affected.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_ReliableDbConnection_ExecuteCommand_" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection.ExecuteCommand*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_ReliableDbConnection_ExecuteCommand_System_Data_IDbCommand_MilestoneTG_TransientFaultHandling_RetryPolicy_" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection.ExecuteCommand(System.Data.IDbCommand,MilestoneTG.TransientFaultHandling.RetryPolicy)">ExecuteCommand(IDbCommand, RetryPolicy)</h4>
+  <div class="markdown level1 summary"><p>Executes a SQL command and returns the number of rows affected.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int ExecuteCommand(IDbCommand command, RetryPolicy retryPolicy)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.IDbCommand</span></td>
+        <td><span class="parametername">command</span></td>
+        <td><p>The SQL command to be executed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MilestoneTG.TransientFaultHandling.RetryPolicy.html">RetryPolicy</a></td>
+        <td><span class="parametername">retryPolicy</span></td>
+        <td><p>The retry policy that defines whether to retry a command if a connection fails while executing the command.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The number of rows affected.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_ReliableDbConnection_ExecuteCommand_" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection.ExecuteCommand*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_ReliableDbConnection_ExecuteCommand__1_System_Data_IDbCommand_" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection.ExecuteCommand``1(System.Data.IDbCommand)">ExecuteCommand&lt;T&gt;(IDbCommand)</h4>
+  <div class="markdown level1 summary"><p>Executes a SQL command and returns a result that is defined by the specified type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code>. This method uses the retry policy specified when 
+instantiating the SqlAzureConnection class (or the default retry policy if no policy was set at construction time).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T ExecuteCommand&lt;T&gt;(IDbCommand command)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.IDbCommand</span></td>
+        <td><span class="parametername">command</span></td>
+        <td><p>The SQL command to be executed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><p>An instance of an IDataReader, XmlReader, or any other .NET Framework object that contains the result.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>IDataReader, XmlReader, or any other .NET Framework type that defines the type of result to be returned.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_ReliableDbConnection_ExecuteCommand_" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection.ExecuteCommand*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_ReliableDbConnection_ExecuteCommand__1_System_Data_IDbCommand_MilestoneTG_TransientFaultHandling_RetryPolicy_" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection.ExecuteCommand``1(System.Data.IDbCommand,MilestoneTG.TransientFaultHandling.RetryPolicy)">ExecuteCommand&lt;T&gt;(IDbCommand, RetryPolicy)</h4>
+  <div class="markdown level1 summary"><p>Executes a SQL command by using the specified retry policy, and returns a result that is defined by the specified type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T ExecuteCommand&lt;T&gt;(IDbCommand command, RetryPolicy retryPolicy)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.IDbCommand</span></td>
+        <td><span class="parametername">command</span></td>
+        <td><p>The SQL command to be executed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MilestoneTG.TransientFaultHandling.RetryPolicy.html">RetryPolicy</a></td>
+        <td><span class="parametername">retryPolicy</span></td>
+        <td><p>The retry policy that defines whether to retry a command if a connection fails while executing the command.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><p>An instance of an IDataReader, XmlReader, or any other .NET Frameork object that contains the result.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>IDataReader, XmlReader, or any other .NET Framework type that defines the type of result to be returned.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_ReliableDbConnection_ExecuteCommand_" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection.ExecuteCommand*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_ReliableDbConnection_ExecuteCommand__1_System_Data_IDbCommand_MilestoneTG_TransientFaultHandling_RetryPolicy_System_Data_CommandBehavior_" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection.ExecuteCommand``1(System.Data.IDbCommand,MilestoneTG.TransientFaultHandling.RetryPolicy,System.Data.CommandBehavior)">ExecuteCommand&lt;T&gt;(IDbCommand, RetryPolicy, CommandBehavior)</h4>
+  <div class="markdown level1 summary"><p>Executes a SQL command by using the specified retry policy, and returns a result that is defined by the specified type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T ExecuteCommand&lt;T&gt;(IDbCommand command, RetryPolicy retryPolicy, CommandBehavior behavior)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.IDbCommand</span></td>
+        <td><span class="parametername">command</span></td>
+        <td><p>The SQL command to be executed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MilestoneTG.TransientFaultHandling.RetryPolicy.html">RetryPolicy</a></td>
+        <td><span class="parametername">retryPolicy</span></td>
+        <td><p>The retry policy that defines whether to retry a command if a connection fails while executing the command.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Data.CommandBehavior</span></td>
+        <td><span class="parametername">behavior</span></td>
+        <td><p>A description of the results of the query and its effect on the database.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><p>An instance of an IDataReader, XmlReader, or any other .NET Frameork object that contains the result.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>IDataReader, XmlReader, or any other .NET Framework type that defines the type of result to be returned.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_ReliableDbConnection_ExecuteCommand_" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection.ExecuteCommand*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_ReliableDbConnection_ExecuteCommand__1_System_Data_IDbCommand_System_Data_CommandBehavior_" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection.ExecuteCommand``1(System.Data.IDbCommand,System.Data.CommandBehavior)">ExecuteCommand&lt;T&gt;(IDbCommand, CommandBehavior)</h4>
+  <div class="markdown level1 summary"><p>Executes a SQL command and returns a result that is defined by the specified type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code>. This method uses the retry policy specified when 
+instantiating the SqlAzureConnection class (or the default retry policy if no policy was set at construction time).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T ExecuteCommand&lt;T&gt;(IDbCommand command, CommandBehavior behavior)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.IDbCommand</span></td>
+        <td><span class="parametername">command</span></td>
+        <td><p>The SQL command to be executed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Data.CommandBehavior</span></td>
+        <td><span class="parametername">behavior</span></td>
+        <td><p>A description of the results of the query and its effect on the database.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><p>An instance of an IDataReader, XmlReader, or any other .NET Frameork object that contains the result.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>IDataReader, XmlReader, or any other .NET Framework type that defines the type of result to be returned.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_ReliableDbConnection_ExecuteXmlReader_" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection.ExecuteXmlReader*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_ReliableDbConnection_ExecuteXmlReader__1_System_Data_IDbCommand_System_Data_CommandBehavior_System_Boolean_" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection.ExecuteXmlReader``1(System.Data.IDbCommand,System.Data.CommandBehavior,System.Boolean)">ExecuteXmlReader&lt;T&gt;(IDbCommand, CommandBehavior, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract T ExecuteXmlReader&lt;T&gt;(IDbCommand command, CommandBehavior behavior, bool closeOpenedConnectionOnSuccess)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.IDbCommand</span></td>
+        <td><span class="parametername">command</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Data.CommandBehavior</span></td>
+        <td><span class="parametername">behavior</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">closeOpenedConnectionOnSuccess</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_ReliableDbConnection_Open_" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection.Open*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_ReliableDbConnection_Open" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection.Open">Open()</h4>
+  <div class="markdown level1 summary"><p>Opens a database connection with the settings specified by the ConnectionString and ConnectionRetryPolicy properties.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DbConnection Open()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.Common.DbConnection</span></td>
+        <td><p>An object that represents the open connection.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_ReliableDbConnection_Open_" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection.Open*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_ReliableDbConnection_Open_MilestoneTG_TransientFaultHandling_RetryPolicy_" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection.Open(MilestoneTG.TransientFaultHandling.RetryPolicy)">Open(RetryPolicy)</h4>
+  <div class="markdown level1 summary"><p>Opens a database connection with the settings specified by the connection string and the specified retry policy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DbConnection Open(RetryPolicy retryPolicy)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MilestoneTG.TransientFaultHandling.RetryPolicy.html">RetryPolicy</a></td>
+        <td><span class="parametername">retryPolicy</span></td>
+        <td><p>The retry policy that defines whether to retry a request if the connection fails to open.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.Common.DbConnection</span></td>
+        <td><p>An object that represents the open connection.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_ReliableDbConnection_System_Data_IDbConnection_CreateCommand_" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection.System#Data#IDbConnection#CreateCommand*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_ReliableDbConnection_System_Data_IDbConnection_CreateCommand" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection.System#Data#IDbConnection#CreateCommand">IDbConnection.CreateCommand()</h4>
+  <div class="markdown level1 summary"><p>Creates and returns an object that implements the IDbCommand interface that is associated 
+with the underlying SqlConnection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IDbCommand IDbConnection.CreateCommand()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.IDbCommand</span></td>
+        <td><p>A System.Data.SqlClient.SqlCommand object that is associated with the underlying connection.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_ReliableDbConnection_System_Data_IDbConnection_Open_" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection.System#Data#IDbConnection#Open*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_ReliableDbConnection_System_Data_IDbConnection_Open" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection.System#Data#IDbConnection#Open">IDbConnection.Open()</h4>
+  <div class="markdown level1 summary"><p>Opens a database connection with the settings specified by the ConnectionString
+property of the provider-specific Connection object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void IDbConnection.Open()</code></pre>
+  </div>
+  
+  
+  <a id="MilestoneTG_TransientFaultHandling_ReliableDbConnection_System_ICloneable_Clone_" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection.System#ICloneable#Clone*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_ReliableDbConnection_System_ICloneable_Clone" data-uid="MilestoneTG.TransientFaultHandling.ReliableDbConnection.System#ICloneable#Clone">ICloneable.Clone()</h4>
+  <div class="markdown level1 summary"><p>Creates a new connection that is a copy of the current instance, including the connection
+string, connection retry policy, and command retry policy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">object ICloneable.Clone()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><p>A new object that is a copy of this instance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.Data.IDbConnection</span>
+  </div>
+  <div>
+      <span class="xref">System.IDisposable</span>
+  </div>
+  <div>
+      <span class="xref">System.ICloneable</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Licensed under MIT
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
