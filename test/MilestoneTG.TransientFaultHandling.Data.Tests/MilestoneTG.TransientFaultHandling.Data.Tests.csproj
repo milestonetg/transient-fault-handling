@@ -15,8 +15,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\src\MilestoneTG.TransientFaultHandling.Data.SqlServer\MilestoneTG.TransientFaultHandling.Data.SqlServer.csproj" />
     <ProjectReference Include="..\..\src\MilestoneTG.TransientFaultHandling.Data\MilestoneTG.TransientFaultHandling.Data.csproj" />
-    <ProjectReference Include="..\..\src\MilestoneTG.TransientFaultHandlingv.Data.SqlServer\MilestoneTG.TransientFaultHandling.Data.SqlServer.csproj" />
     <ProjectReference Include="..\TransientFaultHandling.TestSupport\TransientFaultHandling.TestSupport.csproj" />
   </ItemGroup>
 
