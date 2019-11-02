@@ -1,10 +1,10 @@
-name: $(ReleaseVersionNumber) build $(Rev:r)
+name: $(ReleaseVersionNumber).$(Build)
 variables:
   ReleaseVersionNumber: 2.0.0
-  CicdVersionNumber: $(ReleaseVersionNumber)-beta$(Rev:r)
-  AssemblyVersion: $(ReleaseVersionNumber).$(Rev:r)
-  InformationalVersion: '$(ReleaseVersionNumber) build $(Rev:r)'
-  PackageVersion: $(ReleaseVersionNumber)
+  Build: $[couunter(variables['ReleaseVersionNumber']), 1]
+  CicdVersionNumber: $(ReleaseVersionNumber)-beta$(Build)
+  AssemblyVersion: $(Build.BuildNumber)
+  InformationalVersion: $(Build.BuildNumber)
 
 trigger:
   paths:
@@ -23,7 +23,7 @@ jobs:
           command: restore
           configuration: release
           projects: |
-            src/**/*.csproj
+            **/*.csproj
 
       - task: DotNetCoreCLI@2
         displayName: Build
@@ -40,7 +40,6 @@ jobs:
           command: pack
           nobuild: true
           configuration: release
-          arguments: -:PackageVersion=$(PackageVersion)
           packagesToPack: |
             src/**/*.csproj
           packDirectory: '$(Build.ArtifactStagingDirectory)/cicd'
