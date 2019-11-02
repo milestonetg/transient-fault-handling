@@ -29,7 +29,7 @@ jobs:
         displayName: Build
         inputs:
           command: build
-          arguments: --no-restore -p:Version=$(AssemblyVersion) -p:InformationalVersion='$(InformationalVersion)'
+          arguments: --no-restore -p:Version=$(AssemblyVersion) -p:InformationalVersion=\"$(InformationalVersion)\"
           configuration: release
           projects: |
             src/**/*.csproj
