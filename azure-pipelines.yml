@@ -38,7 +38,7 @@ jobs:
         inputs:
           command: custom
           custom: pack
-          arguments: --no-restore --no-build -c release -p:PackageVersion=$(PrereleaseVersionNumber) -o '$(Build.ArtifactStagingDirectory)/cicd'
+          arguments: --no-build -c release -p:PackageVersion=$(PrereleaseVersionNumber) -o $(Build.ArtifactStagingDirectory)/cicd
           projects: |
             src/**/*.csproj
 
@@ -47,7 +47,7 @@ jobs:
         inputs:
           command: custom
           custom: pack
-          arguments: --no-restore --no-build -c release -p:PackageVersion=$(ReleaseVersionNumber) -o '$(Build.ArtifactStagingDirectory)/dist'
+          arguments: --no-build -c release -p:PackageVersion=$(ReleaseVersionNumber) -o $(Build.ArtifactStagingDirectory)/dist
           projects: |
             src/**/*.csproj
 
