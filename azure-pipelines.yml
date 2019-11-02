@@ -1,7 +1,7 @@
 name: $(ReleaseVersionNumber).$(Build)
 variables:
   ReleaseVersionNumber: 2.0.0
-  Build: $[counter(variables['ReleaseVersionNumber']), 1]
+  Build: $[counter(variables['ReleaseVersionNumber'], 1)]
   CicdVersionNumber: $(ReleaseVersionNumber)-beta$(Build)
   AssemblyVersion: $(Build.BuildNumber)
   InformationalVersion: $(Build.BuildNumber)
