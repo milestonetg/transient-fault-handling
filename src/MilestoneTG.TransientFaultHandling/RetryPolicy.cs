@@ -23,6 +23,28 @@ namespace MilestoneTG.TransientFaultHandling
         private static RetryPolicy noRetry = new RetryPolicy(new TransientErrorIgnoreStrategy(), RetryStrategy.NoRetry);
 
         /// <summary>
+        /// Initializes a new instance of the <see cref="RetryPolicy"/> class using the supplied options.
+        /// </summary>
+        /// <param name="errorDetectionStrategy">The error detection strategy.</param>
+        /// <param name="options">The options.</param>
+        public RetryPolicy(ITransientErrorDetectionStrategy errorDetectionStrategy, RetryPolicyOptions options)
+        {
+            this.ErrorDetectionStrategy = errorDetectionStrategy;
+
+            switch (options.RetryStrategyName)
+            {
+                case RetryPolicyOptions.EXPONENTIAL:
+                    this.RetryStrategy = new ExponentialBackoffRetryStrategy(options.RetryCount, options.MinBackoff, options.MaxBackoff, options.DeltaBackoff);
+                    break;
+                case RetryPolicyOptions.INCREMENTAL:
+                    this.RetryStrategy = new IncrementalRetryStrategy(options.RetryCount, options.Interval, options.Increment);
+                    break;
+                case RetryPolicyOptions.FIXED:
+                    this.RetryStrategy = new FixedIntervalRetryStrategy(options.RetryCount, options.Interval);
+                    break;
+            }
+        }
+        /// <summary>
         /// Initializes a new instance of the <see cref="RetryPolicy"/> class with the specified number of retry 
         /// attempts and parameters defining the progressive delay between retries.
         /// </summary>
@@ -35,12 +57,6 @@ namespace MilestoneTG.TransientFaultHandling
             Guard.ArgumentNotNull(retryStrategy, "retryPolicy");
 
             this.ErrorDetectionStrategy = errorDetectionStrategy;
-
-            if (errorDetectionStrategy == null)
-            {
-                throw new InvalidOperationException(TransientFaultHandling.Properties.Resources.ITransientErrorDetectionStrategyNotImplemented);
-            }
-
             this.RetryStrategy = retryStrategy;
         }
 

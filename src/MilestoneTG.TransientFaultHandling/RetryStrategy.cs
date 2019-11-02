@@ -22,7 +22,7 @@ namespace MilestoneTG.TransientFaultHandling
         /// <summary>
         /// Represents the default number of retry attempts.
         /// </summary>
-        public static readonly int DefaultClientRetryCount = 10;
+        public static readonly int DefaultClientRetryCount = 3;
 
         /// <summary>
         /// Represents the default interval between retries.

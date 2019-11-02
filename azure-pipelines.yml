@@ -1,0 +1,63 @@
+name: $(ReleaseVersionNumber) build $(Rev:r)
+variables:
+  ReleaseVersionNumber: 2.0.0
+  CicdVersionNumber: $(ReleaseVersionNumber)-beta$(Rev:r)
+  AssemblyVersion: $(ReleaseVersionNumber).$(Rev:r)
+  InformationalVersion: '$(ReleaseVersionNumber) build $(Rev:r)'
+  PackageVersion: $(ReleaseVersionNumber)
+
+trigger:
+  paths:
+    include:
+      - src
+    
+jobs:
+  - job:
+    displayName: 'Build, test, pacakge'
+    pool:
+      vmImage: windows-latest
+    steps:
+      - task: DotNetCoreCLI@2
+        displayName: Restore packages
+        inputs:
+          command: restore
+          configuration: release
+          projects: |
+            src/**/*.csproj
+
+      - task: DotNetCoreCLI@2
+        displayName: Build
+        inputs:
+          command: build
+          arguments: --no-restore -p:Version=$(AssemblyVersion) -p:InformationalVersion=$(InformationalVersion)
+          configuration: release
+          projects: |
+            src/**/*.csproj
+            
+      - task: DotNetCoreCLI@2
+        displayName: Pack for unstable
+        inputs:
+          command: pack
+          nobuild: true
+          configuration: release
+          arguments: -:PackageVersion=$(PackageVersion)
+          packagesToPack: |
+            src/**/*.csproj
+          packDirectory: '$(Build.ArtifactStagingDirectory)/cicd'
+          versioningScheme: byEnvVar
+          versionEnvVar: CicdVersionNumber
+
+      - task: DotNetCoreCLI@2
+        displayName: Pack for stable
+        inputs:
+          command: pack
+          nobuild: true
+          configuration: release
+          packagesToPack: |
+            src/**/*.csproj
+          packDirectory: '$(Build.ArtifactStagingDirectory)/cicd'
+          versioningScheme: byEnvVar
+          versionEnvVar: ReleaseVersionNumber
+
+      - task: PublishBuildArtifacts@1
+        displayName: 'Publish Artifact: drop'

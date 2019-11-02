@@ -19,12 +19,20 @@ namespace MilestoneTG.TransientFaultHandling.Http
         private readonly TimeSpan DefaultMaxBackoff = new TimeSpan(0, 0, 10);
         private readonly TimeSpan DefaultMinBackoff = new TimeSpan(0, 0, 1);
 
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="RetryDelegatingHandler"/> class using the supplied options. 
+        /// </summary>
+        public RetryDelegatingHandler(HttpRetryPolicyOptions options)
+        {
+            RetryPolicy = new RetryPolicy(new HttpStatusCodeErrorDetectionStrategy(options), options);
+        }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="RetryDelegatingHandler"/> class. 
         /// Sets default retry policy base on Exponential Backoff.
-        /// Sets the InnerHandler to a new HttpClientHandler.
         /// </summary>
-        public RetryDelegatingHandler() : base(new HttpClientHandler())
+        public RetryDelegatingHandler() 
         {
             var retryStrategy = new ExponentialBackoffRetryStrategy(
                 DefaultNumberOfAttempts,
@@ -37,28 +45,39 @@ namespace MilestoneTG.TransientFaultHandling.Http
         /// <summary>
         /// Initializes a new instance of the <see cref="RetryDelegatingHandler"/> class. Sets 
         /// the default retry policy base on Exponential Backoff.
+        /// Sets the InnerHandler to the provided HttpMessageHandler.
         /// </summary>
         /// <param name="innerHandler">Inner http handler.</param>
         public RetryDelegatingHandler(HttpMessageHandler innerHandler)
-            : base(innerHandler)
+            : this()
         {
-            var retryStrategy = new ExponentialBackoffRetryStrategy(
-                DefaultNumberOfAttempts,
-                DefaultMinBackoff,
-                DefaultMaxBackoff,
-                DefaultBackoffDelta);
-            RetryPolicy = new RetryPolicy<HttpStatusCodeErrorDetectionStrategy>(retryStrategy);
+            InnerHandler = innerHandler;
         }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="RetryDelegatingHandler"/> class. 
         /// </summary>
         /// <param name="retryPolicy">Retry policy to use.</param>
-        /// <param name="innerHandler">Inner http handler.</param>
-        public RetryDelegatingHandler(RetryPolicy retryPolicy, HttpMessageHandler innerHandler)
-            : base(innerHandler)
+        public RetryDelegatingHandler(RetryPolicy retryPolicy)
         {
             RetryPolicy = retryPolicy ?? throw new ArgumentNullException("retryPolicy");
+
+            RetryPolicy.Retrying += (sender, args) =>
+            {
+                internalRetrying?.Invoke(sender, args);
+            };
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="RetryDelegatingHandler"/> class with the provided
+        /// RetryPolicy and sets the InnerHandler to the provided HttpMessageHandler.
+        /// </summary>
+        /// <param name="retryPolicy">Retry policy to use.</param>
+        /// <param name="innerHandler">Inner http handler.</param>
+        public RetryDelegatingHandler(RetryPolicy retryPolicy, HttpMessageHandler innerHandler)
+            : this(retryPolicy)
+        {
+            InnerHandler = innerHandler;
         }
 
         /// <summary>
@@ -77,11 +96,6 @@ namespace MilestoneTG.TransientFaultHandling.Http
         protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request,
             CancellationToken cancellationToken)
         {
-            RetryPolicy.Retrying += (sender, args) =>
-            {
-                Retrying?.Invoke(sender, args);
-            };
-
             HttpResponseMessage responseMessage = null;
             try
             {
@@ -92,7 +106,7 @@ namespace MilestoneTG.TransientFaultHandling.Http
                     if (!responseMessage.IsSuccessStatusCode)
                     {
                         // dispose the message unless we have stopped retrying
-                        this.Retrying += (sender, args) =>
+                        this.internalRetrying += (sender, args) =>
                         {
                             if (responseMessage != null)
                             {
@@ -126,11 +140,11 @@ namespace MilestoneTG.TransientFaultHandling.Http
             }
             finally
             {
-                if (Retrying != null)
+                if (internalRetrying != null)
                 {
-                    foreach (EventHandler<RetryingEventArgs> d in Retrying.GetInvocationList())
+                    foreach (EventHandler<RetryingEventArgs> d in internalRetrying.GetInvocationList())
                     {
-                        Retrying -= d;
+                        internalRetrying -= d;
                     }
                 }
             }
@@ -139,6 +153,6 @@ namespace MilestoneTG.TransientFaultHandling.Http
         /// <summary>
         /// An instance of a callback delegate that will be invoked whenever a retry condition is encountered.
         /// </summary>
-        private event EventHandler<RetryingEventArgs> Retrying;
+        private event EventHandler<RetryingEventArgs> internalRetrying;
     }
 }

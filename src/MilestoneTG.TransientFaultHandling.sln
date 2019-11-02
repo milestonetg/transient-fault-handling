@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27428.2015
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29411.108
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MilestoneTG.TransientFaultHandling", "MilestoneTG.TransientFaultHandling\MilestoneTG.TransientFaultHandling.csproj", "{95490C1D-B79B-49F5-BA45-6D8887636533}"
 EndProject
@@ -22,6 +22,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.Tests", "..\test\MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.Tests\MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.Tests.csproj", "{A3CAF57D-D865-4C93-9A3D-9C944AEAE13A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MilestoneTG.TransientFaultHandling.Data.SqlServer", "MilestoneTG.TransientFaultHandling.Data.SqlServer\MilestoneTG.TransientFaultHandling.Data.SqlServer.csproj", "{709933EB-3C8B-43F5-8B72-01D3568D9527}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilestoneTG.TransientFaultHandling.Http.Extensions", "MilestoneTG.TransientFaultHandling.Http.Extensions\MilestoneTG.TransientFaultHandling.Http.Extensions.csproj", "{EDB7A0A1-8086-4FB3-BB6E-A124F44B8B63}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -65,6 +67,10 @@ Global
 		{709933EB-3C8B-43F5-8B72-01D3568D9527}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{709933EB-3C8B-43F5-8B72-01D3568D9527}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{709933EB-3C8B-43F5-8B72-01D3568D9527}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDB7A0A1-8086-4FB3-BB6E-A124F44B8B63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDB7A0A1-8086-4FB3-BB6E-A124F44B8B63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDB7A0A1-8086-4FB3-BB6E-A124F44B8B63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDB7A0A1-8086-4FB3-BB6E-A124F44B8B63}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

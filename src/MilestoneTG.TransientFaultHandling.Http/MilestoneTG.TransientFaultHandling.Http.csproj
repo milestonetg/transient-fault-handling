@@ -7,15 +7,17 @@
       Transient fault handling for HttpClient based on Microsoft's implementation.
     </Description>
     <Authors>milestonetg</Authors>
+    <PackageTags>HttpClient;TransientFaultHandling</PackageTags>
   </PropertyGroup>
 
   <ItemGroup Condition="$(TargetFramework)=='net45'">
     <Reference Include="System.Net.Http" />
   </ItemGroup>
-  <!--<ItemGroup Condition="$(TargetFramework)!='net45'">
-    <PackageReference Include="System.Net.Http" Version="4.3.2" />
-  </ItemGroup>-->
 
+  <ItemGroup Condition="$(TargetFramework)!='net45'">
+    <PackageReference Include="System.Net.Http" Version="4.3.4" />
+  </ItemGroup>
+  
   <ItemGroup>
     <ProjectReference Include="..\MilestoneTG.TransientFaultHandling\MilestoneTG.TransientFaultHandling.csproj" />
   </ItemGroup>

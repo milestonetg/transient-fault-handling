@@ -26,7 +26,15 @@ namespace MilestoneTG.TransientFaultHandling.Http
         /// </summary>
         public HttpStatusCodeErrorDetectionStrategy() : this(true, false)
         {
+        }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="HttpStatusCodeErrorDetectionStrategy"/> class using the supplied options.
+        /// </summary>
+        /// <param name="options">The options.</param>
+        public HttpStatusCodeErrorDetectionStrategy(HttpRetryPolicyOptions options)
+            :this(options.IncludeTimeouts, options.IncludeServerErrors)
+        {
         }
 
         /// <summary>
