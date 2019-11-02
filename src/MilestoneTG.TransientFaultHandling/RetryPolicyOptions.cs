@@ -24,6 +24,13 @@ namespace MilestoneTG.TransientFaultHandling
         public const string FIXED = "Fixed";
 
         /// <summary>
+        /// Gets or sets whether or not retry is enabled. Setting to false sets the 
+        /// strategy to NoRetry.
+        /// </summary>
+        /// <value></value>
+        public bool Enabled { get; set; }
+
+        /// <summary>
         /// Gets or sets the name of the retry strategy. Value must be one of the consts.
         /// </summary>
         /// <value>The name of the retry strategy.</value>

@@ -29,19 +29,27 @@ namespace MilestoneTG.TransientFaultHandling
         /// <param name="options">The options.</param>
         public RetryPolicy(ITransientErrorDetectionStrategy errorDetectionStrategy, RetryPolicyOptions options)
         {
-            this.ErrorDetectionStrategy = errorDetectionStrategy;
-
-            switch (options.RetryStrategyName)
+            if (options.Enabled)
             {
-                case RetryPolicyOptions.EXPONENTIAL:
-                    this.RetryStrategy = new ExponentialBackoffRetryStrategy(options.RetryCount, options.MinBackoff, options.MaxBackoff, options.DeltaBackoff);
-                    break;
-                case RetryPolicyOptions.INCREMENTAL:
-                    this.RetryStrategy = new IncrementalRetryStrategy(options.RetryCount, options.Interval, options.Increment);
-                    break;
-                case RetryPolicyOptions.FIXED:
-                    this.RetryStrategy = new FixedIntervalRetryStrategy(options.RetryCount, options.Interval);
-                    break;
+                this.ErrorDetectionStrategy = errorDetectionStrategy;
+
+                switch (options.RetryStrategyName)
+                {
+                    case RetryPolicyOptions.EXPONENTIAL:
+                        this.RetryStrategy = new ExponentialBackoffRetryStrategy(options.RetryCount, options.MinBackoff, options.MaxBackoff, options.DeltaBackoff);
+                        break;
+                    case RetryPolicyOptions.INCREMENTAL:
+                        this.RetryStrategy = new IncrementalRetryStrategy(options.RetryCount, options.Interval, options.Increment);
+                        break;
+                    case RetryPolicyOptions.FIXED:
+                        this.RetryStrategy = new FixedIntervalRetryStrategy(options.RetryCount, options.Interval);
+                        break;
+                }
+            }
+            else
+            {
+                this.ErrorDetectionStrategy = new TransientErrorIgnoreStrategy();
+                this.RetryStrategy = RetryStrategy.NoRetry;
             }
         }
         /// <summary>
