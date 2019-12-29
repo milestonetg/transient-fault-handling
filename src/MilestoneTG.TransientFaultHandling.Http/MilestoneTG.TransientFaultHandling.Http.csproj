@@ -7,7 +7,13 @@
       Transient fault handling for HttpClient based on Microsoft's implementation.
     </Description>
     <Authors>milestonetg</Authors>
-    <PackageTags>HttpClient;TransientFaultHandling</PackageTags>
+    <PackageTags>microservices;transient fault handling;resiliency;httpclient</PackageTags>
+    <RepositoryUrl>https://github.com/milestonetg/transient-fault-handling</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/milestonetg/transient-fault-handling</PackageProjectUrl>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <Copyright>MIT License, Copyright (C) 2019 - Milestone Technology Group, LLC</Copyright>
+    <Company>Milestone Technology Group, LLC</Company>
+
   </PropertyGroup>
 
   <ItemGroup Condition="$(TargetFramework)=='net45'">

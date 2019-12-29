@@ -1,9 +1,13 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;net461</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;net452</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <PackageTags>microservices;transient fault handling;resiliency;nhibernate;sql server;mssql</PackageTags>
+    <Description>
+      Transient fault handling for MySQL Server Client. Supports MySql, MariaDB, Percona, Azure, AWS Aurora.
+    </Description>
+    <Authors>milestonetg</Authors>
+    <PackageTags>microservices;transient fault handling;resiliency;mysql</PackageTags>
     <RepositoryUrl>https://github.com/milestonetg/transient-fault-handling</RepositoryUrl>
     <PackageProjectUrl>https://github.com/milestonetg/transient-fault-handling</PackageProjectUrl>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
@@ -12,12 +16,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="NBuilder" Version="5.0.0" />
-    <PackageReference Include="NHibernate" Version="5.1.1" />
+    <PackageReference Include="MySqlConnector" Version="0.61.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MilestoneTG.TransientFaultHandling.Data.SqlServer\MilestoneTG.TransientFaultHandling.Data.SqlServer.csproj" />
+    <ProjectReference Include="..\MilestoneTG.TransientFaultHandling.Data\MilestoneTG.TransientFaultHandling.Data.csproj" />
   </ItemGroup>
 
 </Project>

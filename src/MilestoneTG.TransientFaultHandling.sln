@@ -23,7 +23,16 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MilestoneTG.NHibernate.Tran
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MilestoneTG.TransientFaultHandling.Data.SqlServer", "MilestoneTG.TransientFaultHandling.Data.SqlServer\MilestoneTG.TransientFaultHandling.Data.SqlServer.csproj", "{709933EB-3C8B-43F5-8B72-01D3568D9527}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilestoneTG.TransientFaultHandling.Http.Extensions", "MilestoneTG.TransientFaultHandling.Http.Extensions\MilestoneTG.TransientFaultHandling.Http.Extensions.csproj", "{EDB7A0A1-8086-4FB3-BB6E-A124F44B8B63}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MilestoneTG.TransientFaultHandling.Http.Extensions", "MilestoneTG.TransientFaultHandling.Http.Extensions\MilestoneTG.TransientFaultHandling.Http.Extensions.csproj", "{EDB7A0A1-8086-4FB3-BB6E-A124F44B8B63}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilestoneTG.TransientFaultHandling.Data.MySql", "MilestoneTG.TransientFaultHandling.Data.MySQL\MilestoneTG.TransientFaultHandling.Data.MySql.csproj", "{29947BA1-F4BD-4C08-B20C-63701BE2CD19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilestoneTG.TransientFaultHandling.Data.Postgres", "MilestoneTG.TransientFaultHandling.Data.Postgres\MilestoneTG.TransientFaultHandling.Data.Postgres.csproj", "{095E6878-CAA5-4872-AE06-5A9C1AA22D40}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_build", "_build", "{B9B9E04F-1D0E-47EB-B021-90F019986EA6}"
+	ProjectSection(SolutionItems) = preProject
+		..\azure-pipelines.yml = ..\azure-pipelines.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,6 +80,14 @@ Global
 		{EDB7A0A1-8086-4FB3-BB6E-A124F44B8B63}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EDB7A0A1-8086-4FB3-BB6E-A124F44B8B63}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EDB7A0A1-8086-4FB3-BB6E-A124F44B8B63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29947BA1-F4BD-4C08-B20C-63701BE2CD19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29947BA1-F4BD-4C08-B20C-63701BE2CD19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29947BA1-F4BD-4C08-B20C-63701BE2CD19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29947BA1-F4BD-4C08-B20C-63701BE2CD19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{095E6878-CAA5-4872-AE06-5A9C1AA22D40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{095E6878-CAA5-4872-AE06-5A9C1AA22D40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{095E6878-CAA5-4872-AE06-5A9C1AA22D40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{095E6878-CAA5-4872-AE06-5A9C1AA22D40}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

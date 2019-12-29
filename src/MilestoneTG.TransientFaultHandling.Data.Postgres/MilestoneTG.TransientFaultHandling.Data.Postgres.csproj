@@ -1,14 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;net451</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;net452</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Description>
-      Transient fault handling for Microsft SQL Server Client based on Microsoft's implementation in their
-      Enterperise Library Transient Fault Handling Block.
+      Transient fault handling for Npgsql ProstgeSQL client. Supports PostgreSQL, Percona, Azure, AWS Aurora, AWS Red Shift.
     </Description>
     <Authors>milestonetg</Authors>
-    <PackageTags>microservices;transient fault handling;resiliency;sql server;mssql</PackageTags>
+    <PackageTags>microservices;transient fault handling;resiliency;postgresql</PackageTags>
     <RepositoryUrl>https://github.com/milestonetg/transient-fault-handling</RepositoryUrl>
     <PackageProjectUrl>https://github.com/milestonetg/transient-fault-handling</PackageProjectUrl>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
@@ -17,7 +16,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.Data.SqlClient" Version="4.4.0" />
+    <None Include="..\..\LICENSE" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)'=='net452'">
+    <PackageReference Include="Npgsql" Version="4.0.10" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)'!='net452'">
+    <PackageReference Include="Npgsql" Version="4.1.2" />
   </ItemGroup>
 
   <ItemGroup>
