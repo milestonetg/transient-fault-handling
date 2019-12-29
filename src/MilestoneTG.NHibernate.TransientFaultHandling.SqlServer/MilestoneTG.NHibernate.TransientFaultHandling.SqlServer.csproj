@@ -12,6 +12,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="..\..\LICENSE" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="NBuilder" Version="5.0.0" />
     <PackageReference Include="NHibernate" Version="5.1.1" />
   </ItemGroup>

@@ -16,6 +16,10 @@
 
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Include="..\..\LICENSE" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
   <ItemGroup Condition="$(TargetFramework)=='net45'">
     <Reference Include="System.Net.Http" />
   </ItemGroup>
