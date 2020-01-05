@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class RetryStrategy
    | Transient Fault Handling ">
-    <meta name="generator" content="docfx 2.32.2.0">
+    <meta name="generator" content="docfx 2.48.0.0">
     
     <link rel="shortcut icon" href="../images/favicon.png">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -22,7 +22,7 @@
     <meta property="docfx:rel" content="../">
     <meta property="docfx:newtab" content="true">
   </head>
-  <body data-spy="scroll" data-target="#affix">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -62,7 +62,9 @@
         
         <div id="search-results">
           <div class="search-list"></div>
-          <div class="sr-items"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
           <ul id="pagination"></ul>
         </div>
       </div>
@@ -125,8 +127,13 @@ between retries.</p>
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_RetryStrategy__ctor_System_String_System_Boolean_.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.RetryStrategy.%23ctor(System.String%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling/RetryStrategy.cs/#L53">View Source</a>
+  </span>
   <a id="MilestoneTG_TransientFaultHandling_RetryStrategy__ctor_" data-uid="MilestoneTG.TransientFaultHandling.RetryStrategy.#ctor*"></a>
   <h4 id="MilestoneTG_TransientFaultHandling_RetryStrategy__ctor_System_String_System_Boolean_" data-uid="MilestoneTG.TransientFaultHandling.RetryStrategy.#ctor(System.String,System.Boolean)">RetryStrategy(String, Boolean)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MilestoneTG.TransientFaultHandling.RetryStrategy.html">RetryStrategy</a> class. </p>
@@ -163,8 +170,13 @@ The subsequent retries will remain subject to the configured retry interval.</p>
   </table>
   <h3 id="fields">Fields
   </h3>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_RetryStrategy_DefaultClientRetryCount.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.RetryStrategy.DefaultClientRetryCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling/RetryStrategy.cs/#L25">View Source</a>
+  </span>
   <h4 id="MilestoneTG_TransientFaultHandling_RetryStrategy_DefaultClientRetryCount" data-uid="MilestoneTG.TransientFaultHandling.RetryStrategy.DefaultClientRetryCount">DefaultClientRetryCount</h4>
   <div class="markdown level1 summary"><p>Represents the default number of retry attempts.</p>
 </div>
@@ -188,8 +200,13 @@ The subsequent retries will remain subject to the configured retry interval.</p>
       </tr>
     </tbody>
   </table>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_RetryStrategy_DefaultFirstFastRetry.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.RetryStrategy.DefaultFirstFastRetry%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling/RetryStrategy.cs/#L36">View Source</a>
+  </span>
   <h4 id="MilestoneTG_TransientFaultHandling_RetryStrategy_DefaultFirstFastRetry" data-uid="MilestoneTG.TransientFaultHandling.RetryStrategy.DefaultFirstFastRetry">DefaultFirstFastRetry</h4>
   <div class="markdown level1 summary"><p>Represents the default flag indicating whether the first retry attempt will be made immediately,
 whereas subsequent retries will remain subject to the retry interval.</p>
@@ -214,8 +231,13 @@ whereas subsequent retries will remain subject to the retry interval.</p>
       </tr>
     </tbody>
   </table>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_RetryStrategy_DefaultRetryInterval.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.RetryStrategy.DefaultRetryInterval%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling/RetryStrategy.cs/#L30">View Source</a>
+  </span>
   <h4 id="MilestoneTG_TransientFaultHandling_RetryStrategy_DefaultRetryInterval" data-uid="MilestoneTG.TransientFaultHandling.RetryStrategy.DefaultRetryInterval">DefaultRetryInterval</h4>
   <div class="markdown level1 summary"><p>Represents the default interval between retries.</p>
 </div>
@@ -241,8 +263,13 @@ whereas subsequent retries will remain subject to the retry interval.</p>
   </table>
   <h3 id="properties">Properties
   </h3>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_RetryStrategy_FastFirstRetry.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.RetryStrategy.FastFirstRetry%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling/RetryStrategy.cs/#L63">View Source</a>
+  </span>
   <a id="MilestoneTG_TransientFaultHandling_RetryStrategy_FastFirstRetry_" data-uid="MilestoneTG.TransientFaultHandling.RetryStrategy.FastFirstRetry*"></a>
   <h4 id="MilestoneTG_TransientFaultHandling_RetryStrategy_FastFirstRetry" data-uid="MilestoneTG.TransientFaultHandling.RetryStrategy.FastFirstRetry">FastFirstRetry</h4>
   <div class="markdown level1 summary"><p>Gets or sets a value indicating whether the first retry attempt will be made immediately,
@@ -268,8 +295,13 @@ whereas subsequent retries will remain subject to the retry interval.</p>
       </tr>
     </tbody>
   </table>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_RetryStrategy_Name.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.RetryStrategy.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling/RetryStrategy.cs/#L68">View Source</a>
+  </span>
   <a id="MilestoneTG_TransientFaultHandling_RetryStrategy_Name_" data-uid="MilestoneTG.TransientFaultHandling.RetryStrategy.Name*"></a>
   <h4 id="MilestoneTG_TransientFaultHandling_RetryStrategy_Name" data-uid="MilestoneTG.TransientFaultHandling.RetryStrategy.Name">Name</h4>
   <div class="markdown level1 summary"><p>Gets the name of the retry strategy.</p>
@@ -294,8 +326,13 @@ whereas subsequent retries will remain subject to the retry interval.</p>
       </tr>
     </tbody>
   </table>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_RetryStrategy_NoRetry.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.RetryStrategy.NoRetry%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling/RetryStrategy.cs/#L41">View Source</a>
+  </span>
   <a id="MilestoneTG_TransientFaultHandling_RetryStrategy_NoRetry_" data-uid="MilestoneTG.TransientFaultHandling.RetryStrategy.NoRetry*"></a>
   <h4 id="MilestoneTG_TransientFaultHandling_RetryStrategy_NoRetry" data-uid="MilestoneTG.TransientFaultHandling.RetryStrategy.NoRetry">NoRetry</h4>
   <div class="markdown level1 summary"><p>Returns a default policy that performs no retries, but invokes the action only once.</p>
@@ -322,8 +359,13 @@ whereas subsequent retries will remain subject to the retry interval.</p>
   </table>
   <h3 id="methods">Methods
   </h3>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_RetryStrategy_GetShouldRetryHandler.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.RetryStrategy.GetShouldRetryHandler%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling/RetryStrategy.cs/#L74">View Source</a>
+  </span>
   <a id="MilestoneTG_TransientFaultHandling_RetryStrategy_GetShouldRetryHandler_" data-uid="MilestoneTG.TransientFaultHandling.RetryStrategy.GetShouldRetryHandler*"></a>
   <h4 id="MilestoneTG_TransientFaultHandling_RetryStrategy_GetShouldRetryHandler" data-uid="MilestoneTG.TransientFaultHandling.RetryStrategy.GetShouldRetryHandler">GetShouldRetryHandler()</h4>
   <div class="markdown level1 summary"><p>Returns the corresponding ShouldRetry delegate.</p>
@@ -356,6 +398,12 @@ whereas subsequent retries will remain subject to the retry interval.</p>
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
+                  <li>
+                    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_RetryStrategy.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.RetryStrategy%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling/RetryStrategy.cs/#L20" class="contribution-link">View Source</a>
+                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

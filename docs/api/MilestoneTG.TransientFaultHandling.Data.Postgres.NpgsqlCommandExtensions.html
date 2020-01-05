@@ -1,0 +1,585 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class NpgsqlCommandExtensions
+   | Transient Fault Handling </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class NpgsqlCommandExtensions
+   | Transient Fault Handling ">
+    <meta name="generator" content="docfx 2.48.0.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MilestoneTG.TransientFaultHandling.Data.Postgres.NpgsqlCommandExtensions">
+  
+  
+  <h1 id="MilestoneTG_TransientFaultHandling_Data_Postgres_NpgsqlCommandExtensions" data-uid="MilestoneTG.TransientFaultHandling.Data.Postgres.NpgsqlCommandExtensions" class="text-break">Class NpgsqlCommandExtensions
+  </h1>
+  <div class="markdown level0 summary"><p>Provides a set of extension methods that add retry capabilities to the standard System.Data.SqlClient.SqlCommand implementation.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">NpgsqlCommandExtensions</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MilestoneTG.TransientFaultHandling.Data.Postgres.html">MilestoneTG.TransientFaultHandling.Data.Postgres</a></h6>
+  <h6><strong>Assembly</strong>: MilestoneTG.TransientFaultHandling.Data.Postgres.dll</h6>
+  <h5 id="MilestoneTG_TransientFaultHandling_Data_Postgres_NpgsqlCommandExtensions_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class NpgsqlCommandExtensions</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Data_Postgres_NpgsqlCommandExtensions_ExecuteNonQueryWithRetry_Npgsql_NpgsqlCommand_.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Data.Postgres.NpgsqlCommandExtensions.ExecuteNonQueryWithRetry(Npgsql.NpgsqlCommand)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Data.Postgres/NpgsqlCommandExtensions.cs/#L21">View Source</a>
+  </span>
+  <a id="MilestoneTG_TransientFaultHandling_Data_Postgres_NpgsqlCommandExtensions_ExecuteNonQueryWithRetry_" data-uid="MilestoneTG.TransientFaultHandling.Data.Postgres.NpgsqlCommandExtensions.ExecuteNonQueryWithRetry*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_Postgres_NpgsqlCommandExtensions_ExecuteNonQueryWithRetry_Npgsql_NpgsqlCommand_" data-uid="MilestoneTG.TransientFaultHandling.Data.Postgres.NpgsqlCommandExtensions.ExecuteNonQueryWithRetry(Npgsql.NpgsqlCommand)">ExecuteNonQueryWithRetry(NpgsqlCommand)</h4>
+  <div class="markdown level1 summary"><p>Executes a Transact-Npgsql statement against the connection and returns the number of rows affected. Uses the default retry policy when executing the command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ExecuteNonQueryWithRetry(this NpgsqlCommand command)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Npgsql.NpgsqlCommand</span></td>
+        <td><span class="parametername">command</span></td>
+        <td><p>The command object that is required for the extension method declaration.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The number of rows affected.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Data_Postgres_NpgsqlCommandExtensions_ExecuteNonQueryWithRetryAsync_Npgsql_NpgsqlCommand_.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Data.Postgres.NpgsqlCommandExtensions.ExecuteNonQueryWithRetryAsync(Npgsql.NpgsqlCommand)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Data.Postgres/NpgsqlCommandExtensions.cs/#L31">View Source</a>
+  </span>
+  <a id="MilestoneTG_TransientFaultHandling_Data_Postgres_NpgsqlCommandExtensions_ExecuteNonQueryWithRetryAsync_" data-uid="MilestoneTG.TransientFaultHandling.Data.Postgres.NpgsqlCommandExtensions.ExecuteNonQueryWithRetryAsync*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_Postgres_NpgsqlCommandExtensions_ExecuteNonQueryWithRetryAsync_Npgsql_NpgsqlCommand_" data-uid="MilestoneTG.TransientFaultHandling.Data.Postgres.NpgsqlCommandExtensions.ExecuteNonQueryWithRetryAsync(Npgsql.NpgsqlCommand)">ExecuteNonQueryWithRetryAsync(NpgsqlCommand)</h4>
+  <div class="markdown level1 summary"><p>Executes a Transact-Npgsql statement against the connection and returns the number of rows affected. Uses the default retry policy when executing the command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;int&gt; ExecuteNonQueryWithRetryAsync(this NpgsqlCommand command)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Npgsql.NpgsqlCommand</span></td>
+        <td><span class="parametername">command</span></td>
+        <td><p>The command object that is required for the extension method declaration.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><p>The number of rows affected.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Data_Postgres_NpgsqlCommandExtensions_ExecuteReaderWithRetry_Npgsql_NpgsqlCommand_.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Data.Postgres.NpgsqlCommandExtensions.ExecuteReaderWithRetry(Npgsql.NpgsqlCommand)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Data.Postgres/NpgsqlCommandExtensions.cs/#L45">View Source</a>
+  </span>
+  <a id="MilestoneTG_TransientFaultHandling_Data_Postgres_NpgsqlCommandExtensions_ExecuteReaderWithRetry_" data-uid="MilestoneTG.TransientFaultHandling.Data.Postgres.NpgsqlCommandExtensions.ExecuteReaderWithRetry*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_Postgres_NpgsqlCommandExtensions_ExecuteReaderWithRetry_Npgsql_NpgsqlCommand_" data-uid="MilestoneTG.TransientFaultHandling.Data.Postgres.NpgsqlCommandExtensions.ExecuteReaderWithRetry(Npgsql.NpgsqlCommand)">ExecuteReaderWithRetry(NpgsqlCommand)</h4>
+  <div class="markdown level1 summary"><p>Sends the specified command to the connection and builds a NpgsqlDataReader object that contains the results.
+Uses the default retry policy when executing the command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static NpgsqlDataReader ExecuteReaderWithRetry(this NpgsqlCommand command)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Npgsql.NpgsqlCommand</span></td>
+        <td><span class="parametername">command</span></td>
+        <td><p>The command object that is required for the extension method declaration.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Npgsql.NpgsqlDataReader</span></td>
+        <td><p>A System.Data.NpgsqlClient.NpgsqlDataReader object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Data_Postgres_NpgsqlCommandExtensions_ExecuteReaderWithRetry_Npgsql_NpgsqlCommand_System_Data_CommandBehavior_.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Data.Postgres.NpgsqlCommandExtensions.ExecuteReaderWithRetry(Npgsql.NpgsqlCommand%2CSystem.Data.CommandBehavior)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Data.Postgres/NpgsqlCommandExtensions.cs/#L68">View Source</a>
+  </span>
+  <a id="MilestoneTG_TransientFaultHandling_Data_Postgres_NpgsqlCommandExtensions_ExecuteReaderWithRetry_" data-uid="MilestoneTG.TransientFaultHandling.Data.Postgres.NpgsqlCommandExtensions.ExecuteReaderWithRetry*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_Postgres_NpgsqlCommandExtensions_ExecuteReaderWithRetry_Npgsql_NpgsqlCommand_System_Data_CommandBehavior_" data-uid="MilestoneTG.TransientFaultHandling.Data.Postgres.NpgsqlCommandExtensions.ExecuteReaderWithRetry(Npgsql.NpgsqlCommand,System.Data.CommandBehavior)">ExecuteReaderWithRetry(NpgsqlCommand, CommandBehavior)</h4>
+  <div class="markdown level1 summary"><p>Sends the specified command to the connection and builds a NpgsqlDataReader object by using the specified 
+command behavior. Uses the default retry policy when executing the command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static NpgsqlDataReader ExecuteReaderWithRetry(this NpgsqlCommand command, CommandBehavior behavior)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Npgsql.NpgsqlCommand</span></td>
+        <td><span class="parametername">command</span></td>
+        <td><p>The command object that is required for the extension method declaration.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Data.CommandBehavior</span></td>
+        <td><span class="parametername">behavior</span></td>
+        <td><p>One of the enumeration values that specifies the command behavior.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Npgsql.NpgsqlDataReader</span></td>
+        <td><p>A System.Data.NpgsqlClient.NpgsqlDataReader object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Data_Postgres_NpgsqlCommandExtensions_ExecuteReaderWithRetryAsync_Npgsql_NpgsqlCommand_.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Data.Postgres.NpgsqlCommandExtensions.ExecuteReaderWithRetryAsync(Npgsql.NpgsqlCommand)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Data.Postgres/NpgsqlCommandExtensions.cs/#L56">View Source</a>
+  </span>
+  <a id="MilestoneTG_TransientFaultHandling_Data_Postgres_NpgsqlCommandExtensions_ExecuteReaderWithRetryAsync_" data-uid="MilestoneTG.TransientFaultHandling.Data.Postgres.NpgsqlCommandExtensions.ExecuteReaderWithRetryAsync*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_Postgres_NpgsqlCommandExtensions_ExecuteReaderWithRetryAsync_Npgsql_NpgsqlCommand_" data-uid="MilestoneTG.TransientFaultHandling.Data.Postgres.NpgsqlCommandExtensions.ExecuteReaderWithRetryAsync(Npgsql.NpgsqlCommand)">ExecuteReaderWithRetryAsync(NpgsqlCommand)</h4>
+  <div class="markdown level1 summary"><p>Sends the specified command to the connection and builds a NpgsqlDataReader object that contains the results.
+Uses the default retry policy when executing the command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;NpgsqlDataReader&gt; ExecuteReaderWithRetryAsync(this NpgsqlCommand command)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Npgsql.NpgsqlCommand</span></td>
+        <td><span class="parametername">command</span></td>
+        <td><p>The command object that is required for the extension method declaration.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Npgsql.NpgsqlDataReader</span>&gt;</td>
+        <td><p>A System.Data.NpgsqlClient.NpgsqlDataReader object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Data_Postgres_NpgsqlCommandExtensions_ExecuteReaderWithRetryAsync_Npgsql_NpgsqlCommand_System_Data_CommandBehavior_.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Data.Postgres.NpgsqlCommandExtensions.ExecuteReaderWithRetryAsync(Npgsql.NpgsqlCommand%2CSystem.Data.CommandBehavior)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Data.Postgres/NpgsqlCommandExtensions.cs/#L80">View Source</a>
+  </span>
+  <a id="MilestoneTG_TransientFaultHandling_Data_Postgres_NpgsqlCommandExtensions_ExecuteReaderWithRetryAsync_" data-uid="MilestoneTG.TransientFaultHandling.Data.Postgres.NpgsqlCommandExtensions.ExecuteReaderWithRetryAsync*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_Postgres_NpgsqlCommandExtensions_ExecuteReaderWithRetryAsync_Npgsql_NpgsqlCommand_System_Data_CommandBehavior_" data-uid="MilestoneTG.TransientFaultHandling.Data.Postgres.NpgsqlCommandExtensions.ExecuteReaderWithRetryAsync(Npgsql.NpgsqlCommand,System.Data.CommandBehavior)">ExecuteReaderWithRetryAsync(NpgsqlCommand, CommandBehavior)</h4>
+  <div class="markdown level1 summary"><p>Sends the specified command to the connection and builds a NpgsqlDataReader object by using the specified 
+command behavior. Uses the default retry policy when executing the command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;NpgsqlDataReader&gt; ExecuteReaderWithRetryAsync(this NpgsqlCommand command, CommandBehavior behavior)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Npgsql.NpgsqlCommand</span></td>
+        <td><span class="parametername">command</span></td>
+        <td><p>The command object that is required for the extension method declaration.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Data.CommandBehavior</span></td>
+        <td><span class="parametername">behavior</span></td>
+        <td><p>One of the enumeration values that specifies the command behavior.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Npgsql.NpgsqlDataReader</span>&gt;</td>
+        <td><p>A System.Data.NpgsqlClient.NpgsqlDataReader object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Data_Postgres_NpgsqlCommandExtensions_ExecuteScalarWithRetry_Npgsql_NpgsqlCommand_.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Data.Postgres.NpgsqlCommandExtensions.ExecuteScalarWithRetry(Npgsql.NpgsqlCommand)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Data.Postgres/NpgsqlCommandExtensions.cs/#L95">View Source</a>
+  </span>
+  <a id="MilestoneTG_TransientFaultHandling_Data_Postgres_NpgsqlCommandExtensions_ExecuteScalarWithRetry_" data-uid="MilestoneTG.TransientFaultHandling.Data.Postgres.NpgsqlCommandExtensions.ExecuteScalarWithRetry*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_Postgres_NpgsqlCommandExtensions_ExecuteScalarWithRetry_Npgsql_NpgsqlCommand_" data-uid="MilestoneTG.TransientFaultHandling.Data.Postgres.NpgsqlCommandExtensions.ExecuteScalarWithRetry(Npgsql.NpgsqlCommand)">ExecuteScalarWithRetry(NpgsqlCommand)</h4>
+  <div class="markdown level1 summary"><p>Executes the query, and returns the first column of the first row in the result set returned by the query. Additional columns or rows are ignored.
+Uses the default retry policy when executing the command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static object ExecuteScalarWithRetry(this NpgsqlCommand command)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Npgsql.NpgsqlCommand</span></td>
+        <td><span class="parametername">command</span></td>
+        <td><p>The command object that is required for the extension method declaration.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><p>The first column of the first row in the result set, or a null reference if the result set is empty. Returns a maximum of 2033 characters.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Data_Postgres_NpgsqlCommandExtensions_ExecuteScalarWithRetryAsync_Npgsql_NpgsqlCommand_.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Data.Postgres.NpgsqlCommandExtensions.ExecuteScalarWithRetryAsync(Npgsql.NpgsqlCommand)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Data.Postgres/NpgsqlCommandExtensions.cs/#L106">View Source</a>
+  </span>
+  <a id="MilestoneTG_TransientFaultHandling_Data_Postgres_NpgsqlCommandExtensions_ExecuteScalarWithRetryAsync_" data-uid="MilestoneTG.TransientFaultHandling.Data.Postgres.NpgsqlCommandExtensions.ExecuteScalarWithRetryAsync*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_Postgres_NpgsqlCommandExtensions_ExecuteScalarWithRetryAsync_Npgsql_NpgsqlCommand_" data-uid="MilestoneTG.TransientFaultHandling.Data.Postgres.NpgsqlCommandExtensions.ExecuteScalarWithRetryAsync(Npgsql.NpgsqlCommand)">ExecuteScalarWithRetryAsync(NpgsqlCommand)</h4>
+  <div class="markdown level1 summary"><p>Executes the query, and returns the first column of the first row in the result set returned by the query. Additional columns or rows are ignored.
+Uses the default retry policy when executing the command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;object&gt; ExecuteScalarWithRetryAsync(this NpgsqlCommand command)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Npgsql.NpgsqlCommand</span></td>
+        <td><span class="parametername">command</span></td>
+        <td><p>The command object that is required for the extension method declaration.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td><p>The first column of the first row in the result set, or a null reference if the result set is empty. Returns a maximum of 2033 characters.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Data_Postgres_NpgsqlCommandExtensions.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Data.Postgres.NpgsqlCommandExtensions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Data.Postgres/NpgsqlCommandExtensions.cs/#L13" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Licensed under MIT
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

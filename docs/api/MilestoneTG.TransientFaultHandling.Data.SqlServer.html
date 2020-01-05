@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace MilestoneTG.TransientFaultHandling.Data.SqlServer
    | Transient Fault Handling ">
-    <meta name="generator" content="docfx 2.32.2.0">
+    <meta name="generator" content="docfx 2.48.0.0">
     
     <link rel="shortcut icon" href="../images/favicon.png">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -22,7 +22,7 @@
     <meta property="docfx:rel" content="../">
     <meta property="docfx:newtab" content="true">
   </head>
-  <body data-spy="scroll" data-target="#affix">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -62,7 +62,9 @@
         
         <div id="search-results">
           <div class="search-list"></div>
-          <div class="sr-items"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
           <ul id="pagination"></ul>
         </div>
       </div>
@@ -86,7 +88,37 @@
     <h3 id="classes">Classes
   </h3>
       <h4><a class="xref" href="MilestoneTG.TransientFaultHandling.Data.SqlServer.ReliableSqlConnection.html">ReliableSqlConnection</a></h4>
-      <section></section>
+      <section><p>Implements transient fault handling for Microsoft SQL Server Client connections.</p>
+</section>
+      <h4><a class="xref" href="MilestoneTG.TransientFaultHandling.Data.SqlServer.RetryManagerSqlExtensions.html">RetryManagerSqlExtensions</a></h4>
+      <section><p>Extends the <a class="xref" href="MilestoneTG.TransientFaultHandling.RetryManager.html">RetryManager</a> class to use it with the SQL Database retry strategy.</p>
+</section>
+      <h4><a class="xref" href="MilestoneTG.TransientFaultHandling.Data.SqlServer.SqlCommandExtensions.html">SqlCommandExtensions</a></h4>
+      <section><p>Provides a set of extension methods that add retry capabilities to the standard System.Data.SqlClient.SqlCommand implementation.</p>
+</section>
+      <h4><a class="xref" href="MilestoneTG.TransientFaultHandling.Data.SqlServer.SqlConnectionExtensions.html">SqlConnectionExtensions</a></h4>
+      <section><p>Provides a set of extension methods that add retry capabilities to the standard <span class="xref">System.Data.SqlClient.SqlConnection</span> implementation.</p>
+</section>
+      <h4><a class="xref" href="MilestoneTG.TransientFaultHandling.Data.SqlServer.SqlDatabaseTransientErrorDetectionStrategy.html">SqlDatabaseTransientErrorDetectionStrategy</a></h4>
+      <section><p>Provides the transient error detection logic for transient faults that are specific to SQL Database.</p>
+</section>
+      <h4><a class="xref" href="MilestoneTG.TransientFaultHandling.Data.SqlServer.SqlServerNetworkConnectivityErrorDetectionStrategy.html">SqlServerNetworkConnectivityErrorDetectionStrategy</a></h4>
+      <section><p>Implements a strategy that detects network connectivity errors such as &quot;host not found&quot;.</p>
+</section>
+      <h4><a class="xref" href="MilestoneTG.TransientFaultHandling.Data.SqlServer.ThrottlingCondition.html">ThrottlingCondition</a></h4>
+      <section><p>Implements an object that holds the decoded reason code returned from SQL Database when throttling conditions are encountered.</p>
+</section>
+    <h3 id="enums">Enums
+  </h3>
+      <h4><a class="xref" href="MilestoneTG.TransientFaultHandling.Data.SqlServer.ThrottledResourceType.html">ThrottledResourceType</a></h4>
+      <section><p>Defines the types of resources in SQL Database that may be subject to throttling conditions.</p>
+</section>
+      <h4><a class="xref" href="MilestoneTG.TransientFaultHandling.Data.SqlServer.ThrottlingMode.html">ThrottlingMode</a></h4>
+      <section><p>Defines the possible throttling modes in SQL Database.</p>
+</section>
+      <h4><a class="xref" href="MilestoneTG.TransientFaultHandling.Data.SqlServer.ThrottlingType.html">ThrottlingType</a></h4>
+      <section><p>Defines the possible throttling types in SQL Database.</p>
+</section>
 </article>
           </div>
           

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace MilestoneTG.TransientFaultHandling
    | Transient Fault Handling ">
-    <meta name="generator" content="docfx 2.32.2.0">
+    <meta name="generator" content="docfx 2.48.0.0">
     
     <link rel="shortcut icon" href="../images/favicon.png">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -22,7 +22,7 @@
     <meta property="docfx:rel" content="../">
     <meta property="docfx:newtab" content="true">
   </head>
-  <body data-spy="scroll" data-target="#affix">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -62,7 +62,9 @@
         
         <div id="search-results">
           <div class="search-list"></div>
-          <div class="sr-items"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
           <ul id="pagination"></ul>
         </div>
       </div>
@@ -92,19 +94,9 @@
       <section><p>Represents a retry strategy with a specified number of retry attempts and a default, fixed 
 time interval between retries.</p>
 </section>
-      <h4><a class="xref" href="MilestoneTG.TransientFaultHandling.HttpStatusCodeErrorDetectionStrategy.html">HttpStatusCodeErrorDetectionStrategy</a></h4>
-      <section><p>Default Http error detection strategy based on Http Status Code.</p>
-</section>
       <h4><a class="xref" href="MilestoneTG.TransientFaultHandling.IncrementalRetryStrategy.html">IncrementalRetryStrategy</a></h4>
       <section><p>A retry strategy with a specified number of retry attempts and an incremental time 
 interval between retries.</p>
-</section>
-      <h4><a class="xref" href="MilestoneTG.TransientFaultHandling.NetworkConnectivityErrorDetectionStrategy.html">NetworkConnectivityErrorDetectionStrategy</a></h4>
-      <section><p>Implements a strategy that detects network connectivity errors such as &quot;host not found&quot;.</p>
-</section>
-      <h4><a class="xref" href="MilestoneTG.TransientFaultHandling.ReliableDbConnection.html">ReliableDbConnection</a></h4>
-      <section><p>Provides a reliable way of opening connections to, and executing commands against, the SQL Database 
-databases taking potential network unreliability and connection retry requirements into account.</p>
 </section>
       <h4><a class="xref" href="MilestoneTG.TransientFaultHandling.RetryCondition.html">RetryCondition</a></h4>
       <section><p>Defines a retry condition.</p>
@@ -119,9 +111,6 @@ exception to notify the retry policy that no further retry attempts are required
       <h4><a class="xref" href="MilestoneTG.TransientFaultHandling.RetryManager.html">RetryManager</a></h4>
       <section><p>Provides the entry point to the retry functionality.</p>
 </section>
-      <h4><a class="xref" href="MilestoneTG.TransientFaultHandling.RetryManagerSqlExtensions.html">RetryManagerSqlExtensions</a></h4>
-      <section><p>Extends the <a class="xref" href="MilestoneTG.TransientFaultHandling.RetryManager.html">RetryManager</a> class to use it with the SQL Database retry strategy.</p>
-</section>
       <h4><a class="xref" href="MilestoneTG.TransientFaultHandling.RetryPolicy.html">RetryPolicy</a></h4>
       <section><p>Provides the base implementation of the retry mechanism for unreliable actions and 
 transient conditions.</p>
@@ -129,31 +118,12 @@ transient conditions.</p>
       <h4><a class="xref" href="MilestoneTG.TransientFaultHandling.RetryPolicy-1.html">RetryPolicy&lt;T&gt;</a></h4>
       <section><p>Provides a generic version of the <a class="xref" href="MilestoneTG.TransientFaultHandling.RetryPolicy.html">RetryPolicy</a> class.</p>
 </section>
+      <h4><a class="xref" href="MilestoneTG.TransientFaultHandling.RetryPolicyOptions.html">RetryPolicyOptions</a></h4>
+      <section><p>Supports creating a retry policy using configuration.</p>
+</section>
       <h4><a class="xref" href="MilestoneTG.TransientFaultHandling.RetryStrategy.html">RetryStrategy</a></h4>
       <section><p>Represents a retry strategy that determines the number of retry attempts and the interval 
 between retries.</p>
-</section>
-      <h4><a class="xref" href="MilestoneTG.TransientFaultHandling.SqlCommandExtensions.html">SqlCommandExtensions</a></h4>
-      <section><p>Provides a set of extension methods that add retry capabilities to the standard System.Data.SqlClient.SqlCommand implementation.</p>
-</section>
-      <h4><a class="xref" href="MilestoneTG.TransientFaultHandling.SqlCommandFactory.html">SqlCommandFactory</a></h4>
-      <section><p>Provides factory methods for instantiating SQL commands.</p>
-</section>
-      <h4><a class="xref" href="MilestoneTG.TransientFaultHandling.SqlConnectionExtensions.html">SqlConnectionExtensions</a></h4>
-      <section><p>Provides a set of extension methods that add retry capabilities to the standard <span class="xref">System.Data.SqlClient.SqlConnection</span> implementation.</p>
-</section>
-      <h4><a class="xref" href="MilestoneTG.TransientFaultHandling.SqlDatabaseTransientErrorDetectionStrategy.html">SqlDatabaseTransientErrorDetectionStrategy</a></h4>
-      <section><p>Provides the transient error detection logic for transient faults that are specific to SQL Database.</p>
-</section>
-      <h4><a class="xref" href="MilestoneTG.TransientFaultHandling.SqlServerNetworkConnectivityErrorDetectionStrategy.html">SqlServerNetworkConnectivityErrorDetectionStrategy</a></h4>
-      <section><p>Implements a strategy that detects network connectivity errors such as &quot;host not found&quot;.</p>
-</section>
-      <h4><a class="xref" href="MilestoneTG.TransientFaultHandling.SqlXmlReader.html">SqlXmlReader</a></h4>
-      <section><p>Provides a disposable wrapper for SQL XML data reader, which synchronizes the SQL connection
-disposal with its own life cycle.</p>
-</section>
-      <h4><a class="xref" href="MilestoneTG.TransientFaultHandling.TransactionRetryScope.html">TransactionRetryScope</a></h4>
-      <section><p>Provides support for retry policy-aware transactional scope.</p>
 </section>
       <h4><a class="xref" href="MilestoneTG.TransientFaultHandling.TransientErrorIgnoreStrategy.html">TransientErrorIgnoreStrategy</a></h4>
       <section><p>Retry strategy that ignores any transient errors.</p>

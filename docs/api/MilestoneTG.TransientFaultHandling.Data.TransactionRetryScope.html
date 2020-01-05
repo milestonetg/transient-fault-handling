@@ -1,0 +1,808 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class TransactionRetryScope
+   | Transient Fault Handling </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class TransactionRetryScope
+   | Transient Fault Handling ">
+    <meta name="generator" content="docfx 2.48.0.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope">
+  
+  
+  <h1 id="MilestoneTG_TransientFaultHandling_Data_TransactionRetryScope" data-uid="MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope" class="text-break">Class TransactionRetryScope
+  </h1>
+  <div class="markdown level0 summary"><p>Provides support for retry policy-aware transactional scope.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">TransactionRetryScope</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.IDisposable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MilestoneTG.TransientFaultHandling.Data.html">MilestoneTG.TransientFaultHandling.Data</a></h6>
+  <h6><strong>Assembly</strong>: MilestoneTG.TransientFaultHandling.Data.dll</h6>
+  <h5 id="MilestoneTG_TransientFaultHandling_Data_TransactionRetryScope_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class TransactionRetryScope : IDisposable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Data_TransactionRetryScope__ctor_MilestoneTG_TransientFaultHandling_RetryPolicy_System_Action_.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.%23ctor(MilestoneTG.TransientFaultHandling.RetryPolicy%2CSystem.Action)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Data/TransactionRetryScope.cs/#L45">View Source</a>
+  </span>
+  <a id="MilestoneTG_TransientFaultHandling_Data_TransactionRetryScope__ctor_" data-uid="MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.#ctor*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_TransactionRetryScope__ctor_MilestoneTG_TransientFaultHandling_RetryPolicy_System_Action_" data-uid="MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.#ctor(MilestoneTG.TransientFaultHandling.RetryPolicy,System.Action)">TransactionRetryScope(RetryPolicy, Action)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.html">TransactionRetryScope</a> class with the specified retry policy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransactionRetryScope(RetryPolicy retryPolicy, Action unitOfWork)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MilestoneTG.TransientFaultHandling.RetryPolicy.html">RetryPolicy</a></td>
+        <td><span class="parametername">retryPolicy</span></td>
+        <td><p>The retry policy that determines whether to retry the execution of the entire scope if a transient fault is encountered.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span></td>
+        <td><span class="parametername">unitOfWork</span></td>
+        <td><p>A delegate that represents the executable unit of work that will be retried upon failure.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Data_TransactionRetryScope__ctor_System_Action_.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.%23ctor(System.Action)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Data/TransactionRetryScope.cs/#L35">View Source</a>
+  </span>
+  <a id="MilestoneTG_TransientFaultHandling_Data_TransactionRetryScope__ctor_" data-uid="MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.#ctor*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_TransactionRetryScope__ctor_System_Action_" data-uid="MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.#ctor(System.Action)">TransactionRetryScope(Action)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.html">TransactionRetryScope</a> class. 
+Implements no retry policy, but just invokes the unit of work exactly once.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransactionRetryScope(Action unitOfWork)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span></td>
+        <td><span class="parametername">unitOfWork</span></td>
+        <td><p>A delegate that represents the executable unit of work that will be retried upon failure.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Data_TransactionRetryScope__ctor_System_Transactions_Transaction_MilestoneTG_TransientFaultHandling_RetryPolicy_System_Action_.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.%23ctor(System.Transactions.Transaction%2CMilestoneTG.TransientFaultHandling.RetryPolicy%2CSystem.Action)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Data/TransactionRetryScope.cs/#L159">View Source</a>
+  </span>
+  <a id="MilestoneTG_TransientFaultHandling_Data_TransactionRetryScope__ctor_" data-uid="MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.#ctor*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_TransactionRetryScope__ctor_System_Transactions_Transaction_MilestoneTG_TransientFaultHandling_RetryPolicy_System_Action_" data-uid="MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.#ctor(System.Transactions.Transaction,MilestoneTG.TransientFaultHandling.RetryPolicy,System.Action)">TransactionRetryScope(Transaction, RetryPolicy, Action)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.html">TransactionRetryScope</a> class with the specified retry policy and sets the specified transaction as the ambient transaction, 
+so that transactional work performed inside the scope uses this transaction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransactionRetryScope(Transaction tx, RetryPolicy retryPolicy, Action unitOfWork)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Transactions.Transaction</span></td>
+        <td><span class="parametername">tx</span></td>
+        <td><p>The transaction to be set as the ambient transaction, so that transactional work performed inside the scope uses this transaction.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MilestoneTG.TransientFaultHandling.RetryPolicy.html">RetryPolicy</a></td>
+        <td><span class="parametername">retryPolicy</span></td>
+        <td><p>The retry policy that determines whether to retry the execution of the entire scope if a transient fault is encountered.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span></td>
+        <td><span class="parametername">unitOfWork</span></td>
+        <td><p>A delegate that represents the executable unit of work that will be retried upon failure.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Data_TransactionRetryScope__ctor_System_Transactions_Transaction_System_Action_.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.%23ctor(System.Transactions.Transaction%2CSystem.Action)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Data/TransactionRetryScope.cs/#L147">View Source</a>
+  </span>
+  <a id="MilestoneTG_TransientFaultHandling_Data_TransactionRetryScope__ctor_" data-uid="MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.#ctor*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_TransactionRetryScope__ctor_System_Transactions_Transaction_System_Action_" data-uid="MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.#ctor(System.Transactions.Transaction,System.Action)">TransactionRetryScope(Transaction, Action)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.html">TransactionRetryScope</a> class and sets the specified transaction as the ambient transaction, 
+so that transactional work performed inside the scope uses this transaction. Implements no retry policy, but just invokes the unit of work exactly once.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransactionRetryScope(Transaction tx, Action unitOfWork)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Transactions.Transaction</span></td>
+        <td><span class="parametername">tx</span></td>
+        <td><p>The transaction to be set as the ambient transaction, so that transactional work performed inside the scope uses this transaction.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span></td>
+        <td><span class="parametername">unitOfWork</span></td>
+        <td><p>A delegate that represents the executable unit of work that will be retried upon failure.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Data_TransactionRetryScope__ctor_System_Transactions_Transaction_System_TimeSpan_MilestoneTG_TransientFaultHandling_RetryPolicy_System_Action_.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.%23ctor(System.Transactions.Transaction%2CSystem.TimeSpan%2CMilestoneTG.TransientFaultHandling.RetryPolicy%2CSystem.Action)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Data/TransactionRetryScope.cs/#L191">View Source</a>
+  </span>
+  <a id="MilestoneTG_TransientFaultHandling_Data_TransactionRetryScope__ctor_" data-uid="MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.#ctor*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_TransactionRetryScope__ctor_System_Transactions_Transaction_System_TimeSpan_MilestoneTG_TransientFaultHandling_RetryPolicy_System_Action_" data-uid="MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.#ctor(System.Transactions.Transaction,System.TimeSpan,MilestoneTG.TransientFaultHandling.RetryPolicy,System.Action)">TransactionRetryScope(Transaction, TimeSpan, RetryPolicy, Action)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.html">TransactionRetryScope</a> class with the specified time-out value, and sets the specified transaction as the ambient transaction, 
+so that transactional work performed inside the scope uses this transaction. Uses the specified retry policy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransactionRetryScope(Transaction tx, TimeSpan scopeTimeout, RetryPolicy retryPolicy, Action unitOfWork)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Transactions.Transaction</span></td>
+        <td><span class="parametername">tx</span></td>
+        <td><p>The transaction to be set as the ambient transaction, so that transactional work performed inside the scope uses this transaction.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="parametername">scopeTimeout</span></td>
+        <td><p>The TimeSpan after which the transaction scope times out and aborts the transaction.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MilestoneTG.TransientFaultHandling.RetryPolicy.html">RetryPolicy</a></td>
+        <td><span class="parametername">retryPolicy</span></td>
+        <td><p>The retry policy that determines whether to retry the execution of the entire scope if a transient fault is encountered.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span></td>
+        <td><span class="parametername">unitOfWork</span></td>
+        <td><p>A delegate that represents the executable unit of work that will be retried upon failure.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Data_TransactionRetryScope__ctor_System_Transactions_Transaction_System_TimeSpan_System_Action_.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.%23ctor(System.Transactions.Transaction%2CSystem.TimeSpan%2CSystem.Action)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Data/TransactionRetryScope.cs/#L178">View Source</a>
+  </span>
+  <a id="MilestoneTG_TransientFaultHandling_Data_TransactionRetryScope__ctor_" data-uid="MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.#ctor*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_TransactionRetryScope__ctor_System_Transactions_Transaction_System_TimeSpan_System_Action_" data-uid="MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.#ctor(System.Transactions.Transaction,System.TimeSpan,System.Action)">TransactionRetryScope(Transaction, TimeSpan, Action)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.html">TransactionRetryScope</a> class with the specified time-out value, and sets the specified transaction as the ambient transaction, 
+so that transactional work performed inside the scope uses this transaction. Implements no retry policy, but just invokes the unit of work exactly once.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransactionRetryScope(Transaction tx, TimeSpan scopeTimeout, Action unitOfWork)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Transactions.Transaction</span></td>
+        <td><span class="parametername">tx</span></td>
+        <td><p>The transaction to be set as the ambient transaction, so that transactional work performed inside the scope uses this transaction.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="parametername">scopeTimeout</span></td>
+        <td><p>The TimeSpan after which the transaction scope times out and aborts the transaction.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span></td>
+        <td><span class="parametername">unitOfWork</span></td>
+        <td><p>A delegate that represents the executable unit of work that will be retried upon failure.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Data_TransactionRetryScope__ctor_System_Transactions_TransactionScopeOption_MilestoneTG_TransientFaultHandling_RetryPolicy_System_Action_.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.%23ctor(System.Transactions.TransactionScopeOption%2CMilestoneTG.TransientFaultHandling.RetryPolicy%2CSystem.Action)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Data/TransactionRetryScope.cs/#L136">View Source</a>
+  </span>
+  <a id="MilestoneTG_TransientFaultHandling_Data_TransactionRetryScope__ctor_" data-uid="MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.#ctor*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_TransactionRetryScope__ctor_System_Transactions_TransactionScopeOption_MilestoneTG_TransientFaultHandling_RetryPolicy_System_Action_" data-uid="MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.#ctor(System.Transactions.TransactionScopeOption,MilestoneTG.TransientFaultHandling.RetryPolicy,System.Action)">TransactionRetryScope(TransactionScopeOption, RetryPolicy, Action)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.html">TransactionRetryScope</a> class with the specified requirements and retry policy.
+Uses the ReadCommitted isolation level by default.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransactionRetryScope(TransactionScopeOption scopeOption, RetryPolicy retryPolicy, Action unitOfWork)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Transactions.TransactionScopeOption</span></td>
+        <td><span class="parametername">scopeOption</span></td>
+        <td><p>One of the enumeration values that specifies the transaction requirements associated with this transaction scope.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MilestoneTG.TransientFaultHandling.RetryPolicy.html">RetryPolicy</a></td>
+        <td><span class="parametername">retryPolicy</span></td>
+        <td><p>The retry policy that determines whether to retry the execution of the entire scope if a transient fault is encountered.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span></td>
+        <td><span class="parametername">unitOfWork</span></td>
+        <td><p>A delegate that represents the executable unit of work that will be retried upon failure.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Data_TransactionRetryScope__ctor_System_Transactions_TransactionScopeOption_System_Action_.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.%23ctor(System.Transactions.TransactionScopeOption%2CSystem.Action)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Data/TransactionRetryScope.cs/#L56">View Source</a>
+  </span>
+  <a id="MilestoneTG_TransientFaultHandling_Data_TransactionRetryScope__ctor_" data-uid="MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.#ctor*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_TransactionRetryScope__ctor_System_Transactions_TransactionScopeOption_System_Action_" data-uid="MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.#ctor(System.Transactions.TransactionScopeOption,System.Action)">TransactionRetryScope(TransactionScopeOption, Action)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.html">TransactionRetryScope</a> class with the specified requirements.
+Implements no retry policy, but just invokes the unit of work exactly once.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransactionRetryScope(TransactionScopeOption scopeOption, Action unitOfWork)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Transactions.TransactionScopeOption</span></td>
+        <td><span class="parametername">scopeOption</span></td>
+        <td><p>One of the enumeration values that specifies the transaction requirements associated with this transaction scope.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span></td>
+        <td><span class="parametername">unitOfWork</span></td>
+        <td><p>A delegate that represents the executable unit of work that will be retried upon failure.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Data_TransactionRetryScope__ctor_System_Transactions_TransactionScopeOption_System_TimeSpan_MilestoneTG_TransientFaultHandling_RetryPolicy_System_Action_.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.%23ctor(System.Transactions.TransactionScopeOption%2CSystem.TimeSpan%2CMilestoneTG.TransientFaultHandling.RetryPolicy%2CSystem.Action)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Data/TransactionRetryScope.cs/#L81">View Source</a>
+  </span>
+  <a id="MilestoneTG_TransientFaultHandling_Data_TransactionRetryScope__ctor_" data-uid="MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.#ctor*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_TransactionRetryScope__ctor_System_Transactions_TransactionScopeOption_System_TimeSpan_MilestoneTG_TransientFaultHandling_RetryPolicy_System_Action_" data-uid="MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.#ctor(System.Transactions.TransactionScopeOption,System.TimeSpan,MilestoneTG.TransientFaultHandling.RetryPolicy,System.Action)">TransactionRetryScope(TransactionScopeOption, TimeSpan, RetryPolicy, Action)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.html">TransactionRetryScope</a> class with the specified time-out value, transaction scope options, and retry policy.
+Uses the ReadCommitted isolation level by default.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransactionRetryScope(TransactionScopeOption scopeOption, TimeSpan scopeTimeout, RetryPolicy retryPolicy, Action unitOfWork)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Transactions.TransactionScopeOption</span></td>
+        <td><span class="parametername">scopeOption</span></td>
+        <td><p>One of the enumeration values that specifies the transaction requirements associated with this transaction scope.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="parametername">scopeTimeout</span></td>
+        <td><p>The TimeSpan after which the transaction scope times out and aborts the transaction.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MilestoneTG.TransientFaultHandling.RetryPolicy.html">RetryPolicy</a></td>
+        <td><span class="parametername">retryPolicy</span></td>
+        <td><p>The retry policy that determines whether to retry the execution of the entire scope if a transient fault is encountered.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span></td>
+        <td><span class="parametername">unitOfWork</span></td>
+        <td><p>A delegate that represents the executable unit of work that will be retried upon failure.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Data_TransactionRetryScope__ctor_System_Transactions_TransactionScopeOption_System_TimeSpan_System_Action_.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.%23ctor(System.Transactions.TransactionScopeOption%2CSystem.TimeSpan%2CSystem.Action)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Data/TransactionRetryScope.cs/#L68">View Source</a>
+  </span>
+  <a id="MilestoneTG_TransientFaultHandling_Data_TransactionRetryScope__ctor_" data-uid="MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.#ctor*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_TransactionRetryScope__ctor_System_Transactions_TransactionScopeOption_System_TimeSpan_System_Action_" data-uid="MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.#ctor(System.Transactions.TransactionScopeOption,System.TimeSpan,System.Action)">TransactionRetryScope(TransactionScopeOption, TimeSpan, Action)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.html">TransactionRetryScope</a> class with the specified time-out value and requirements.
+Implements no retry policy, but just invokes the unit of work exactly once.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransactionRetryScope(TransactionScopeOption scopeOption, TimeSpan scopeTimeout, Action unitOfWork)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Transactions.TransactionScopeOption</span></td>
+        <td><span class="parametername">scopeOption</span></td>
+        <td><p>One of the enumeration values that specifies the transaction requirements associated with this transaction scope.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="parametername">scopeTimeout</span></td>
+        <td><p>The TimeSpan after which the transaction scope times out and aborts the transaction.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span></td>
+        <td><span class="parametername">unitOfWork</span></td>
+        <td><p>A delegate that represents the executable unit of work that will be retried upon failure.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Data_TransactionRetryScope__ctor_System_Transactions_TransactionScopeOption_System_Transactions_TransactionOptions_MilestoneTG_TransientFaultHandling_RetryPolicy_System_Action_.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.%23ctor(System.Transactions.TransactionScopeOption%2CSystem.Transactions.TransactionOptions%2CMilestoneTG.TransientFaultHandling.RetryPolicy%2CSystem.Action)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Data/TransactionRetryScope.cs/#L117">View Source</a>
+  </span>
+  <a id="MilestoneTG_TransientFaultHandling_Data_TransactionRetryScope__ctor_" data-uid="MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.#ctor*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_TransactionRetryScope__ctor_System_Transactions_TransactionScopeOption_System_Transactions_TransactionOptions_MilestoneTG_TransientFaultHandling_RetryPolicy_System_Action_" data-uid="MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.#ctor(System.Transactions.TransactionScopeOption,System.Transactions.TransactionOptions,MilestoneTG.TransientFaultHandling.RetryPolicy,System.Action)">TransactionRetryScope(TransactionScopeOption, TransactionOptions, RetryPolicy, Action)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.html">TransactionRetryScope</a> class with the specified requirements and retry policy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransactionRetryScope(TransactionScopeOption scopeOption, TransactionOptions transactionOptions, RetryPolicy retryPolicy, Action unitOfWork)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Transactions.TransactionScopeOption</span></td>
+        <td><span class="parametername">scopeOption</span></td>
+        <td><p>One of the enumeration values that specifies the transaction requirements associated with this transaction scope.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Transactions.TransactionOptions</span></td>
+        <td><span class="parametername">transactionOptions</span></td>
+        <td><p>A <span class="xref">System.Transactions.TransactionOptions</span> structure that describes the transaction options to use if a new transaction is created. If an existing transaction is used, the time-out value in this parameter applies to the transaction scope. If that time expires before the scope is disposed, the transaction is aborted.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MilestoneTG.TransientFaultHandling.RetryPolicy.html">RetryPolicy</a></td>
+        <td><span class="parametername">retryPolicy</span></td>
+        <td><p>The retry policy that determines whether to retry the execution of the entire scope if a transient fault is encountered.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span></td>
+        <td><span class="parametername">unitOfWork</span></td>
+        <td><p>A delegate that represents the executable unit of work that will be retried upon failure.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Data_TransactionRetryScope__ctor_System_Transactions_TransactionScopeOption_System_Transactions_TransactionOptions_System_Action_.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.%23ctor(System.Transactions.TransactionScopeOption%2CSystem.Transactions.TransactionOptions%2CSystem.Action)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Data/TransactionRetryScope.cs/#L105">View Source</a>
+  </span>
+  <a id="MilestoneTG_TransientFaultHandling_Data_TransactionRetryScope__ctor_" data-uid="MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.#ctor*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_TransactionRetryScope__ctor_System_Transactions_TransactionScopeOption_System_Transactions_TransactionOptions_System_Action_" data-uid="MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.#ctor(System.Transactions.TransactionScopeOption,System.Transactions.TransactionOptions,System.Action)">TransactionRetryScope(TransactionScopeOption, TransactionOptions, Action)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.html">TransactionRetryScope</a> class with the specified requirements.
+Implements no retry policy, but just invokes the unit of work exactly once.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransactionRetryScope(TransactionScopeOption scopeOption, TransactionOptions transactionOptions, Action unitOfWork)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Transactions.TransactionScopeOption</span></td>
+        <td><span class="parametername">scopeOption</span></td>
+        <td><p>One of the enumeration values that specifies the transaction requirements associated with this transaction scope.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Transactions.TransactionOptions</span></td>
+        <td><span class="parametername">transactionOptions</span></td>
+        <td><p>A <span class="xref">System.Transactions.TransactionOptions</span> structure that describes the transaction options to use if a new transaction is created. If an existing transaction is used, the time-out value in this parameter applies to the transaction scope. If that time expires before the scope is disposed, the transaction is aborted.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span></td>
+        <td><span class="parametername">unitOfWork</span></td>
+        <td><p>A delegate that represents the executable unit of work that will be retried upon failure.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Data_TransactionRetryScope_RetryPolicy.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.RetryPolicy%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Data/TransactionRetryScope.cs/#L210">View Source</a>
+  </span>
+  <a id="MilestoneTG_TransientFaultHandling_Data_TransactionRetryScope_RetryPolicy_" data-uid="MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.RetryPolicy*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_TransactionRetryScope_RetryPolicy" data-uid="MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.RetryPolicy">RetryPolicy</h4>
+  <div class="markdown level1 summary"><p>Gets the policy that determines whether to retry the execution of the entire scope if a transient fault is encountered.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RetryPolicy RetryPolicy { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MilestoneTG.TransientFaultHandling.RetryPolicy.html">RetryPolicy</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Data_TransactionRetryScope_Complete.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.Complete%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Data/TransactionRetryScope.cs/#L228">View Source</a>
+  </span>
+  <a id="MilestoneTG_TransientFaultHandling_Data_TransactionRetryScope_Complete_" data-uid="MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.Complete*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_TransactionRetryScope_Complete" data-uid="MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.Complete">Complete()</h4>
+  <div class="markdown level1 summary"><p>Indicates that all operations within the scope have been completed successfully.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Complete()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Data_TransactionRetryScope_Dispose.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Data/TransactionRetryScope.cs/#L242">View Source</a>
+  </span>
+  <a id="MilestoneTG_TransientFaultHandling_Data_TransactionRetryScope_Dispose_" data-uid="MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.Dispose*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_TransactionRetryScope_Dispose" data-uid="MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"><p>Ends the transaction scope.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Data_TransactionRetryScope_InvokeUnitOfWork.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.InvokeUnitOfWork%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Data/TransactionRetryScope.cs/#L220">View Source</a>
+  </span>
+  <a id="MilestoneTG_TransientFaultHandling_Data_TransactionRetryScope_InvokeUnitOfWork_" data-uid="MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.InvokeUnitOfWork*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_TransactionRetryScope_InvokeUnitOfWork" data-uid="MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.InvokeUnitOfWork">InvokeUnitOfWork()</h4>
+  <div class="markdown level1 summary"><p>Executes the underlying unit of work and retries as prescribed by the current retry policy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void InvokeUnitOfWork()</code></pre>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.IDisposable</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Data_TransactionRetryScope.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Data/TransactionRetryScope.cs/#L22" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Licensed under MIT
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

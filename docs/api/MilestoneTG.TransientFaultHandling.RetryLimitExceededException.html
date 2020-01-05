@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class RetryLimitExceededException
    | Transient Fault Handling ">
-    <meta name="generator" content="docfx 2.32.2.0">
+    <meta name="generator" content="docfx 2.48.0.0">
     
     <link rel="shortcut icon" href="../images/favicon.png">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -22,7 +22,7 @@
     <meta property="docfx:rel" content="../">
     <meta property="docfx:newtab" content="true">
   </head>
-  <body data-spy="scroll" data-target="#affix">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -62,7 +62,9 @@
         
         <div id="search-results">
           <div class="search-list"></div>
-          <div class="sr-items"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
           <ul id="pagination"></ul>
         </div>
       </div>
@@ -91,20 +93,10 @@ exception to notify the retry policy that no further retry attempts are required
     <div class="level1"><span class="xref">System.Exception</span></div>
     <div class="level2"><span class="xref">RetryLimitExceededException</span></div>
   </div>
-  <div classs="implements">
-    <h5>Implements</h5>
-    <div><span class="xref">System.Runtime.Serialization.ISerializable</span></div>
-  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
       <span class="xref">System.Exception.GetBaseException()</span>
-    </div>
-    <div>
-      <span class="xref">System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)</span>
-    </div>
-    <div>
-      <span class="xref">System.Exception.GetType()</span>
     </div>
     <div>
       <span class="xref">System.Exception.ToString()</span>
@@ -131,12 +123,6 @@ exception to notify the retry policy that no further retry attempts are required
       <span class="xref">System.Exception.StackTrace</span>
     </div>
     <div>
-      <span class="xref">System.Exception.TargetSite</span>
-    </div>
-    <div>
-      <span class="xref">System.Exception.SerializeObjectState</span>
-    </div>
-    <div>
       <span class="xref">System.Object.Equals(System.Object)</span>
     </div>
     <div>
@@ -144,6 +130,9 @@ exception to notify the retry policy that no further retry attempts are required
     </div>
     <div>
       <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
     </div>
     <div>
       <span class="xref">System.Object.MemberwiseClone()</span>
@@ -157,12 +146,17 @@ exception to notify the retry policy that no further retry attempts are required
   <h5 id="MilestoneTG_TransientFaultHandling_RetryLimitExceededException_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Obsolete(&quot;You should use cancellation tokens or other means of stopping the retry loop.&quot;)]
-public sealed class RetryLimitExceededException : Exception, ISerializable</code></pre>
+public sealed class RetryLimitExceededException : Exception</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_RetryLimitExceededException__ctor.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.RetryLimitExceededException.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling/RetryLimitExceededException.cs/#L29">View Source</a>
+  </span>
   <a id="MilestoneTG_TransientFaultHandling_RetryLimitExceededException__ctor_" data-uid="MilestoneTG.TransientFaultHandling.RetryLimitExceededException.#ctor*"></a>
   <h4 id="MilestoneTG_TransientFaultHandling_RetryLimitExceededException__ctor" data-uid="MilestoneTG.TransientFaultHandling.RetryLimitExceededException.#ctor">RetryLimitExceededException()</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MilestoneTG.TransientFaultHandling.RetryLimitExceededException.html">RetryLimitExceededException</a> class with a default error message.</p>
@@ -172,8 +166,13 @@ public sealed class RetryLimitExceededException : Exception, ISerializable</code
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public RetryLimitExceededException()</code></pre>
   </div>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_RetryLimitExceededException__ctor_System_Exception_.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.RetryLimitExceededException.%23ctor(System.Exception)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling/RetryLimitExceededException.cs/#L48">View Source</a>
+  </span>
   <a id="MilestoneTG_TransientFaultHandling_RetryLimitExceededException__ctor_" data-uid="MilestoneTG.TransientFaultHandling.RetryLimitExceededException.#ctor*"></a>
   <h4 id="MilestoneTG_TransientFaultHandling_RetryLimitExceededException__ctor_System_Exception_" data-uid="MilestoneTG.TransientFaultHandling.RetryLimitExceededException.#ctor(System.Exception)">RetryLimitExceededException(Exception)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MilestoneTG.TransientFaultHandling.RetryLimitExceededException.html">RetryLimitExceededException</a> class with a reference to the inner exception
@@ -202,8 +201,13 @@ that is the cause of this exception.</p>
       </tr>
     </tbody>
   </table>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_RetryLimitExceededException__ctor_System_String_.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.RetryLimitExceededException.%23ctor(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling/RetryLimitExceededException.cs/#L38">View Source</a>
+  </span>
   <a id="MilestoneTG_TransientFaultHandling_RetryLimitExceededException__ctor_" data-uid="MilestoneTG.TransientFaultHandling.RetryLimitExceededException.#ctor*"></a>
   <h4 id="MilestoneTG_TransientFaultHandling_RetryLimitExceededException__ctor_System_String_" data-uid="MilestoneTG.TransientFaultHandling.RetryLimitExceededException.#ctor(System.String)">RetryLimitExceededException(String)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MilestoneTG.TransientFaultHandling.RetryLimitExceededException.html">RetryLimitExceededException</a> class with a specified error message.</p>
@@ -231,8 +235,13 @@ that is the cause of this exception.</p>
       </tr>
     </tbody>
   </table>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_RetryLimitExceededException__ctor_System_String_System_Exception_.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.RetryLimitExceededException.%23ctor(System.String%2CSystem.Exception)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling/RetryLimitExceededException.cs/#L58">View Source</a>
+  </span>
   <a id="MilestoneTG_TransientFaultHandling_RetryLimitExceededException__ctor_" data-uid="MilestoneTG.TransientFaultHandling.RetryLimitExceededException.#ctor*"></a>
   <h4 id="MilestoneTG_TransientFaultHandling_RetryLimitExceededException__ctor_System_String_System_Exception_" data-uid="MilestoneTG.TransientFaultHandling.RetryLimitExceededException.#ctor(System.String,System.Exception)">RetryLimitExceededException(String, Exception)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MilestoneTG.TransientFaultHandling.RetryLimitExceededException.html">RetryLimitExceededException</a> class with a specified error message and inner exception.</p>
@@ -266,10 +275,6 @@ that is the cause of this exception.</p>
       </tr>
     </tbody>
   </table>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <span class="xref">System.Runtime.Serialization.ISerializable</span>
-  </div>
 </article>
           </div>
           
@@ -277,6 +282,12 @@ that is the cause of this exception.</p>
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
+                  <li>
+                    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_RetryLimitExceededException.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.RetryLimitExceededException%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling/RetryLimitExceededException.cs/#L23" class="contribution-link">View Source</a>
+                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

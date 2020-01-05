@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class DefaultReliableSql2008ClientDriver&lt;TTransientErrorDetectionStrategy&gt;
    | Transient Fault Handling ">
-    <meta name="generator" content="docfx 2.32.2.0">
+    <meta name="generator" content="docfx 2.48.0.0">
     
     <link rel="shortcut icon" href="../images/favicon.png">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -22,7 +22,7 @@
     <meta property="docfx:rel" content="../">
     <meta property="docfx:newtab" content="true">
   </head>
-  <body data-spy="scroll" data-target="#affix">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -62,7 +62,9 @@
         
         <div id="search-results">
           <div class="search-list"></div>
-          <div class="sr-items"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
           <ul id="pagination"></ul>
         </div>
       </div>
@@ -284,7 +286,7 @@ specify the transient error detection strategy.</p>
   <h6><strong>Assembly</strong>: MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.dll</h6>
   <h5 id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_DefaultReliableSql2008ClientDriver_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class DefaultReliableSql2008ClientDriver&lt;TTransientErrorDetectionStrategy&gt; : ReliableSql2008ClientDriver, IDriver, ISqlParameterFormatter, IEmbeddedBatcherFactoryProvider where TTransientErrorDetectionStrategy : ITransientErrorDetectionStrategy, new ()</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class DefaultReliableSql2008ClientDriver&lt;TTransientErrorDetectionStrategy&gt; : ReliableSql2008ClientDriver, IDriver, ISqlParameterFormatter, IEmbeddedBatcherFactoryProvider where TTransientErrorDetectionStrategy : ITransientErrorDetectionStrategy, new()</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -304,8 +306,13 @@ specify the transient error detection strategy.</p>
   </table>
   <h3 id="methods">Methods
   </h3>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_DefaultReliableSql2008ClientDriver_1_CommandRetryEventHandler.md&amp;value=---%0Auid%3A%20MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.DefaultReliableSql2008ClientDriver%601.CommandRetryEventHandler%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.NHibernate.TransientFaultHandling.SqlServer/DefaultReliableSql2008ClientDriver.cs/#L52">View Source</a>
+  </span>
   <a id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_DefaultReliableSql2008ClientDriver_1_CommandRetryEventHandler_" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.DefaultReliableSql2008ClientDriver`1.CommandRetryEventHandler*"></a>
   <h4 id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_DefaultReliableSql2008ClientDriver_1_CommandRetryEventHandler" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.DefaultReliableSql2008ClientDriver`1.CommandRetryEventHandler">CommandRetryEventHandler()</h4>
   <div class="markdown level1 summary"><p>An event handler delegate which will be called on command retries.
@@ -332,8 +339,13 @@ Only override this if you want to explicitly capture command retries, otherwise 
       </tr>
     </tbody>
   </table>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_DefaultReliableSql2008ClientDriver_1_ConnectionRetryEventHandler.md&amp;value=---%0Auid%3A%20MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.DefaultReliableSql2008ClientDriver%601.ConnectionRetryEventHandler%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.NHibernate.TransientFaultHandling.SqlServer/DefaultReliableSql2008ClientDriver.cs/#L42">View Source</a>
+  </span>
   <a id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_DefaultReliableSql2008ClientDriver_1_ConnectionRetryEventHandler_" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.DefaultReliableSql2008ClientDriver`1.ConnectionRetryEventHandler*"></a>
   <h4 id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_DefaultReliableSql2008ClientDriver_1_ConnectionRetryEventHandler" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.DefaultReliableSql2008ClientDriver`1.ConnectionRetryEventHandler">ConnectionRetryEventHandler()</h4>
   <div class="markdown level1 summary"><p>An event handler delegate which will be called on connection retries.
@@ -360,11 +372,17 @@ Only override this if you want to explicitly capture connection retries, otherwi
       </tr>
     </tbody>
   </table>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_DefaultReliableSql2008ClientDriver_1_CreateReliableConnection.md&amp;value=---%0Auid%3A%20MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.DefaultReliableSql2008ClientDriver%601.CreateReliableConnection%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.NHibernate.TransientFaultHandling.SqlServer/DefaultReliableSql2008ClientDriver.cs/#L21">View Source</a>
+  </span>
   <a id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_DefaultReliableSql2008ClientDriver_1_CreateReliableConnection_" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.DefaultReliableSql2008ClientDriver`1.CreateReliableConnection*"></a>
   <h4 id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_DefaultReliableSql2008ClientDriver_1_CreateReliableConnection" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.DefaultReliableSql2008ClientDriver`1.CreateReliableConnection">CreateReliableConnection()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Provides a <a class="xref" href="MilestoneTG.TransientFaultHandling.Data.SqlServer.ReliableSqlConnection.html">ReliableSqlConnection</a> instance to use for connections.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -381,14 +399,20 @@ Only override this if you want to explicitly capture connection retries, otherwi
     <tbody>
       <tr>
         <td><a class="xref" href="MilestoneTG.TransientFaultHandling.Data.SqlServer.ReliableSqlConnection.html">ReliableSqlConnection</a></td>
-        <td></td>
+        <td><p>A reliable connection</p>
+</td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSql2008ClientDriver.html#MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSql2008ClientDriver_CreateReliableConnection">ReliableSql2008ClientDriver.CreateReliableConnection()</a></div>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_DefaultReliableSql2008ClientDriver_1_RetryEventHandler.md&amp;value=---%0Auid%3A%20MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.DefaultReliableSql2008ClientDriver%601.RetryEventHandler%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.NHibernate.TransientFaultHandling.SqlServer/DefaultReliableSql2008ClientDriver.cs/#L62">View Source</a>
+  </span>
   <a id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_DefaultReliableSql2008ClientDriver_1_RetryEventHandler_" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.DefaultReliableSql2008ClientDriver`1.RetryEventHandler*"></a>
   <h4 id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_DefaultReliableSql2008ClientDriver_1_RetryEventHandler" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.DefaultReliableSql2008ClientDriver`1.RetryEventHandler">RetryEventHandler()</h4>
   <div class="markdown level1 summary"><p>An event handler delegate which will be called on connection and command retries.
@@ -432,6 +456,12 @@ If you override ConnectionRetryEventHandler and CommandRetryEventHandler then th
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
+                  <li>
+                    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_DefaultReliableSql2008ClientDriver_1.md&amp;value=---%0Auid%3A%20MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.DefaultReliableSql2008ClientDriver%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.NHibernate.TransientFaultHandling.SqlServer/DefaultReliableSql2008ClientDriver.cs/#L14" class="contribution-link">View Source</a>
+                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

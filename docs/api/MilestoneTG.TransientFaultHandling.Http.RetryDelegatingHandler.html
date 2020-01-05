@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class RetryDelegatingHandler
    | Transient Fault Handling ">
-    <meta name="generator" content="docfx 2.32.2.0">
+    <meta name="generator" content="docfx 2.48.0.0">
     
     <link rel="shortcut icon" href="../images/favicon.png">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -22,7 +22,7 @@
     <meta property="docfx:rel" content="../">
     <meta property="docfx:newtab" content="true">
   </head>
-  <body data-spy="scroll" data-target="#affix">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -62,7 +62,9 @@
         
         <div id="search-results">
           <div class="search-list"></div>
-          <div class="sr-items"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
           <ul id="pagination"></ul>
         </div>
       </div>
@@ -136,24 +138,101 @@
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Http_RetryDelegatingHandler__ctor.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Http.RetryDelegatingHandler.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Http/RetryDelegatingHandler.cs/#L35">View Source</a>
+  </span>
   <a id="MilestoneTG_TransientFaultHandling_Http_RetryDelegatingHandler__ctor_" data-uid="MilestoneTG.TransientFaultHandling.Http.RetryDelegatingHandler.#ctor*"></a>
   <h4 id="MilestoneTG_TransientFaultHandling_Http_RetryDelegatingHandler__ctor" data-uid="MilestoneTG.TransientFaultHandling.Http.RetryDelegatingHandler.#ctor">RetryDelegatingHandler()</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MilestoneTG.TransientFaultHandling.Http.RetryDelegatingHandler.html">RetryDelegatingHandler</a> class. 
-Sets default retry policy base on Exponential Backoff.
-Sets the InnerHandler to a new HttpClientHandler.</p>
+Sets default retry policy base on Exponential Backoff.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public RetryDelegatingHandler()</code></pre>
   </div>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Http_RetryDelegatingHandler__ctor_MilestoneTG_TransientFaultHandling_Http_HttpRetryPolicyOptions_.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Http.RetryDelegatingHandler.%23ctor(MilestoneTG.TransientFaultHandling.Http.HttpRetryPolicyOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Http/RetryDelegatingHandler.cs/#L26">View Source</a>
+  </span>
+  <a id="MilestoneTG_TransientFaultHandling_Http_RetryDelegatingHandler__ctor_" data-uid="MilestoneTG.TransientFaultHandling.Http.RetryDelegatingHandler.#ctor*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Http_RetryDelegatingHandler__ctor_MilestoneTG_TransientFaultHandling_Http_HttpRetryPolicyOptions_" data-uid="MilestoneTG.TransientFaultHandling.Http.RetryDelegatingHandler.#ctor(MilestoneTG.TransientFaultHandling.Http.HttpRetryPolicyOptions)">RetryDelegatingHandler(HttpRetryPolicyOptions)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MilestoneTG.TransientFaultHandling.Http.RetryDelegatingHandler.html">RetryDelegatingHandler</a> class using the supplied options. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RetryDelegatingHandler(HttpRetryPolicyOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MilestoneTG.TransientFaultHandling.Http.HttpRetryPolicyOptions.html">HttpRetryPolicyOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Http_RetryDelegatingHandler__ctor_MilestoneTG_TransientFaultHandling_RetryPolicy_.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Http.RetryDelegatingHandler.%23ctor(MilestoneTG.TransientFaultHandling.RetryPolicy)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Http/RetryDelegatingHandler.cs/#L61">View Source</a>
+  </span>
+  <a id="MilestoneTG_TransientFaultHandling_Http_RetryDelegatingHandler__ctor_" data-uid="MilestoneTG.TransientFaultHandling.Http.RetryDelegatingHandler.#ctor*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Http_RetryDelegatingHandler__ctor_MilestoneTG_TransientFaultHandling_RetryPolicy_" data-uid="MilestoneTG.TransientFaultHandling.Http.RetryDelegatingHandler.#ctor(MilestoneTG.TransientFaultHandling.RetryPolicy)">RetryDelegatingHandler(RetryPolicy)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MilestoneTG.TransientFaultHandling.Http.RetryDelegatingHandler.html">RetryDelegatingHandler</a> class. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RetryDelegatingHandler(RetryPolicy retryPolicy)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MilestoneTG.TransientFaultHandling.RetryPolicy.html">RetryPolicy</a></td>
+        <td><span class="parametername">retryPolicy</span></td>
+        <td><p>Retry policy to use.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Http_RetryDelegatingHandler__ctor_MilestoneTG_TransientFaultHandling_RetryPolicy_System_Net_Http_HttpMessageHandler_.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Http.RetryDelegatingHandler.%23ctor(MilestoneTG.TransientFaultHandling.RetryPolicy%2CSystem.Net.Http.HttpMessageHandler)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Http/RetryDelegatingHandler.cs/#L77">View Source</a>
+  </span>
   <a id="MilestoneTG_TransientFaultHandling_Http_RetryDelegatingHandler__ctor_" data-uid="MilestoneTG.TransientFaultHandling.Http.RetryDelegatingHandler.#ctor*"></a>
   <h4 id="MilestoneTG_TransientFaultHandling_Http_RetryDelegatingHandler__ctor_MilestoneTG_TransientFaultHandling_RetryPolicy_System_Net_Http_HttpMessageHandler_" data-uid="MilestoneTG.TransientFaultHandling.Http.RetryDelegatingHandler.#ctor(MilestoneTG.TransientFaultHandling.RetryPolicy,System.Net.Http.HttpMessageHandler)">RetryDelegatingHandler(RetryPolicy, HttpMessageHandler)</h4>
-  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MilestoneTG.TransientFaultHandling.Http.RetryDelegatingHandler.html">RetryDelegatingHandler</a> class. </p>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MilestoneTG.TransientFaultHandling.Http.RetryDelegatingHandler.html">RetryDelegatingHandler</a> class with the provided
+RetryPolicy and sets the InnerHandler to the provided HttpMessageHandler.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -184,12 +263,18 @@ Sets the InnerHandler to a new HttpClientHandler.</p>
       </tr>
     </tbody>
   </table>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Http_RetryDelegatingHandler__ctor_System_Net_Http_HttpMessageHandler_.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Http.RetryDelegatingHandler.%23ctor(System.Net.Http.HttpMessageHandler)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Http/RetryDelegatingHandler.cs/#L51">View Source</a>
+  </span>
   <a id="MilestoneTG_TransientFaultHandling_Http_RetryDelegatingHandler__ctor_" data-uid="MilestoneTG.TransientFaultHandling.Http.RetryDelegatingHandler.#ctor*"></a>
   <h4 id="MilestoneTG_TransientFaultHandling_Http_RetryDelegatingHandler__ctor_System_Net_Http_HttpMessageHandler_" data-uid="MilestoneTG.TransientFaultHandling.Http.RetryDelegatingHandler.#ctor(System.Net.Http.HttpMessageHandler)">RetryDelegatingHandler(HttpMessageHandler)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MilestoneTG.TransientFaultHandling.Http.RetryDelegatingHandler.html">RetryDelegatingHandler</a> class. Sets 
-the default retry policy base on Exponential Backoff.</p>
+the default retry policy base on Exponential Backoff.
+Sets the InnerHandler to the provided HttpMessageHandler.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -216,8 +301,13 @@ the default retry policy base on Exponential Backoff.</p>
   </table>
   <h3 id="properties">Properties
   </h3>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Http_RetryDelegatingHandler_RetryPolicy.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Http.RetryDelegatingHandler.RetryPolicy%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Http/RetryDelegatingHandler.cs/#L86">View Source</a>
+  </span>
   <a id="MilestoneTG_TransientFaultHandling_Http_RetryDelegatingHandler_RetryPolicy_" data-uid="MilestoneTG.TransientFaultHandling.Http.RetryDelegatingHandler.RetryPolicy*"></a>
   <h4 id="MilestoneTG_TransientFaultHandling_Http_RetryDelegatingHandler_RetryPolicy" data-uid="MilestoneTG.TransientFaultHandling.Http.RetryDelegatingHandler.RetryPolicy">RetryPolicy</h4>
   <div class="markdown level1 summary"><p>Gets or sets retry policy.</p>
@@ -244,8 +334,13 @@ the default retry policy base on Exponential Backoff.</p>
   </table>
   <h3 id="methods">Methods
   </h3>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Http_RetryDelegatingHandler_SendAsync_System_Net_Http_HttpRequestMessage_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Http.RetryDelegatingHandler.SendAsync(System.Net.Http.HttpRequestMessage%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Http/RetryDelegatingHandler.cs/#L96">View Source</a>
+  </span>
   <a id="MilestoneTG_TransientFaultHandling_Http_RetryDelegatingHandler_SendAsync_" data-uid="MilestoneTG.TransientFaultHandling.Http.RetryDelegatingHandler.SendAsync*"></a>
   <h4 id="MilestoneTG_TransientFaultHandling_Http_RetryDelegatingHandler_SendAsync_System_Net_Http_HttpRequestMessage_System_Threading_CancellationToken_" data-uid="MilestoneTG.TransientFaultHandling.Http.RetryDelegatingHandler.SendAsync(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)">SendAsync(HttpRequestMessage, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Sends an HTTP request to the inner handler to send to the server as an asynchronous
@@ -310,6 +405,12 @@ task object representing the asynchronous operation.</p>
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
+                  <li>
+                    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Http_RetryDelegatingHandler.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Http.RetryDelegatingHandler%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Http/RetryDelegatingHandler.cs/#L15" class="contribution-link">View Source</a>
+                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

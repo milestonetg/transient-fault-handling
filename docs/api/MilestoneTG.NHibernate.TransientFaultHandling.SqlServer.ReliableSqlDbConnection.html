@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ReliableSqlDbConnection
    | Transient Fault Handling ">
-    <meta name="generator" content="docfx 2.32.2.0">
+    <meta name="generator" content="docfx 2.48.0.0">
     
     <link rel="shortcut icon" href="../images/favicon.png">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -22,7 +22,7 @@
     <meta property="docfx:rel" content="../">
     <meta property="docfx:newtab" content="true">
   </head>
-  <body data-spy="scroll" data-target="#affix">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -62,7 +62,9 @@
         
         <div id="search-results">
           <div class="search-list"></div>
-          <div class="sr-items"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
           <ul id="pagination"></ul>
         </div>
       </div>
@@ -200,8 +202,13 @@ so internal type casts within NHibernate don&apos;t fail.</p>
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection__ctor_MilestoneTG_TransientFaultHandling_Data_SqlServer_ReliableSqlConnection_.md&amp;value=---%0Auid%3A%20MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.%23ctor(MilestoneTG.TransientFaultHandling.Data.SqlServer.ReliableSqlConnection)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.NHibernate.TransientFaultHandling.SqlServer/ReliableSqlDbConnection.cs/#L32">View Source</a>
+  </span>
   <a id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection__ctor_" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.#ctor*"></a>
   <h4 id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection__ctor_MilestoneTG_TransientFaultHandling_Data_SqlServer_ReliableSqlConnection_" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.#ctor(MilestoneTG.TransientFaultHandling.Data.SqlServer.ReliableSqlConnection)">ReliableSqlDbConnection(ReliableSqlConnection)</h4>
   <div class="markdown level1 summary"><p>Constructs a <a class="xref" href="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.html">ReliableSqlDbConnection</a> to wrap around the given <a class="xref" href="MilestoneTG.TransientFaultHandling.Data.SqlServer.ReliableSqlConnection.html">ReliableSqlConnection</a>.</p>
@@ -231,11 +238,17 @@ so internal type casts within NHibernate don&apos;t fail.</p>
   </table>
   <h3 id="properties">Properties
   </h3>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_ConnectionString.md&amp;value=---%0Auid%3A%20MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.ConnectionString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.NHibernate.TransientFaultHandling.SqlServer/ReliableSqlDbConnection.cs/#L148">View Source</a>
+  </span>
   <a id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_ConnectionString_" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.ConnectionString*"></a>
   <h4 id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_ConnectionString" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.ConnectionString">ConnectionString</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets or sets the string used to open the connection.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -252,17 +265,24 @@ so internal type casts within NHibernate don&apos;t fail.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>The connection string.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">System.Data.Common.DbConnection.ConnectionString</span></div>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_ConnectionTimeout.md&amp;value=---%0Auid%3A%20MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.ConnectionTimeout%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.NHibernate.TransientFaultHandling.SqlServer/ReliableSqlDbConnection.cs/#L153">View Source</a>
+  </span>
   <a id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_ConnectionTimeout_" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.ConnectionTimeout*"></a>
   <h4 id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_ConnectionTimeout" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.ConnectionTimeout">ConnectionTimeout</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the time to wait while establishing a connection before terminating the attempt and generating an error.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -279,17 +299,24 @@ so internal type casts within NHibernate don&apos;t fail.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
+        <td><p>The connection timeout.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">System.Data.Common.DbConnection.ConnectionTimeout</span></div>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_Database.md&amp;value=---%0Auid%3A%20MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.Database%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.NHibernate.TransientFaultHandling.SqlServer/ReliableSqlDbConnection.cs/#L158">View Source</a>
+  </span>
   <a id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_Database_" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.Database*"></a>
   <h4 id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_Database" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.Database">Database</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the name of the current database after a connection is opened, or the database name specified in the connection string before the connection is opened.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -306,17 +333,24 @@ so internal type casts within NHibernate don&apos;t fail.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>The database.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">System.Data.Common.DbConnection.Database</span></div>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_DataSource.md&amp;value=---%0Auid%3A%20MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.DataSource%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.NHibernate.TransientFaultHandling.SqlServer/ReliableSqlDbConnection.cs/#L163">View Source</a>
+  </span>
   <a id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_DataSource_" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.DataSource*"></a>
   <h4 id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_DataSource" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.DataSource">DataSource</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the name of the database server to which to connect.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -333,14 +367,20 @@ so internal type casts within NHibernate don&apos;t fail.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>The data source.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">System.Data.Common.DbConnection.DataSource</span></div>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_ReliableConnection.md&amp;value=---%0Auid%3A%20MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.ReliableConnection%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.NHibernate.TransientFaultHandling.SqlServer/ReliableSqlDbConnection.cs/#L26">View Source</a>
+  </span>
   <a id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_ReliableConnection_" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.ReliableConnection*"></a>
   <h4 id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_ReliableConnection" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.ReliableConnection">ReliableConnection</h4>
   <div class="markdown level1 summary"><p>The underlying <a class="xref" href="MilestoneTG.TransientFaultHandling.Data.SqlServer.ReliableSqlConnection.html">ReliableSqlConnection</a>.</p>
@@ -361,15 +401,22 @@ so internal type casts within NHibernate don&apos;t fail.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="MilestoneTG.TransientFaultHandling.Data.SqlServer.ReliableSqlConnection.html">ReliableSqlConnection</a></td>
-        <td></td>
+        <td><p>The reliable connection.</p>
+</td>
       </tr>
     </tbody>
   </table>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_ServerVersion.md&amp;value=---%0Auid%3A%20MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.ServerVersion%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.NHibernate.TransientFaultHandling.SqlServer/ReliableSqlDbConnection.cs/#L168">View Source</a>
+  </span>
   <a id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_ServerVersion_" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.ServerVersion*"></a>
   <h4 id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_ServerVersion" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.ServerVersion">ServerVersion</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets a string that represents the version of the server to which the object is connected.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -386,17 +433,24 @@ so internal type casts within NHibernate don&apos;t fail.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>The server version.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">System.Data.Common.DbConnection.ServerVersion</span></div>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_State.md&amp;value=---%0Auid%3A%20MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.State%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.NHibernate.TransientFaultHandling.SqlServer/ReliableSqlDbConnection.cs/#L173">View Source</a>
+  </span>
   <a id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_State_" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.State*"></a>
   <h4 id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_State" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.State">State</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets a string that describes the state of the connection.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -413,7 +467,8 @@ so internal type casts within NHibernate don&apos;t fail.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Data.ConnectionState</span></td>
-        <td></td>
+        <td><p>The state.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -421,11 +476,17 @@ so internal type casts within NHibernate don&apos;t fail.</p>
   <div><span class="xref">System.Data.Common.DbConnection.State</span></div>
   <h3 id="methods">Methods
   </h3>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_BeginDbTransaction_System_Data_IsolationLevel_.md&amp;value=---%0Auid%3A%20MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.BeginDbTransaction(System.Data.IsolationLevel)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.NHibernate.TransientFaultHandling.SqlServer/ReliableSqlDbConnection.cs/#L69">View Source</a>
+  </span>
   <a id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_BeginDbTransaction_" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.BeginDbTransaction*"></a>
   <h4 id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_BeginDbTransaction_System_Data_IsolationLevel_" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.BeginDbTransaction(System.Data.IsolationLevel)">BeginDbTransaction(IsolationLevel)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Starts a database transaction.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -444,7 +505,8 @@ so internal type casts within NHibernate don&apos;t fail.</p>
       <tr>
         <td><span class="xref">System.Data.IsolationLevel</span></td>
         <td><span class="parametername">isolationLevel</span></td>
-        <td></td>
+        <td><p>Specifies the isolation level for the transaction.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -459,17 +521,24 @@ so internal type casts within NHibernate don&apos;t fail.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Data.Common.DbTransaction</span></td>
-        <td></td>
+        <td><p>An object representing the new transaction.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">System.Data.Common.DbConnection.BeginDbTransaction(System.Data.IsolationLevel)</span></div>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_ChangeDatabase_System_String_.md&amp;value=---%0Auid%3A%20MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.ChangeDatabase(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.NHibernate.TransientFaultHandling.SqlServer/ReliableSqlDbConnection.cs/#L122">View Source</a>
+  </span>
   <a id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_ChangeDatabase_" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.ChangeDatabase*"></a>
   <h4 id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_ChangeDatabase_System_String_" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.ChangeDatabase(System.String)">ChangeDatabase(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Changes the current database for an open connection.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -488,17 +557,24 @@ so internal type casts within NHibernate don&apos;t fail.</p>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">databaseName</span></td>
-        <td></td>
+        <td><p>Specifies the name of the database for the connection to use.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">System.Data.Common.DbConnection.ChangeDatabase(System.String)</span></div>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_Close.md&amp;value=---%0Auid%3A%20MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.Close%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.NHibernate.TransientFaultHandling.SqlServer/ReliableSqlDbConnection.cs/#L77">View Source</a>
+  </span>
   <a id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_Close_" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.Close*"></a>
   <h4 id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_Close" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.Close">Close()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Closes the connection to the database. This is the preferred method of closing any open connection.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -506,11 +582,17 @@ so internal type casts within NHibernate don&apos;t fail.</p>
   </div>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">System.Data.Common.DbConnection.Close()</span></div>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_CreateDbCommand.md&amp;value=---%0Auid%3A%20MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.CreateDbCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.NHibernate.TransientFaultHandling.SqlServer/ReliableSqlDbConnection.cs/#L131">View Source</a>
+  </span>
   <a id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_CreateDbCommand_" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.CreateDbCommand*"></a>
   <h4 id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_CreateDbCommand" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.CreateDbCommand">CreateDbCommand()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates and returns a <span class="xref">System.Data.Common.DbCommand</span> object associated with the current connection.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -527,17 +609,24 @@ so internal type casts within NHibernate don&apos;t fail.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Data.Common.DbCommand</span></td>
-        <td></td>
+        <td><p>A <span class="xref">System.Data.Common.DbCommand</span> object.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">System.Data.Common.DbConnection.CreateDbCommand()</span></div>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.NHibernate.TransientFaultHandling.SqlServer/ReliableSqlDbConnection.cs/#L51">View Source</a>
+  </span>
   <a id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_Dispose_" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.Dispose*"></a>
   <h4 id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_Dispose_System_Boolean_" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.Dispose(System.Boolean)">Dispose(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Releases the unmanaged resources used by the <span class="xref">System.ComponentModel.Component</span> and optionally releases the managed resources.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -556,17 +645,24 @@ so internal type casts within NHibernate don&apos;t fail.</p>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">disposing</span></td>
-        <td></td>
+        <td><p>true to release both managed and unmanaged resources; false to release only unmanaged resources.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">System.ComponentModel.Component.Dispose(System.Boolean)</span></div>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_GetSchema.md&amp;value=---%0Auid%3A%20MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.GetSchema%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.NHibernate.TransientFaultHandling.SqlServer/ReliableSqlDbConnection.cs/#L86">View Source</a>
+  </span>
   <a id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_GetSchema_" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.GetSchema*"></a>
   <h4 id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_GetSchema" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.GetSchema">GetSchema()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns schema information for the data source of this <span class="xref">System.Data.Common.DbConnection</span>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -583,17 +679,24 @@ so internal type casts within NHibernate don&apos;t fail.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Data.DataTable</span></td>
-        <td></td>
+        <td><p>A <span class="xref">System.Data.DataTable</span> that contains schema information.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">System.Data.Common.DbConnection.GetSchema()</span></div>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_GetSchema_System_String_.md&amp;value=---%0Auid%3A%20MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.GetSchema(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.NHibernate.TransientFaultHandling.SqlServer/ReliableSqlDbConnection.cs/#L98">View Source</a>
+  </span>
   <a id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_GetSchema_" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.GetSchema*"></a>
   <h4 id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_GetSchema_System_String_" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.GetSchema(System.String)">GetSchema(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns schema information for the data source of this <span class="xref">System.Data.Common.DbConnection</span> using the specified string for the schema name.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -612,7 +715,8 @@ so internal type casts within NHibernate don&apos;t fail.</p>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">collectionName</span></td>
-        <td></td>
+        <td><p>Specifies the name of the schema to return.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -627,17 +731,24 @@ so internal type casts within NHibernate don&apos;t fail.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Data.DataTable</span></td>
-        <td></td>
+        <td><p>A <span class="xref">System.Data.DataTable</span> that contains schema information.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">System.Data.Common.DbConnection.GetSchema(System.String)</span></div>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_GetSchema_System_String_System_String___.md&amp;value=---%0Auid%3A%20MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.GetSchema(System.String%2CSystem.String%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.NHibernate.TransientFaultHandling.SqlServer/ReliableSqlDbConnection.cs/#L111">View Source</a>
+  </span>
   <a id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_GetSchema_" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.GetSchema*"></a>
   <h4 id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_GetSchema_System_String_System_String___" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.GetSchema(System.String,System.String[])">GetSchema(String, String[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns schema information for the data source of this <span class="xref">System.Data.Common.DbConnection</span> using the specified string for the schema name and the specified string array for the restriction values.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -656,12 +767,14 @@ so internal type casts within NHibernate don&apos;t fail.</p>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">collectionName</span></td>
-        <td></td>
+        <td><p>Specifies the name of the schema to return.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span>[]</td>
         <td><span class="parametername">restrictionValues</span></td>
-        <td></td>
+        <td><p>Specifies a set of restriction values for the requested schema.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -676,17 +789,24 @@ so internal type casts within NHibernate don&apos;t fail.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Data.DataTable</span></td>
-        <td></td>
+        <td><p>A <span class="xref">System.Data.DataTable</span> that contains schema information.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">System.Data.Common.DbConnection.GetSchema(System.String, System.String[])</span></div>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_Open.md&amp;value=---%0Auid%3A%20MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.Open%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.NHibernate.TransientFaultHandling.SqlServer/ReliableSqlDbConnection.cs/#L139">View Source</a>
+  </span>
   <a id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_Open_" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.Open*"></a>
   <h4 id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_Open" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.Open">Open()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Opens a database connection with the settings specified by the <span class="xref">System.Data.Common.DbConnection.ConnectionString</span>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -696,8 +816,13 @@ so internal type casts within NHibernate don&apos;t fail.</p>
   <div><span class="xref">System.Data.Common.DbConnection.Open()</span></div>
   <h3 id="operators">Operators
   </h3>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_op_Explicit_MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection__System_Data_SqlClient_SqlConnection.md&amp;value=---%0Auid%3A%20MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.op_Explicit(MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection)~System.Data.SqlClient.SqlConnection%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.NHibernate.TransientFaultHandling.SqlServer/ReliableSqlDbConnection.cs/#L42">View Source</a>
+  </span>
   <a id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_op_Explicit_" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.op_Explicit*"></a>
   <h4 id="MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection_op_Explicit_MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection__System_Data_SqlClient_SqlConnection" data-uid="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.op_Explicit(MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection)~System.Data.SqlClient.SqlConnection">Explicit(ReliableSqlDbConnection to SqlConnection)</h4>
   <div class="markdown level1 summary"><p>Explicit type-casting between <a class="xref" href="MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection.html">ReliableSqlDbConnection</a> and <a class="xref" href="MilestoneTG.TransientFaultHandling.Data.SqlServer.ReliableSqlConnection.html">ReliableSqlConnection</a>.</p>
@@ -751,6 +876,10 @@ so internal type casts within NHibernate don&apos;t fail.</p>
   <div>
       <span class="xref">System.IDisposable</span>
   </div>
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><span class="xref">System.Data.Common.DbConnection</span></div>
+  </div>
 </article>
           </div>
           
@@ -758,6 +887,12 @@ so internal type casts within NHibernate don&apos;t fail.</p>
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
+                  <li>
+                    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_NHibernate_TransientFaultHandling_SqlServer_ReliableSqlDbConnection.md&amp;value=---%0Auid%3A%20MilestoneTG.NHibernate.TransientFaultHandling.SqlServer.ReliableSqlDbConnection%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.NHibernate.TransientFaultHandling.SqlServer/ReliableSqlDbConnection.cs/#L16" class="contribution-link">View Source</a>
+                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

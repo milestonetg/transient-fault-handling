@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace MilestoneTG.TransientFaultHandling.Data
    | Transient Fault Handling ">
-    <meta name="generator" content="docfx 2.32.2.0">
+    <meta name="generator" content="docfx 2.48.0.0">
     
     <link rel="shortcut icon" href="../images/favicon.png">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -22,7 +22,7 @@
     <meta property="docfx:rel" content="../">
     <meta property="docfx:newtab" content="true">
   </head>
-  <body data-spy="scroll" data-target="#affix">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -62,7 +62,9 @@
         
         <div id="search-results">
           <div class="search-list"></div>
-          <div class="sr-items"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
           <ul id="pagination"></ul>
         </div>
       </div>
@@ -85,22 +87,30 @@
   <div class="markdown level0 remarks"></div>
     <h3 id="classes">Classes
   </h3>
+      <h4><a class="xref" href="MilestoneTG.TransientFaultHandling.Data.DbCommandExtensions.html">DbCommandExtensions</a></h4>
+      <section></section>
+      <h4><a class="xref" href="MilestoneTG.TransientFaultHandling.Data.DbConnectionExtensions.html">DbConnectionExtensions</a></h4>
+      <section><p>DbConnection Extension methods.</p>
+</section>
+      <h4><a class="xref" href="MilestoneTG.TransientFaultHandling.Data.NetworkConnectivityErrorDetectionStrategy.html">NetworkConnectivityErrorDetectionStrategy</a></h4>
+      <section><p>Implements a strategy that detects network connectivity errors such as &quot;host not found&quot;.</p>
+</section>
+      <h4><a class="xref" href="MilestoneTG.TransientFaultHandling.Data.ReliableDbConnection.html">ReliableDbConnection</a></h4>
+      <section><p>Provides a reliable way of opening connections to, and executing commands against, the SQL Database 
+databases taking potential network unreliability and connection retry requirements into account.</p>
+</section>
       <h4><a class="xref" href="MilestoneTG.TransientFaultHandling.Data.Resources.html">Resources</a></h4>
       <section><p>A strongly-typed resource class, for looking up localized strings, etc.</p>
 </section>
-      <h4><a class="xref" href="MilestoneTG.TransientFaultHandling.Data.ThrottlingCondition.html">ThrottlingCondition</a></h4>
-      <section><p>Implements an object that holds the decoded reason code returned from SQL Database when throttling conditions are encountered.</p>
+      <h4><a class="xref" href="MilestoneTG.TransientFaultHandling.Data.SqlCommandFactory.html">SqlCommandFactory</a></h4>
+      <section><p>Provides factory methods for instantiating SQL commands.</p>
 </section>
-    <h3 id="enums">Enums
-  </h3>
-      <h4><a class="xref" href="MilestoneTG.TransientFaultHandling.Data.ThrottledResourceType.html">ThrottledResourceType</a></h4>
-      <section><p>Defines the types of resources in SQL Database that may be subject to throttling conditions.</p>
+      <h4><a class="xref" href="MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.html">SqlXmlReader</a></h4>
+      <section><p>Provides a disposable wrapper for SQL XML data reader, which synchronizes the SQL connection
+disposal with its own life cycle.</p>
 </section>
-      <h4><a class="xref" href="MilestoneTG.TransientFaultHandling.Data.ThrottlingMode.html">ThrottlingMode</a></h4>
-      <section><p>Defines the possible throttling modes in SQL Database.</p>
-</section>
-      <h4><a class="xref" href="MilestoneTG.TransientFaultHandling.Data.ThrottlingType.html">ThrottlingType</a></h4>
-      <section><p>Defines the possible throttling types in SQL Database.</p>
+      <h4><a class="xref" href="MilestoneTG.TransientFaultHandling.Data.TransactionRetryScope.html">TransactionRetryScope</a></h4>
+      <section><p>Provides support for retry policy-aware transactional scope.</p>
 </section>
 </article>
           </div>

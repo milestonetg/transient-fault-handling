@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class RetryPolicy
    | Transient Fault Handling ">
-    <meta name="generator" content="docfx 2.32.2.0">
+    <meta name="generator" content="docfx 2.48.0.0">
     
     <link rel="shortcut icon" href="../images/favicon.png">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -22,7 +22,7 @@
     <meta property="docfx:rel" content="../">
     <meta property="docfx:newtab" content="true">
   </head>
-  <body data-spy="scroll" data-target="#affix">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -62,7 +62,9 @@
         
         <div id="search-results">
           <div class="search-list"></div>
-          <div class="sr-items"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
           <ul id="pagination"></ul>
         </div>
       </div>
@@ -123,8 +125,53 @@ transient conditions.</p>
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_RetryPolicy__ctor_MilestoneTG_TransientFaultHandling_ITransientErrorDetectionStrategy_MilestoneTG_TransientFaultHandling_RetryPolicyOptions_.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.RetryPolicy.%23ctor(MilestoneTG.TransientFaultHandling.ITransientErrorDetectionStrategy%2CMilestoneTG.TransientFaultHandling.RetryPolicyOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling/RetryPolicy.cs/#L30">View Source</a>
+  </span>
+  <a id="MilestoneTG_TransientFaultHandling_RetryPolicy__ctor_" data-uid="MilestoneTG.TransientFaultHandling.RetryPolicy.#ctor*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_RetryPolicy__ctor_MilestoneTG_TransientFaultHandling_ITransientErrorDetectionStrategy_MilestoneTG_TransientFaultHandling_RetryPolicyOptions_" data-uid="MilestoneTG.TransientFaultHandling.RetryPolicy.#ctor(MilestoneTG.TransientFaultHandling.ITransientErrorDetectionStrategy,MilestoneTG.TransientFaultHandling.RetryPolicyOptions)">RetryPolicy(ITransientErrorDetectionStrategy, RetryPolicyOptions)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MilestoneTG.TransientFaultHandling.RetryPolicy.html">RetryPolicy</a> class using the supplied options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RetryPolicy(ITransientErrorDetectionStrategy errorDetectionStrategy, RetryPolicyOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MilestoneTG.TransientFaultHandling.ITransientErrorDetectionStrategy.html">ITransientErrorDetectionStrategy</a></td>
+        <td><span class="parametername">errorDetectionStrategy</span></td>
+        <td><p>The error detection strategy.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MilestoneTG.TransientFaultHandling.RetryPolicyOptions.html">RetryPolicyOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_RetryPolicy__ctor_MilestoneTG_TransientFaultHandling_ITransientErrorDetectionStrategy_MilestoneTG_TransientFaultHandling_RetryStrategy_.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.RetryPolicy.%23ctor(MilestoneTG.TransientFaultHandling.ITransientErrorDetectionStrategy%2CMilestoneTG.TransientFaultHandling.RetryStrategy)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling/RetryPolicy.cs/#L62">View Source</a>
+  </span>
   <a id="MilestoneTG_TransientFaultHandling_RetryPolicy__ctor_" data-uid="MilestoneTG.TransientFaultHandling.RetryPolicy.#ctor*"></a>
   <h4 id="MilestoneTG_TransientFaultHandling_RetryPolicy__ctor_MilestoneTG_TransientFaultHandling_ITransientErrorDetectionStrategy_MilestoneTG_TransientFaultHandling_RetryStrategy_" data-uid="MilestoneTG.TransientFaultHandling.RetryPolicy.#ctor(MilestoneTG.TransientFaultHandling.ITransientErrorDetectionStrategy,MilestoneTG.TransientFaultHandling.RetryStrategy)">RetryPolicy(ITransientErrorDetectionStrategy, RetryStrategy)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MilestoneTG.TransientFaultHandling.RetryPolicy.html">RetryPolicy</a> class with the specified number of retry 
@@ -160,8 +207,13 @@ responsible for detecting transient conditions.</p>
       </tr>
     </tbody>
   </table>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_RetryPolicy__ctor_MilestoneTG_TransientFaultHandling_ITransientErrorDetectionStrategy_System_Int32_.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.RetryPolicy.%23ctor(MilestoneTG.TransientFaultHandling.ITransientErrorDetectionStrategy%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling/RetryPolicy.cs/#L78">View Source</a>
+  </span>
   <a id="MilestoneTG_TransientFaultHandling_RetryPolicy__ctor_" data-uid="MilestoneTG.TransientFaultHandling.RetryPolicy.#ctor*"></a>
   <h4 id="MilestoneTG_TransientFaultHandling_RetryPolicy__ctor_MilestoneTG_TransientFaultHandling_ITransientErrorDetectionStrategy_System_Int32_" data-uid="MilestoneTG.TransientFaultHandling.RetryPolicy.#ctor(MilestoneTG.TransientFaultHandling.ITransientErrorDetectionStrategy,System.Int32)">RetryPolicy(ITransientErrorDetectionStrategy, Int32)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MilestoneTG.TransientFaultHandling.RetryPolicy.html">RetryPolicy</a> class with the specified number of retry 
@@ -197,8 +249,13 @@ for detecting transient conditions.</p>
       </tr>
     </tbody>
   </table>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_RetryPolicy__ctor_MilestoneTG_TransientFaultHandling_ITransientErrorDetectionStrategy_System_Int32_System_TimeSpan_.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.RetryPolicy.%23ctor(MilestoneTG.TransientFaultHandling.ITransientErrorDetectionStrategy%2CSystem.Int32%2CSystem.TimeSpan)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling/RetryPolicy.cs/#L91">View Source</a>
+  </span>
   <a id="MilestoneTG_TransientFaultHandling_RetryPolicy__ctor_" data-uid="MilestoneTG.TransientFaultHandling.RetryPolicy.#ctor*"></a>
   <h4 id="MilestoneTG_TransientFaultHandling_RetryPolicy__ctor_MilestoneTG_TransientFaultHandling_ITransientErrorDetectionStrategy_System_Int32_System_TimeSpan_" data-uid="MilestoneTG.TransientFaultHandling.RetryPolicy.#ctor(MilestoneTG.TransientFaultHandling.ITransientErrorDetectionStrategy,System.Int32,System.TimeSpan)">RetryPolicy(ITransientErrorDetectionStrategy, Int32, TimeSpan)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MilestoneTG.TransientFaultHandling.RetryPolicy.html">RetryPolicy</a> class with the specified number of retry 
@@ -240,8 +297,13 @@ for detecting transient conditions.</p>
       </tr>
     </tbody>
   </table>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_RetryPolicy__ctor_MilestoneTG_TransientFaultHandling_ITransientErrorDetectionStrategy_System_Int32_System_TimeSpan_System_TimeSpan_.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.RetryPolicy.%23ctor(MilestoneTG.TransientFaultHandling.ITransientErrorDetectionStrategy%2CSystem.Int32%2CSystem.TimeSpan%2CSystem.TimeSpan)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling/RetryPolicy.cs/#L123">View Source</a>
+  </span>
   <a id="MilestoneTG_TransientFaultHandling_RetryPolicy__ctor_" data-uid="MilestoneTG.TransientFaultHandling.RetryPolicy.#ctor*"></a>
   <h4 id="MilestoneTG_TransientFaultHandling_RetryPolicy__ctor_MilestoneTG_TransientFaultHandling_ITransientErrorDetectionStrategy_System_Int32_System_TimeSpan_System_TimeSpan_" data-uid="MilestoneTG.TransientFaultHandling.RetryPolicy.#ctor(MilestoneTG.TransientFaultHandling.ITransientErrorDetectionStrategy,System.Int32,System.TimeSpan,System.TimeSpan)">RetryPolicy(ITransientErrorDetectionStrategy, Int32, TimeSpan, TimeSpan)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MilestoneTG.TransientFaultHandling.RetryPolicy.html">RetryPolicy</a> class with the specified number of retry 
@@ -290,8 +352,13 @@ retries.</p>
       </tr>
     </tbody>
   </table>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_RetryPolicy__ctor_MilestoneTG_TransientFaultHandling_ITransientErrorDetectionStrategy_System_Int32_System_TimeSpan_System_TimeSpan_System_TimeSpan_.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.RetryPolicy.%23ctor(MilestoneTG.TransientFaultHandling.ITransientErrorDetectionStrategy%2CSystem.Int32%2CSystem.TimeSpan%2CSystem.TimeSpan%2CSystem.TimeSpan)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling/RetryPolicy.cs/#L107">View Source</a>
+  </span>
   <a id="MilestoneTG_TransientFaultHandling_RetryPolicy__ctor_" data-uid="MilestoneTG.TransientFaultHandling.RetryPolicy.#ctor*"></a>
   <h4 id="MilestoneTG_TransientFaultHandling_RetryPolicy__ctor_MilestoneTG_TransientFaultHandling_ITransientErrorDetectionStrategy_System_Int32_System_TimeSpan_System_TimeSpan_System_TimeSpan_" data-uid="MilestoneTG.TransientFaultHandling.RetryPolicy.#ctor(MilestoneTG.TransientFaultHandling.ITransientErrorDetectionStrategy,System.Int32,System.TimeSpan,System.TimeSpan,System.TimeSpan)">RetryPolicy(ITransientErrorDetectionStrategy, Int32, TimeSpan, TimeSpan, TimeSpan)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MilestoneTG.TransientFaultHandling.RetryPolicy.html">RetryPolicy</a> class with the specified number of retry attempts 
@@ -348,8 +415,13 @@ between retries.</p>
   </table>
   <h3 id="properties">Properties
   </h3>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_RetryPolicy_ErrorDetectionStrategy.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.RetryPolicy.ErrorDetectionStrategy%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling/RetryPolicy.cs/#L142">View Source</a>
+  </span>
   <a id="MilestoneTG_TransientFaultHandling_RetryPolicy_ErrorDetectionStrategy_" data-uid="MilestoneTG.TransientFaultHandling.RetryPolicy.ErrorDetectionStrategy*"></a>
   <h4 id="MilestoneTG_TransientFaultHandling_RetryPolicy_ErrorDetectionStrategy" data-uid="MilestoneTG.TransientFaultHandling.RetryPolicy.ErrorDetectionStrategy">ErrorDetectionStrategy</h4>
   <div class="markdown level1 summary"><p>Gets the instance of the error detection strategy.</p>
@@ -374,8 +446,13 @@ between retries.</p>
       </tr>
     </tbody>
   </table>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_RetryPolicy_NoRetry.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.RetryPolicy.NoRetry%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling/RetryPolicy.cs/#L19">View Source</a>
+  </span>
   <a id="MilestoneTG_TransientFaultHandling_RetryPolicy_NoRetry_" data-uid="MilestoneTG.TransientFaultHandling.RetryPolicy.NoRetry*"></a>
   <h4 id="MilestoneTG_TransientFaultHandling_RetryPolicy_NoRetry" data-uid="MilestoneTG.TransientFaultHandling.RetryPolicy.NoRetry">NoRetry</h4>
   <div class="markdown level1 summary"><p>Returns a default policy that performs no retries, but invokes the action only once.</p>
@@ -400,8 +477,13 @@ between retries.</p>
       </tr>
     </tbody>
   </table>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_RetryPolicy_RetryStrategy.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.RetryPolicy.RetryStrategy%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling/RetryPolicy.cs/#L137">View Source</a>
+  </span>
   <a id="MilestoneTG_TransientFaultHandling_RetryPolicy_RetryStrategy_" data-uid="MilestoneTG.TransientFaultHandling.RetryPolicy.RetryStrategy*"></a>
   <h4 id="MilestoneTG_TransientFaultHandling_RetryPolicy_RetryStrategy" data-uid="MilestoneTG.TransientFaultHandling.RetryPolicy.RetryStrategy">RetryStrategy</h4>
   <div class="markdown level1 summary"><p>Gets the retry strategy.</p>
@@ -428,8 +510,13 @@ between retries.</p>
   </table>
   <h3 id="methods">Methods
   </h3>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_RetryPolicy_ExecuteAction_System_Action_.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.RetryPolicy.ExecuteAction(System.Action)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling/RetryPolicy.cs/#L148">View Source</a>
+  </span>
   <a id="MilestoneTG_TransientFaultHandling_RetryPolicy_ExecuteAction_" data-uid="MilestoneTG.TransientFaultHandling.RetryPolicy.ExecuteAction*"></a>
   <h4 id="MilestoneTG_TransientFaultHandling_RetryPolicy_ExecuteAction_System_Action_" data-uid="MilestoneTG.TransientFaultHandling.RetryPolicy.ExecuteAction(System.Action)">ExecuteAction(Action)</h4>
   <div class="markdown level1 summary"><p>Repetitively executes the specified action while it satisfies the current retry policy.</p>
@@ -457,8 +544,13 @@ between retries.</p>
       </tr>
     </tbody>
   </table>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_RetryPolicy_ExecuteAction__1_System_Func___0__.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.RetryPolicy.ExecuteAction%60%601(System.Func%7B%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling/RetryPolicy.cs/#L162">View Source</a>
+  </span>
   <a id="MilestoneTG_TransientFaultHandling_RetryPolicy_ExecuteAction_" data-uid="MilestoneTG.TransientFaultHandling.RetryPolicy.ExecuteAction*"></a>
   <h4 id="MilestoneTG_TransientFaultHandling_RetryPolicy_ExecuteAction__1_System_Func___0__" data-uid="MilestoneTG.TransientFaultHandling.RetryPolicy.ExecuteAction``1(System.Func{``0})">ExecuteAction&lt;TResult&gt;(Func&lt;TResult&gt;)</h4>
   <div class="markdown level1 summary"><p>Repetitively executes the specified action while it satisfies the current retry policy.</p>
@@ -519,8 +611,13 @@ type <code data-dev-comment-type="typeparamref" class="typeparamref">TResult</co
       </tr>
     </tbody>
   </table>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_RetryPolicy_ExecuteAsync_System_Func_System_Threading_Tasks_Task__.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.RetryPolicy.ExecuteAsync(System.Func%7BSystem.Threading.Tasks.Task%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling/RetryPolicy.cs/#L241">View Source</a>
+  </span>
   <a id="MilestoneTG_TransientFaultHandling_RetryPolicy_ExecuteAsync_" data-uid="MilestoneTG.TransientFaultHandling.RetryPolicy.ExecuteAsync*"></a>
   <h4 id="MilestoneTG_TransientFaultHandling_RetryPolicy_ExecuteAsync_System_Func_System_Threading_Tasks_Task__" data-uid="MilestoneTG.TransientFaultHandling.RetryPolicy.ExecuteAsync(System.Func{System.Threading.Tasks.Task})">ExecuteAsync(Func&lt;Task&gt;)</h4>
   <div class="markdown level1 summary"><p>Repetitively executes the specified asynchronous task while it satisfies the current retry policy.</p>
@@ -566,8 +663,13 @@ the retry limit is reached, the returned task will transition to a faulted state
       </tr>
     </tbody>
   </table>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_RetryPolicy_ExecuteAsync_System_Func_System_Threading_Tasks_Task__System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.RetryPolicy.ExecuteAsync(System.Func%7BSystem.Threading.Tasks.Task%7D%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling/RetryPolicy.cs/#L257">View Source</a>
+  </span>
   <a id="MilestoneTG_TransientFaultHandling_RetryPolicy_ExecuteAsync_" data-uid="MilestoneTG.TransientFaultHandling.RetryPolicy.ExecuteAsync*"></a>
   <h4 id="MilestoneTG_TransientFaultHandling_RetryPolicy_ExecuteAsync_System_Func_System_Threading_Tasks_Task__System_Threading_CancellationToken_" data-uid="MilestoneTG.TransientFaultHandling.RetryPolicy.ExecuteAsync(System.Func{System.Threading.Tasks.Task},System.Threading.CancellationToken)">ExecuteAsync(Func&lt;Task&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Repetitively executes the specified asynchronous task while it satisfies the current retry policy.</p>
@@ -620,8 +722,13 @@ the retry limit is reached, the returned task will transition to a faulted state
       </tr>
     </tbody>
   </table>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_RetryPolicy_ExecuteAsync__1_System_Func_System_Threading_Tasks_Task___0___.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.RetryPolicy.ExecuteAsync%60%601(System.Func%7BSystem.Threading.Tasks.Task%7B%60%600%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling/RetryPolicy.cs/#L281">View Source</a>
+  </span>
   <a id="MilestoneTG_TransientFaultHandling_RetryPolicy_ExecuteAsync_" data-uid="MilestoneTG.TransientFaultHandling.RetryPolicy.ExecuteAsync*"></a>
   <h4 id="MilestoneTG_TransientFaultHandling_RetryPolicy_ExecuteAsync__1_System_Func_System_Threading_Tasks_Task___0___" data-uid="MilestoneTG.TransientFaultHandling.RetryPolicy.ExecuteAsync``1(System.Func{System.Threading.Tasks.Task{``0}})">ExecuteAsync&lt;TResult&gt;(Func&lt;Task&lt;TResult&gt;&gt;)</h4>
   <div class="markdown level1 summary"><p>Repeatedly executes the specified asynchronous task while it satisfies the current retry policy.</p>
@@ -683,8 +790,13 @@ must be observed.</p>
       </tr>
     </tbody>
   </table>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_RetryPolicy_ExecuteAsync__1_System_Func_System_Threading_Tasks_Task___0___System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.RetryPolicy.ExecuteAsync%60%601(System.Func%7BSystem.Threading.Tasks.Task%7B%60%600%7D%7D%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling/RetryPolicy.cs/#L299">View Source</a>
+  </span>
   <a id="MilestoneTG_TransientFaultHandling_RetryPolicy_ExecuteAsync_" data-uid="MilestoneTG.TransientFaultHandling.RetryPolicy.ExecuteAsync*"></a>
   <h4 id="MilestoneTG_TransientFaultHandling_RetryPolicy_ExecuteAsync__1_System_Func_System_Threading_Tasks_Task___0___System_Threading_CancellationToken_" data-uid="MilestoneTG.TransientFaultHandling.RetryPolicy.ExecuteAsync``1(System.Func{System.Threading.Tasks.Task{``0}},System.Threading.CancellationToken)">ExecuteAsync&lt;TResult&gt;(Func&lt;Task&lt;TResult&gt;&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Repeatedly executes the specified asynchronous task while it satisfies the current retry policy.</p>
@@ -753,8 +865,13 @@ be observed.</p>
       </tr>
     </tbody>
   </table>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_RetryPolicy_OnRetrying_System_Int32_System_Exception_System_TimeSpan_.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.RetryPolicy.OnRetrying(System.Int32%2CSystem.Exception%2CSystem.TimeSpan)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling/RetryPolicy.cs/#L321">View Source</a>
+  </span>
   <a id="MilestoneTG_TransientFaultHandling_RetryPolicy_OnRetrying_" data-uid="MilestoneTG.TransientFaultHandling.RetryPolicy.OnRetrying*"></a>
   <h4 id="MilestoneTG_TransientFaultHandling_RetryPolicy_OnRetrying_System_Int32_System_Exception_System_TimeSpan_" data-uid="MilestoneTG.TransientFaultHandling.RetryPolicy.OnRetrying(System.Int32,System.Exception,System.TimeSpan)">OnRetrying(Int32, Exception, TimeSpan)</h4>
   <div class="markdown level1 summary"><p>Notifies the subscribers whenever a retry condition is encountered.</p>
@@ -797,8 +914,13 @@ the next iteration is invoked.</p>
   </table>
   <h3 id="events">Events
   </h3>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_RetryPolicy_Retrying.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.RetryPolicy.Retrying%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling/RetryPolicy.cs/#L132">View Source</a>
+  </span>
   <h4 id="MilestoneTG_TransientFaultHandling_RetryPolicy_Retrying" data-uid="MilestoneTG.TransientFaultHandling.RetryPolicy.Retrying">Retrying</h4>
   <div class="markdown level1 summary"><p>An instance of a callback delegate that will be invoked whenever a retry condition is encountered.</p>
 </div>
@@ -829,6 +951,12 @@ the next iteration is invoked.</p>
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
+                  <li>
+                    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_RetryPolicy.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.RetryPolicy%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling/RetryPolicy.cs/#L14" class="contribution-link">View Source</a>
+                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

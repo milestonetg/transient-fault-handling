@@ -1,0 +1,1489 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class SqlXmlReader
+   | Transient Fault Handling </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class SqlXmlReader
+   | Transient Fault Handling ">
+    <meta name="generator" content="docfx 2.48.0.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MilestoneTG.TransientFaultHandling.Data.SqlXmlReader">
+  
+  
+  <h1 id="MilestoneTG_TransientFaultHandling_Data_SqlXmlReader" data-uid="MilestoneTG.TransientFaultHandling.Data.SqlXmlReader" class="text-break">Class SqlXmlReader
+  </h1>
+  <div class="markdown level0 summary"><p>Provides a disposable wrapper for SQL XML data reader, which synchronizes the SQL connection
+disposal with its own life cycle.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">System.Xml.XmlReader</span></div>
+    <div class="level2"><span class="xref">SqlXmlReader</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.IDisposable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadContentAsObject()</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadContentAsBoolean()</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadContentAsDateTime()</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadContentAsDateTimeOffset()</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadContentAsDouble()</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadContentAsFloat()</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadContentAsDecimal()</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadContentAsInt()</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadContentAsLong()</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadContentAsString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadContentAs(System.Type, System.Xml.IXmlNamespaceResolver)</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadElementContentAsObject()</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadElementContentAsObject(System.String, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadElementContentAsBoolean()</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadElementContentAsBoolean(System.String, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadElementContentAsDateTime()</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadElementContentAsDateTime(System.String, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadElementContentAsDouble()</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadElementContentAsDouble(System.String, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadElementContentAsFloat()</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadElementContentAsFloat(System.String, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadElementContentAsDecimal()</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadElementContentAsDecimal(System.String, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadElementContentAsInt()</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadElementContentAsInt(System.String, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadElementContentAsLong()</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadElementContentAsLong(System.String, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadElementContentAsString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadElementContentAsString(System.String, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadElementContentAs(System.Type, System.Xml.IXmlNamespaceResolver)</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadElementContentAs(System.Type, System.Xml.IXmlNamespaceResolver, System.String, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.MoveToAttribute(System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.Skip()</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadContentAsBase64(System.Byte[], System.Int32, System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadElementContentAsBase64(System.Byte[], System.Int32, System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadContentAsBinHex(System.Byte[], System.Int32, System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadElementContentAsBinHex(System.Byte[], System.Int32, System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadValueChunk(System.Char[], System.Int32, System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.MoveToContent()</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadStartElement()</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadStartElement(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadStartElement(System.String, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadEndElement()</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.IsStartElement()</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.IsStartElement(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.IsStartElement(System.String, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadToFollowing(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadToFollowing(System.String, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadToDescendant(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadToDescendant(System.String, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadToNextSibling(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadToNextSibling(System.String, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.IsName(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.IsNameToken(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadInnerXml()</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadOuterXml()</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadSubtree()</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.Dispose()</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.Dispose(System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.Create(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.Create(System.String, System.Xml.XmlReaderSettings)</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.Create(System.String, System.Xml.XmlReaderSettings, System.Xml.XmlParserContext)</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.Create(System.IO.Stream)</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.Create(System.IO.Stream, System.Xml.XmlReaderSettings)</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.Create(System.IO.Stream, System.Xml.XmlReaderSettings, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.Create(System.IO.Stream, System.Xml.XmlReaderSettings, System.Xml.XmlParserContext)</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.Create(System.IO.TextReader)</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.Create(System.IO.TextReader, System.Xml.XmlReaderSettings)</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.Create(System.IO.TextReader, System.Xml.XmlReaderSettings, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.Create(System.IO.TextReader, System.Xml.XmlReaderSettings, System.Xml.XmlParserContext)</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.Create(System.Xml.XmlReader, System.Xml.XmlReaderSettings)</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.GetValueAsync()</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadContentAsObjectAsync()</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadContentAsStringAsync()</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadContentAsAsync(System.Type, System.Xml.IXmlNamespaceResolver)</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadElementContentAsObjectAsync()</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadElementContentAsStringAsync()</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadElementContentAsAsync(System.Type, System.Xml.IXmlNamespaceResolver)</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadAsync()</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.SkipAsync()</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadContentAsBase64Async(System.Byte[], System.Int32, System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadElementContentAsBase64Async(System.Byte[], System.Int32, System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadContentAsBinHexAsync(System.Byte[], System.Int32, System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadElementContentAsBinHexAsync(System.Byte[], System.Int32, System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadValueChunkAsync(System.Char[], System.Int32, System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.MoveToContentAsync()</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadInnerXmlAsync()</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ReadOuterXmlAsync()</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.Settings</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.Name</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.IsDefault</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.QuoteChar</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.XmlSpace</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.XmlLang</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.SchemaInfo</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.ValueType</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.Item[System.Int32]</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.Item[System.String]</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.Item[System.String, System.String]</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.CanResolveEntity</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.CanReadBinaryContent</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.CanReadValueChunk</span>
+    </div>
+    <div>
+      <span class="xref">System.Xml.XmlReader.HasAttributes</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MilestoneTG.TransientFaultHandling.Data.html">MilestoneTG.TransientFaultHandling.Data</a></h6>
+  <h6><strong>Assembly</strong>: MilestoneTG.TransientFaultHandling.Data.dll</h6>
+  <h5 id="MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class SqlXmlReader : XmlReader, IDisposable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Data_SqlXmlReader__ctor_System_Data_IDbConnection_System_Xml_XmlReader_.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.%23ctor(System.Data.IDbConnection%2CSystem.Xml.XmlReader)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Data/SqlXmlReader.cs/#L36">View Source</a>
+  </span>
+  <a id="MilestoneTG_TransientFaultHandling_Data_SqlXmlReader__ctor_" data-uid="MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.#ctor*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_SqlXmlReader__ctor_System_Data_IDbConnection_System_Xml_XmlReader_" data-uid="MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.#ctor(System.Data.IDbConnection,System.Xml.XmlReader)">SqlXmlReader(IDbConnection, XmlReader)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.html">SqlXmlReader</a> class that is associated with the specified SQL connection and the original XML reader.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SqlXmlReader(IDbConnection connection, XmlReader innerReader)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.IDbConnection</span></td>
+        <td><span class="parametername">connection</span></td>
+        <td><p>The SQL connection that provides access to the XML data for this reader.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Xml.XmlReader</span></td>
+        <td><span class="parametername">innerReader</span></td>
+        <td><p>The original XML reader that is to be wrapped by this instance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_AttributeCount.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.AttributeCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Data/SqlXmlReader.cs/#L46">View Source</a>
+  </span>
+  <a id="MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_AttributeCount_" data-uid="MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.AttributeCount*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_AttributeCount" data-uid="MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.AttributeCount">AttributeCount</h4>
+  <div class="markdown level1 summary"><p>Returns the number of attributes on the current node.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int AttributeCount { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Xml.XmlReader.AttributeCount</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_BaseURI.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.BaseURI%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Data/SqlXmlReader.cs/#L54">View Source</a>
+  </span>
+  <a id="MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_BaseURI_" data-uid="MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.BaseURI*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_BaseURI" data-uid="MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.BaseURI">BaseURI</h4>
+  <div class="markdown level1 summary"><p>Returns the base Uniform Resource Identifier (URI) of the current node.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string BaseURI { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Xml.XmlReader.BaseURI</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_Depth.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.Depth%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Data/SqlXmlReader.cs/#L62">View Source</a>
+  </span>
+  <a id="MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_Depth_" data-uid="MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.Depth*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_Depth" data-uid="MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.Depth">Depth</h4>
+  <div class="markdown level1 summary"><p>Returns the depth of the current node in the XML document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int Depth { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Xml.XmlReader.Depth</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_EOF.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.EOF%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Data/SqlXmlReader.cs/#L70">View Source</a>
+  </span>
+  <a id="MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_EOF_" data-uid="MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.EOF*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_EOF" data-uid="MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.EOF">EOF</h4>
+  <div class="markdown level1 summary"><p>Returns a value that indicates whether the reader is positioned at the end of the stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool EOF { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Xml.XmlReader.EOF</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_HasValue.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.HasValue%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Data/SqlXmlReader.cs/#L78">View Source</a>
+  </span>
+  <a id="MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_HasValue_" data-uid="MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.HasValue*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_HasValue" data-uid="MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.HasValue">HasValue</h4>
+  <div class="markdown level1 summary"><p>Returns a value that indicates whether the current node can have a <span class="xref">System.Xml.XmlReader.Value</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool HasValue { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Xml.XmlReader.HasValue</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_IsEmptyElement.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.IsEmptyElement%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Data/SqlXmlReader.cs/#L86">View Source</a>
+  </span>
+  <a id="MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_IsEmptyElement_" data-uid="MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.IsEmptyElement*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_IsEmptyElement" data-uid="MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.IsEmptyElement">IsEmptyElement</h4>
+  <div class="markdown level1 summary"><p>Returns a value that indicates whether the current node is an empty element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsEmptyElement { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Xml.XmlReader.IsEmptyElement</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_LocalName.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.LocalName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Data/SqlXmlReader.cs/#L94">View Source</a>
+  </span>
+  <a id="MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_LocalName_" data-uid="MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.LocalName*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_LocalName" data-uid="MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.LocalName">LocalName</h4>
+  <div class="markdown level1 summary"><p>Returns the local name of the current node.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string LocalName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Xml.XmlReader.LocalName</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_NamespaceURI.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.NamespaceURI%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Data/SqlXmlReader.cs/#L110">View Source</a>
+  </span>
+  <a id="MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_NamespaceURI_" data-uid="MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.NamespaceURI*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_NamespaceURI" data-uid="MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.NamespaceURI">NamespaceURI</h4>
+  <div class="markdown level1 summary"><p>Returns the namespace URI (as defined in the W3C Namespace specification) of the node on which the reader is positioned.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string NamespaceURI { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Xml.XmlReader.NamespaceURI</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_NameTable.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.NameTable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Data/SqlXmlReader.cs/#L102">View Source</a>
+  </span>
+  <a id="MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_NameTable_" data-uid="MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.NameTable*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_NameTable" data-uid="MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.NameTable">NameTable</h4>
+  <div class="markdown level1 summary"><p>Returns the <span class="xref">System.Xml.XmlNameTable</span> that is associated with this implementation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override XmlNameTable NameTable { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Xml.XmlNameTable</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Xml.XmlReader.NameTable</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_NodeType.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.NodeType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Data/SqlXmlReader.cs/#L118">View Source</a>
+  </span>
+  <a id="MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_NodeType_" data-uid="MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.NodeType*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_NodeType" data-uid="MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.NodeType">NodeType</h4>
+  <div class="markdown level1 summary"><p>Returns the type of the current node.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override XmlNodeType NodeType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Xml.XmlNodeType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Xml.XmlReader.NodeType</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_Prefix.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.Prefix%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Data/SqlXmlReader.cs/#L126">View Source</a>
+  </span>
+  <a id="MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_Prefix_" data-uid="MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.Prefix*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_Prefix" data-uid="MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.Prefix">Prefix</h4>
+  <div class="markdown level1 summary"><p>Returns the namespace prefix that is associated with the current node.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string Prefix { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Xml.XmlReader.Prefix</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_ReadState.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.ReadState%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Data/SqlXmlReader.cs/#L134">View Source</a>
+  </span>
+  <a id="MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_ReadState_" data-uid="MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.ReadState*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_ReadState" data-uid="MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.ReadState">ReadState</h4>
+  <div class="markdown level1 summary"><p>Returns the state of the reader.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override ReadState ReadState { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Xml.ReadState</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Xml.XmlReader.ReadState</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_Value.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.Value%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Data/SqlXmlReader.cs/#L142">View Source</a>
+  </span>
+  <a id="MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_Value_" data-uid="MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.Value*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_Value" data-uid="MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.Value">Value</h4>
+  <div class="markdown level1 summary"><p>Returns the text value of the current node.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string Value { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Xml.XmlReader.Value</span></div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_Close.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.Close%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Data/SqlXmlReader.cs/#L181">View Source</a>
+  </span>
+  <a id="MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_Close_" data-uid="MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.Close*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_Close" data-uid="MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.Close">Close()</h4>
+  <div class="markdown level1 summary"><p>Closes both the original <span class="xref">System.Xml.XmlReader</span> and the associated SQL connection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Close()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Xml.XmlReader.Close()</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_GetAttribute_System_Int32_.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.GetAttribute(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Data/SqlXmlReader.cs/#L162">View Source</a>
+  </span>
+  <a id="MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_GetAttribute_" data-uid="MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.GetAttribute*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_GetAttribute_System_Int32_" data-uid="MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.GetAttribute(System.Int32)">GetAttribute(Int32)</h4>
+  <div class="markdown level1 summary"><p>Returns the value of the attribute that has the specified index.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string GetAttribute(int i)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">i</span></td>
+        <td><p>The index of the attribute. The index is zero-based. (The first attribute has an index of 0.)</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The value of the specified attribute. This method does not move the reader.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Xml.XmlReader.GetAttribute(System.Int32)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_GetAttribute_System_String_.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.GetAttribute(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Data/SqlXmlReader.cs/#L152">View Source</a>
+  </span>
+  <a id="MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_GetAttribute_" data-uid="MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.GetAttribute*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_GetAttribute_System_String_" data-uid="MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.GetAttribute(System.String)">GetAttribute(String)</h4>
+  <div class="markdown level1 summary"><p>Returns the value of the attribute that has the specified name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string GetAttribute(string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The qualified name of the attribute.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The value of the specified attribute, or null if the attribute isn&apos;t found or its value is <span class="xref">System.String.Empty</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Xml.XmlReader.GetAttribute(System.String)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_GetAttribute_System_String_System_String_.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.GetAttribute(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Data/SqlXmlReader.cs/#L173">View Source</a>
+  </span>
+  <a id="MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_GetAttribute_" data-uid="MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.GetAttribute*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_GetAttribute_System_String_System_String_" data-uid="MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.GetAttribute(System.String,System.String)">GetAttribute(String, String)</h4>
+  <div class="markdown level1 summary"><p>Returns the value of the attribute that has the specified name and namespace URI.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string GetAttribute(string name, string namespaceUri)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The local name of the attribute.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">namespaceUri</span></td>
+        <td><p>The namespace URI of the attribute.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The value of the specified attribute, or null if the attribute isn&apos;t found or its value is <span class="xref">System.String.Empty</span>. This method does not move the reader.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Xml.XmlReader.GetAttribute(System.String, System.String)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_LookupNamespace_System_String_.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.LookupNamespace(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Data/SqlXmlReader.cs/#L199">View Source</a>
+  </span>
+  <a id="MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_LookupNamespace_" data-uid="MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.LookupNamespace*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_LookupNamespace_System_String_" data-uid="MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.LookupNamespace(System.String)">LookupNamespace(String)</h4>
+  <div class="markdown level1 summary"><p>Resolves a namespace prefix in the current element&apos;s scope.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string LookupNamespace(string prefix)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">prefix</span></td>
+        <td><p>The prefix whose namespace URI you want to resolve. To match the default namespace, pass an empty string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The namespace URI to which the prefix maps, or null if no matching prefix is found.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Xml.XmlReader.LookupNamespace(System.String)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_MoveToAttribute_System_String_.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.MoveToAttribute(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Data/SqlXmlReader.cs/#L220">View Source</a>
+  </span>
+  <a id="MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_MoveToAttribute_" data-uid="MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.MoveToAttribute*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_MoveToAttribute_System_String_" data-uid="MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.MoveToAttribute(System.String)">MoveToAttribute(String)</h4>
+  <div class="markdown level1 summary"><p>Moves to the attribute that has the specified name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool MoveToAttribute(string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The qualified name of the attribute.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if the attribute is found; otherwise, false. If false, the reader&apos;s position does not change.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Xml.XmlReader.MoveToAttribute(System.String)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_MoveToAttribute_System_String_System_String_.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.MoveToAttribute(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Data/SqlXmlReader.cs/#L210">View Source</a>
+  </span>
+  <a id="MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_MoveToAttribute_" data-uid="MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.MoveToAttribute*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_MoveToAttribute_System_String_System_String_" data-uid="MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.MoveToAttribute(System.String,System.String)">MoveToAttribute(String, String)</h4>
+  <div class="markdown level1 summary"><p>Moves to the attribute that has the specified name and namespace URI.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool MoveToAttribute(string name, string ns)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The local name of the attribute.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">ns</span></td>
+        <td><p>The namespace URI of the attribute.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if the attribute is found; otherwise, false. If false, the reader&apos;s position does not change.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Xml.XmlReader.MoveToAttribute(System.String, System.String)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_MoveToElement.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.MoveToElement%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Data/SqlXmlReader.cs/#L229">View Source</a>
+  </span>
+  <a id="MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_MoveToElement_" data-uid="MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.MoveToElement*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_MoveToElement" data-uid="MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.MoveToElement">MoveToElement()</h4>
+  <div class="markdown level1 summary"><p>Moves to the element that contains the current attribute node.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool MoveToElement()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if the reader is positioned on an attribute (in which case, the reader moves to the element that owns the attribute); false if the reader is not positioned on an attribute (in which case, the position of the reader does not change).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Xml.XmlReader.MoveToElement()</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_MoveToFirstAttribute.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.MoveToFirstAttribute%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Data/SqlXmlReader.cs/#L238">View Source</a>
+  </span>
+  <a id="MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_MoveToFirstAttribute_" data-uid="MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.MoveToFirstAttribute*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_MoveToFirstAttribute" data-uid="MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.MoveToFirstAttribute">MoveToFirstAttribute()</h4>
+  <div class="markdown level1 summary"><p>Moves to the first attribute.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool MoveToFirstAttribute()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if an attribute exists (in which case, the reader moves to the first attribute); otherwise, false (in which case, the position of the reader does not change).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Xml.XmlReader.MoveToFirstAttribute()</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_MoveToNextAttribute.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.MoveToNextAttribute%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Data/SqlXmlReader.cs/#L247">View Source</a>
+  </span>
+  <a id="MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_MoveToNextAttribute_" data-uid="MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.MoveToNextAttribute*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_MoveToNextAttribute" data-uid="MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.MoveToNextAttribute">MoveToNextAttribute()</h4>
+  <div class="markdown level1 summary"><p>Moves to the next attribute.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool MoveToNextAttribute()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if there is a next attribute; false if there are no more attributes.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Xml.XmlReader.MoveToNextAttribute()</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_Read.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.Read%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Data/SqlXmlReader.cs/#L256">View Source</a>
+  </span>
+  <a id="MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_Read_" data-uid="MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.Read*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_Read" data-uid="MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.Read">Read()</h4>
+  <div class="markdown level1 summary"><p>Reads the next node from the stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Read()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if the next node was read successfully; false if there are no more nodes to read.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Xml.XmlReader.Read()</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_ReadAttributeValue.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.ReadAttributeValue%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Data/SqlXmlReader.cs/#L265">View Source</a>
+  </span>
+  <a id="MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_ReadAttributeValue_" data-uid="MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.ReadAttributeValue*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_ReadAttributeValue" data-uid="MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.ReadAttributeValue">ReadAttributeValue()</h4>
+  <div class="markdown level1 summary"><p>Parses the attribute value into one or more Text, EntityReference, or EndEntity nodes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool ReadAttributeValue()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if there are nodes to return, false if the reader is not positioned on an attribute node when the initial call is made or if all the attribute values have been read. An empty attribute such as misc=&quot;&quot; returns true with a single node that has a value of <span class="xref">System.String.Empty</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Xml.XmlReader.ReadAttributeValue()</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_ResolveEntity.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.ResolveEntity%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Data/SqlXmlReader.cs/#L273">View Source</a>
+  </span>
+  <a id="MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_ResolveEntity_" data-uid="MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.ResolveEntity*"></a>
+  <h4 id="MilestoneTG_TransientFaultHandling_Data_SqlXmlReader_ResolveEntity" data-uid="MilestoneTG.TransientFaultHandling.Data.SqlXmlReader.ResolveEntity">ResolveEntity()</h4>
+  <div class="markdown level1 summary"><p>Resolves the entity reference for EntityReference nodes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void ResolveEntity()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Xml.XmlReader.ResolveEntity()</span></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.IDisposable</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/milestonetg/transient-fault-handling/new/master/apiSpec/new?filename=MilestoneTG_TransientFaultHandling_Data_SqlXmlReader.md&amp;value=---%0Auid%3A%20MilestoneTG.TransientFaultHandling.Data.SqlXmlReader%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/milestonetg/transient-fault-handling/blob/master/src/MilestoneTG.TransientFaultHandling.Data/SqlXmlReader.cs/#L23" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Licensed under MIT
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
