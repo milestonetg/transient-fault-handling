@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net451;netstandard2.0</TargetFrameworks>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <Description>
+      Transient fault handling for Oracle Client. Supports on-prem as well as cloud deployments.
+    </Description>
+    <Authors>milestonetg</Authors>
+    <PackageTags>microservices;transient fault handling;resiliency;oracle</PackageTags>
+    <RepositoryUrl>https://github.com/milestonetg/transient-fault-handling</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/milestonetg/transient-fault-handling</PackageProjectUrl>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <Copyright>MIT License, Copyright (C) 2019 - Milestone Technology Group, LLC</Copyright>
+    <Company>Milestone Technology Group, LLC</Company>
+  </PropertyGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)'=='net451'">
+    <PackageReference Include="Oracle.ManagedDataAccess" Version="12.1.21" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <PackageReference Include="Oracle.ManagedDataAccess.Core" Version="2.18.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MilestoneTG.TransientFaultHandling.Data\MilestoneTG.TransientFaultHandling.Data.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,4 +1,4 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29411.108
@@ -34,6 +34,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_build", "_build", "{B9B9E0
 		..\azure-pipelines.yml = ..\azure-pipelines.yml
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilestoneTG.TransientFaultHandling.Data.Oracle", "MilestoneTG.TransientFaultHandling.Data.Oracle\MilestoneTG.TransientFaultHandling.Data.Oracle.csproj", "{AC53613A-5A4E-462F-86E2-CC7A584C118A}"
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -88,6 +89,10 @@ Global
 		{095E6878-CAA5-4872-AE06-5A9C1AA22D40}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{095E6878-CAA5-4872-AE06-5A9C1AA22D40}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{095E6878-CAA5-4872-AE06-5A9C1AA22D40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC53613A-5A4E-462F-86E2-CC7A584C118A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC53613A-5A4E-462F-86E2-CC7A584C118A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC53613A-5A4E-462F-86E2-CC7A584C118A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC53613A-5A4E-462F-86E2-CC7A584C118A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
