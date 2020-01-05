@@ -103,3 +103,9 @@ Azure Database for MySQL, AWS Aurora MySQL (including Aurora Serverless) and, AW
 
 Supports transient fault handling for most implementations of PostreSQL including PostgreSQL, EnterpriseDB, Percona
 PostgreSQL, Azure Database for PostgreSQL, AWS Aurora PostgreSQL, AWS RDS for PostgreSQL, and AWS Red Shift.
+
+### Oracle (as of v3.0)
+
+#### MilestoneTG.TransientFaultHandling.Data.Oracle
+
+Supports transient fault handling for most deployments of Oracle including on premises, Azure, AWS RDS, and Oracle Cloud.
