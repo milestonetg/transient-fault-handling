@@ -20,10 +20,12 @@ namespace MilestoneTG.TransientFaultHandling.Tests.SqlCommandExtensionsScenarios
     using Common.TestSupport.ContextBase;
 
     using MilestoneTG.TransientFaultHandling.TestSupport;
+    using MilestoneTG.TransientFaultHandling.Data;
     using MilestoneTG.TransientFaultHandling;
 
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using MilestoneTG.TransientFaultHandling.Data.SqlServer;
+    using System.Data.Common;
 
     public abstract class Context : ArrangeActAssert
     {

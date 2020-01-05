@@ -12,6 +12,7 @@
 #endregion
 
 using System.Data.SqlClient;
+using System.Threading.Tasks;
 
 namespace MilestoneTG.TransientFaultHandling.Data.SqlServer
 {
@@ -27,22 +28,17 @@ namespace MilestoneTG.TransientFaultHandling.Data.SqlServer
         /// <param name="connection">The connection object that is required for the extension method declaration.</param>
         public static void OpenWithRetry(this SqlConnection connection)
         {
-            OpenWithRetry(connection, RetryManager.Instance.GetDefaultSqlConnectionRetryPolicy());
+            connection.OpenWithRetry(RetryManager.Instance.GetDefaultSqlConnectionRetryPolicy());
         }
 
         /// <summary>
         /// Opens a database connection with the connection settings specified in the ConnectionString property of the connection object.
-        /// Uses the specified retry policy when opening the connection.
+        /// Uses the default retry policy when opening the connection.
         /// </summary>
         /// <param name="connection">The connection object that is required for the extension method declaration.</param>
-        /// <param name="retryPolicy">The retry policy that defines whether to retry a request if the connection fails.</param>
-        public static void OpenWithRetry(this SqlConnection connection, RetryPolicy retryPolicy)
+        public static Task OpenWithRetryAsync(this SqlConnection connection)
         {
-            // Check if retry policy was specified, if not, use the default retry policy.
-            (retryPolicy != null ? retryPolicy : RetryPolicy.NoRetry).ExecuteAction(() =>
-            {
-                connection.Open();
-            });
+            return connection.OpenWithRetryAsync(RetryManager.Instance.GetDefaultSqlConnectionRetryPolicy());
         }
     }
 }

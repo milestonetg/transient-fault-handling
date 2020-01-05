@@ -15,6 +15,7 @@ using System;
 using System.Data;
 using System.Data.Common;
 using System.Globalization;
+using System.Threading.Tasks;
 using System.Xml;
 
 namespace MilestoneTG.TransientFaultHandling.Data
@@ -164,6 +165,15 @@ namespace MilestoneTG.TransientFaultHandling.Data
         }
 
         /// <summary>
+        /// Opens a database connection with the settings specified by the ConnectionString and ConnectionRetryPolicy properties.
+        /// </summary>
+        /// <returns>An object that represents the open connection.</returns>
+        public Task<DbConnection> OpenAsync()
+        {
+            return this.OpenAsync(this.ConnectionRetryPolicy);
+        }
+
+        /// <summary>
         /// Opens a database connection with the settings specified by the connection string and the specified retry policy.
         /// </summary>
         /// <param name="retryPolicy">The retry policy that defines whether to retry a request if the connection fails to open.</param>
@@ -182,6 +192,27 @@ namespace MilestoneTG.TransientFaultHandling.Data
 
             return this.underlyingConnection;
         }
+
+        /// <summary>
+        /// Opens a database connection with the settings specified by the connection string and the specified retry policy.
+        /// </summary>
+        /// <param name="retryPolicy">The retry policy that defines whether to retry a request if the connection fails to open.</param>
+        /// <returns>An object that represents the open connection.</returns>
+        public async Task<DbConnection> OpenAsync(RetryPolicy retryPolicy)
+        {
+            // Check if retry policy was specified, if not, disable retries by executing the Open method using RetryPolicy.NoRetry.
+            await (retryPolicy ?? RetryPolicy.NoRetry).ExecuteAsync(async () =>
+                await this.connectionStringFailoverPolicy.ExecuteAsync(async () =>
+                {
+                    if (this.underlyingConnection.State != ConnectionState.Open)
+                    {
+                        await this.underlyingConnection.OpenAsync();
+                    }
+                }));
+
+            return this.underlyingConnection;
+        }
+
 
         /// <summary>
         /// Executes a SQL command and returns a result that is defined by the specified type <typeparamref name="T"/>. This method uses the retry policy specified when 
@@ -219,6 +250,45 @@ namespace MilestoneTG.TransientFaultHandling.Data
         {
             return this.ExecuteCommand<T>(command, retryPolicy, CommandBehavior.Default);
         }
+
+
+        /// <summary>
+        /// Executes a SQL command and returns a result that is defined by the specified type <typeparamref name="T"/>. This method uses the retry policy specified when 
+        /// instantiating the SqlAzureConnection class (or the default retry policy if no policy was set at construction time).
+        /// </summary>
+        /// <typeparam name="T">IDataReader, XmlReader, or any other .NET Framework type that defines the type of result to be returned.</typeparam>
+        /// <param name="command">The SQL command to be executed.</param>
+        /// <returns>An instance of an IDataReader, XmlReader, or any other .NET Framework object that contains the result.</returns>
+        public Task<T> ExecuteCommandAsync<T>(DbCommand command)
+        {
+            return this.ExecuteCommandAsync<T>(command, this.CommandRetryPolicy, CommandBehavior.Default);
+        }
+
+        /// <summary>
+        /// Executes a SQL command and returns a result that is defined by the specified type <typeparamref name="T"/>. This method uses the retry policy specified when 
+        /// instantiating the SqlAzureConnection class (or the default retry policy if no policy was set at construction time).
+        /// </summary>
+        /// <typeparam name="T">IDataReader, XmlReader, or any other .NET Framework type that defines the type of result to be returned.</typeparam>
+        /// <param name="command">The SQL command to be executed.</param>
+        /// <param name="behavior">A description of the results of the query and its effect on the database.</param>
+        /// <returns>An instance of an IDataReader, XmlReader, or any other .NET Frameork object that contains the result.</returns>
+        public Task<T> ExecuteCommandAsync<T>(DbCommand command, CommandBehavior behavior)
+        {
+            return this.ExecuteCommandAsync<T>(command, this.CommandRetryPolicy, behavior);
+        }
+
+        /// <summary>
+        /// Executes a SQL command by using the specified retry policy, and returns a result that is defined by the specified type <typeparamref name="T"/>
+        /// </summary>
+        /// <typeparam name="T">IDataReader, XmlReader, or any other .NET Framework type that defines the type of result to be returned.</typeparam>
+        /// <param name="command">The SQL command to be executed.</param>
+        /// <param name="retryPolicy">The retry policy that defines whether to retry a command if a connection fails while executing the command.</param>
+        /// <returns>An instance of an IDataReader, XmlReader, or any other .NET Frameork object that contains the result.</returns>
+        public Task<T> ExecuteCommandAsync<T>(DbCommand command, RetryPolicy retryPolicy)
+        {
+            return this.ExecuteCommandAsync<T>(command, retryPolicy, CommandBehavior.Default);
+        }
+
 
         /// <summary>
         /// Executes a SQL command by using the specified retry policy, and returns a result that is defined by the specified type <typeparamref name="T"/>
@@ -318,6 +388,103 @@ namespace MilestoneTG.TransientFaultHandling.Data
         }
 
         /// <summary>
+        /// Executes a SQL command by using the specified retry policy, and returns a result that is defined by the specified type <typeparamref name="T"/>
+        /// </summary>
+        /// <typeparam name="T">IDataReader, XmlReader, or any other .NET Framework type that defines the type of result to be returned.</typeparam>
+        /// <param name="command">The SQL command to be executed.</param>
+        /// <param name="retryPolicy">The retry policy that defines whether to retry a command if a connection fails while executing the command.</param>
+        /// <param name="behavior">A description of the results of the query and its effect on the database.</param>
+        /// <returns>An instance of an IDataReader, XmlReader, or any other .NET Frameork object that contains the result.</returns>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope", Justification = "Disposed by client code")]
+        public async Task<T> ExecuteCommandAsync<T>(DbCommand command, RetryPolicy retryPolicy, CommandBehavior behavior)
+        {
+            var actionResult = default(T);
+
+            var resultType = typeof(T);
+
+            var hasOpenedConnection = false;
+
+            var closeOpenedConnectionOnSuccess = false;
+
+            try
+            {
+                await (retryPolicy ?? RetryPolicy.NoRetry).ExecuteAsync(async () =>
+                {
+                    actionResult = await this.connectionStringFailoverPolicy.ExecuteAsync<T>(async () =>
+                    {
+                        // Make sure the command has been associated with a valid connection. If not, associate it with an opened SQL connection.
+                        if (command.Connection == null)
+                        {
+                            // Open a new connection and assign it to the command object.
+                            command.Connection = await this.OpenAsync();
+                            hasOpenedConnection = true;
+                        }
+
+                        // Verify whether or not the connection is valid and is open. This code may be retried therefore
+                        // it is important to ensure that a connection is re-established should it have previously failed.
+                        if (command.Connection.State != ConnectionState.Open)
+                        {
+                            await command.Connection.OpenAsync();
+                            hasOpenedConnection = true;
+                        }
+
+                        if (typeof(IDataReader).IsAssignableFrom(resultType))
+                        {
+                            closeOpenedConnectionOnSuccess = false;
+
+                            return (T)Convert.ChangeType(await command.ExecuteReaderAsync(behavior), resultType);
+                        }
+
+                        if (resultType == typeof(XmlReader))
+                        {
+                            return await ExecuteXmlReaderAsync<T>(command, behavior, closeOpenedConnectionOnSuccess);
+                        }
+
+                        if (resultType == typeof(NonQueryResult))
+                        {
+                            var result = new NonQueryResult { RecordsAffected = await command.ExecuteNonQueryAsync() };
+
+                            closeOpenedConnectionOnSuccess = true;
+
+                            return (T)Convert.ChangeType(result, resultType, CultureInfo.InvariantCulture);
+                        }
+                        else
+                        {
+                            var result = await command.ExecuteScalarAsync();
+
+                            closeOpenedConnectionOnSuccess = true;
+
+                            if (result != null)
+                            {
+                                return (T)Convert.ChangeType(result, resultType, CultureInfo.InvariantCulture);
+                            }
+
+                            return default(T);
+                        }
+                    });
+                });
+
+                if (hasOpenedConnection && closeOpenedConnectionOnSuccess &&
+                   command.Connection != null && command.Connection.State == ConnectionState.Open)
+                {
+                    command.Connection.Close();
+                }
+            }
+            catch (Exception)
+            {
+                if (hasOpenedConnection &&
+                   command.Connection != null && command.Connection.State == ConnectionState.Open)
+                {
+                    command.Connection.Close();
+                }
+
+                throw;
+            }
+
+            return actionResult;
+        }
+
+        /// <summary>
         /// Executes the XML reader.
         /// </summary>
         /// <typeparam name="T"></typeparam>
@@ -325,7 +492,24 @@ namespace MilestoneTG.TransientFaultHandling.Data
         /// <param name="behavior">The behavior.</param>
         /// <param name="closeOpenedConnectionOnSuccess">if set to <c>true</c> [close opened connection on success].</param>
         /// <returns>T.</returns>
-        protected abstract T ExecuteXmlReader<T>(IDbCommand command, CommandBehavior behavior, bool closeOpenedConnectionOnSuccess);
+        protected virtual T ExecuteXmlReader<T>(IDbCommand command, CommandBehavior behavior, bool closeOpenedConnectionOnSuccess)
+        {
+            throw new NotSupportedException();
+        }
+
+        /// <summary>
+        /// Executes the XML reader.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="command">The command.</param>
+        /// <param name="behavior">The behavior.</param>
+        /// <param name="closeOpenedConnectionOnSuccess">if set to <c>true</c> [close opened connection on success].</param>
+        /// <returns>T.</returns>
+        protected virtual Task<T> ExecuteXmlReaderAsync<T>(IDbCommand command, CommandBehavior behavior, bool closeOpenedConnectionOnSuccess)
+        {
+            throw new NotSupportedException();
+        }
+
 
         /// <summary>
         /// Executes a SQL command and returns the number of rows affected.

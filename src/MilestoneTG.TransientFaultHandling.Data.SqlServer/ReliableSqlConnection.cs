@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.Common;
 using System.Data.SqlClient;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace MilestoneTG.TransientFaultHandling.Data.SqlServer
 {
@@ -90,6 +91,41 @@ namespace MilestoneTG.TransientFaultHandling.Data.SqlServer
             {
                 object result;
                 var xmlReader = (command as SqlCommand).ExecuteXmlReader();
+
+                closeOpenedConnectionOnSuccess = false;
+
+                if ((behavior & CommandBehavior.CloseConnection) == CommandBehavior.CloseConnection)
+                {
+                    // Implicit conversion from XmlReader to <T> via an intermediary object.
+                    result = new SqlXmlReader(command.Connection, xmlReader);
+                }
+                else
+                {
+                    // Implicit conversion from XmlReader to <T> via an intermediary object.
+                    result = xmlReader;
+                }
+
+                return (T)result;
+            }
+
+            throw new NotSupportedException();
+        }
+
+        /// <summary>
+        /// Execute XML reader as an asynchronous operation.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="command">The command.</param>
+        /// <param name="behavior">The behavior.</param>
+        /// <param name="closeOpenedConnectionOnSuccess">if set to <c>true</c> [close opened connection on success].</param>
+        /// <returns>T.</returns>
+        /// <exception cref="System.NotSupportedException"></exception>
+        protected override async Task<T> ExecuteXmlReaderAsync<T>(IDbCommand command, CommandBehavior behavior, bool closeOpenedConnectionOnSuccess)
+        {
+            if (command is SqlCommand)
+            {
+                object result;
+                var xmlReader = await (command as SqlCommand).ExecuteXmlReaderAsync();
 
                 closeOpenedConnectionOnSuccess = false;
 

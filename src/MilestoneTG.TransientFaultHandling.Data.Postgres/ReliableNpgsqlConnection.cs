@@ -64,19 +64,5 @@ namespace MilestoneTG.TransientFaultHandling.Data.Postgres
         {
             return new RetryPolicy<PostgreSqlDatabaseTransientErrorDetectionStrategy>(1, TimeSpan.FromMilliseconds(1));
         }
-
-        /// <summary>
-        /// Executes the XML reader.
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="command">The command.</param>
-        /// <param name="behavior">The behavior.</param>
-        /// <param name="closeOpenedConnectionOnSuccess">if set to <c>true</c> [close opened connection on success].</param>
-        /// <returns>T.</returns>
-        /// <exception cref="System.NotSupportedException"></exception>
-        protected override T ExecuteXmlReader<T>(IDbCommand command, CommandBehavior behavior, bool closeOpenedConnectionOnSuccess)
-        {
-            throw new NotSupportedException();
-        }
     }
 }
