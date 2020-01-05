@@ -15,6 +15,10 @@
     <Company>Milestone Technology Group, LLC</Company>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Include="..\..\LICENSE" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
   <ItemGroup Condition="'$(TargetFramework)'=='net451'">
     <PackageReference Include="Oracle.ManagedDataAccess" Version="12.1.21" />
   </ItemGroup>
