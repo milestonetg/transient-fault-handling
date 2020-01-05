@@ -63,8 +63,10 @@ jobs:
           solution: '$(System.DefaultWorkingDirectory)/docfx_project/docfx.json'
           
       - script: |
+          git config --global user.email "build@milestonetg.com"
+          git config --global user.name "Build Agent"
           git add *
           git commit -a -m "Updated docs version $(Build.BuildNumber)"
-          git push origin HEAD
+          git push origin HEAD:master
         workingDirectory: $(System.DefaultWorkingDirectory)
         displayName: Commit and Push docs
