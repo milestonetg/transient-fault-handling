@@ -17,6 +17,9 @@ jobs:
     pool:
       vmImage: windows-latest
     steps:
+      - checkout: self
+        persistCredentials: true
+
       - task: DotNetCoreCLI@2
         displayName: Restore packages
         inputs:
@@ -53,3 +56,15 @@ jobs:
 
       - task: PublishBuildArtifacts@1
         displayName: 'Publish Artifact: drop'
+
+      - task: chrismason.vsts-docfxtasks.docfx-extension-build-task.DocFxTask@0
+        displayName: 'Generate Documentation'
+        inputs:
+          solution: '$(System.DefaultWorkingDirectory)/docfx_project/docfx.json'
+          
+      - script: |
+          git add *
+          git commit -a -m "Updated docs version $(Build.BuildNumber)"
+          git push origin HEAD
+        workingDirectory: $(System.DefaultWorkingDirectory)
+        displayName: Commit and Push docs

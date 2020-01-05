@@ -109,3 +109,11 @@ PostgreSQL, Azure Database for PostgreSQL, AWS Aurora PostgreSQL, AWS RDS for Po
 #### MilestoneTG.TransientFaultHandling.Data.Oracle
 
 Supports transient fault handling for most deployments of Oracle including on premises, Azure, AWS RDS, and Oracle Cloud.
+
+## Contributing
+
+If you wish to contribute to this project, please open an issue first to discuss the desired change/contribution.
+
+## Bugs and Feedback
+
+For bugs, questions and discussions please use the [GitHub Issues](https://github.com/milestonetg/transient-fault-handling/issues).
